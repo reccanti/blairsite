@@ -1,4 +1,104 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { assignInlineVars } from "@vanilla-extract/dynamic";
+import { theme } from "@/app/_global.css";
+
+/**
+ * Vanilla extract fonts and NextJS are kind of hard to get working together.
+ * Essentially, the way we do this is by:
+ *
+ * 1. Creating a theme contract in _global.css.ts that specifies the types of
+ *    fonts we want to have
+ * 2. Creating the font variables using NextJS's localFont
+ * 3. Using Vanilla Extract's assignInlineVariable to set the fonts we specified
+ *    in the contract
+ *
+ * I referenced this discussion on Github pretty heavily to get this working:
+ * https://github.com/vanilla-extract-css/vanilla-extract/discussions/1019
+ */
+const merriweather = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-Light.ttf",
+      weight: "300",
+    },
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-Regular.ttf",
+      weight: "500",
+    },
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-Italic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-Bold.ttf",
+      weight: "700",
+    },
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-Black.ttf",
+      weight: "900",
+    },
+    {
+      path: "../../public/fonts/Merriweather/Merriweather-BlackItalic.ttf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
+});
+
+const ubuntu = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-Light.ttf",
+      weight: "300",
+    },
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-MediumItalic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-Bold.ttf",
+      weight: "700",
+    },
+    {
+      path: "../../public/fonts/Ubuntu/Ubuntu-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -10,9 +110,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const withFonts = assignInlineVars({
+    [theme.font.heading]: merriweather.style.fontFamily,
+    [theme.font.body]: ubuntu.style.fontFamily,
+  });
+  const inlined = JSON.parse(JSON.stringify(withFonts));
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={inlined}>{children}</body>
     </html>
   );
 }
