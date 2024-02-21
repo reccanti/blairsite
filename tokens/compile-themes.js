@@ -1,4 +1,5 @@
-const { writeFile, readdir } = require("fs/promises");
+const { existsSync } = require("fs");
+const { writeFile, mkdir } = require("fs/promises");
 const { resolve } = require("path");
 const tokens = require("./tokens.json");
 const { transformTokens } = require("token-transformer");
@@ -8,6 +9,9 @@ const OUT_DIR = resolve(__dirname, "..", "src", "themes", "compiled");
 async function compileThemes(themeName, tokenSets) {
   const outFile = resolve(OUT_DIR, `${themeName}.json`);
   const resolved = transformTokens(tokens, tokenSets);
+  if (!existsSync(OUT_DIR)) {
+    await mkdir(OUT_DIR);
+  }
   await writeFile(outFile, JSON.stringify(resolved, null, 2));
 }
 
@@ -47,106 +51,37 @@ async function compileThemes(themeName, tokenSets) {
   // base theme
   await compileThemes("base", ["base"]);
 
-  // normal layouts on small screens
-  await compileThemes("light", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "colors/semantic",
-  ]);
-  await compileThemes("dark", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "colors/dark",
-  ]);
+  // color themes
+  await compileThemes("light", ["base", "colors/semantic"]);
+  await compileThemes("dark", ["base", "colors/semantic", "colors/dark"]);
   await compileThemes("highContrast", [
     "base",
-    "fonts/semantic",
-    "fonts/styled",
+    "colors/semantic",
     "colors/highContrast",
   ]);
-  await compileThemes("highContrast.dark", [
+  await compileThemes("highContrastDark", [
     "base",
-    "fonts/semantic",
-    "fonts/styled",
+    "colors/semantic",
     "colors/highContrast/dark",
   ]);
 
-  // simple layouts on small screens
-  await compileThemes("light.simple", [
-    "base",
-    "fonts/semantic",
-    "colors/semantic",
-  ]);
-  await compileThemes("dark.simple", ["base", "fonts/semantic", "colors/dark"]);
-  await compileThemes("highContrast.simple", [
-    "base",
-    "fonts/semantic",
-    "colors/highContrast",
-  ]);
-  await compileThemes("highContrast.dark.simple", [
-    "base",
-    "fonts/semantic",
-    "colors/highContrast/dark",
-  ]);
-
-  // normal layouts on large screens
-  await compileThemes("light.largeScreen", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "fonts/largeScreen",
-    "colors/semantic",
-  ]);
-  await compileThemes("dark.largeScreen", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "fonts/largeScreen",
-    "colors/dark",
-  ]);
-  await compileThemes("highContrast.simple", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "fonts/largeScreen",
-    "colors/highContrast",
-  ]);
-  await compileThemes("highContrast.dark.simple", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "fonts/largeScreen",
-    "colors/highContrast/dark",
-  ]);
-
-  // simple layouts on large screens
-  await compileThemes("light.simple.largeScreen", [
+  // font themes
+  await compileThemes("fonts", ["base", "fonts/semantic"]);
+  await compileThemes("fontsLargeScreen", [
     "base",
     "fonts/semantic",
     "fonts/largeScreen",
-    "colors/semantic",
   ]);
-  await compileThemes("dark.simple.largeScreen", [
+  await compileThemes("fontsSimple", [
+    "base",
+    "fonts/semantic",
+    "fonts/simple",
+  ]);
+  await compileThemes("fontsLargeScreenSimple", [
     "base",
     "fonts/semantic",
     "fonts/largeScreen",
-    "colors/dark",
-  ]);
-  await compileThemes("highContrast.simple.largeScreen", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "fonts/largeScreen",
-    "colors/highContrast",
-  ]);
-  await compileThemes("highContrast.dark.simple.largeScreen", [
-    "base",
-    "fonts/semantic",
-    "fonts/styled",
-    "fonts/largeScreen",
-    "colors/highContrast/dark",
+    "fonts/simple",
   ]);
 
   // generate the types of all these files

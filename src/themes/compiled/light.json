@@ -619,24 +619,6 @@
       }
     }
   },
-  "fontFamilies": {
-    "header": {
-      "value": "Oleo Script",
-      "type": "fontFamilies"
-    },
-    "body": {
-      "value": "Ubuntu",
-      "type": "fontFamilies"
-    },
-    "Oleo": {
-      "value": "Oleo Script",
-      "type": "fontFamilies"
-    },
-    "Ubuntu": {
-      "value": "Ubuntu",
-      "type": "fontFamilies"
-    }
-  },
   "fontSizes": {
     "1": {
       "value": "1.1rem",
@@ -665,127 +647,16 @@
     "7": {
       "value": "12.529687500000001rem",
       "type": "fontSizes"
-    },
-    "body": {
-      "value": "1.1rem",
-      "type": "fontSizes"
-    },
-    "header": {
-      "1": {
-        "value": "8.353125rem",
-        "type": "fontSizes"
-      },
-      "2": {
-        "value": "5.5687500000000005rem",
-        "type": "fontSizes"
-      },
-      "3": {
-        "value": "3.7125000000000004rem",
-        "type": "fontSizes"
-      },
-      "4": {
-        "value": "2.475rem",
-        "type": "fontSizes"
-      },
-      "5": {
-        "value": "1.6500000000000001rem",
-        "type": "fontSizes"
-      },
-      "6": {
-        "value": "1.1rem",
-        "type": "fontSizes"
-      }
     }
   },
-  "header": {
-    "1": {
-      "value": {
-        "fontFamily": "Oleo Script",
-        "fontWeight": "Bold",
-        "fontSize": "8.353125rem"
-      },
-      "type": "typography"
+  "fontFamilies": {
+    "Oleo": {
+      "value": "Oleo Script",
+      "type": "fontFamilies"
     },
-    "2": {
-      "value": {
-        "fontFamily": "Oleo Script",
-        "fontWeight": "Bold",
-        "fontSize": "5.5687500000000005rem"
-      },
-      "type": "typography"
-    },
-    "3": {
-      "value": {
-        "fontFamily": "Oleo Script",
-        "fontWeight": "Bold",
-        "fontSize": "3.7125000000000004rem"
-      },
-      "type": "typography"
-    },
-    "4": {
-      "value": {
-        "fontFamily": "Oleo Script",
-        "fontWeight": "Bold",
-        "fontSize": "2.475rem"
-      },
-      "type": "typography"
-    },
-    "5": {
-      "value": {
-        "fontFamily": "Oleo Script",
-        "fontWeight": "Bold",
-        "fontSize": "1.6500000000000001rem"
-      },
-      "type": "typography"
-    },
-    "6": {
-      "value": {
-        "fontFamily": "Oleo Script",
-        "fontWeight": "Bold",
-        "fontSize": "1.1rem"
-      },
-      "type": "typography"
-    }
-  },
-  "body": {
-    "value": {
-      "fontFamily": "Ubuntu",
-      "fontWeight": "Regular",
-      "fontSize": "1.1rem",
-      "lineHeight": "150%"
-    },
-    "type": "typography"
-  },
-  "ui": {
-    "value": {
-      "fontFamily": "Ubuntu",
-      "fontWeight": "Bold",
-      "fontSize": "1.1rem",
-      "textCase": "uppercase",
-      "lineHeight": "100%"
-    },
-    "type": "typography"
-  },
-  "link": {
-    "default": {
-      "value": {
-        "fontFamily": "Ubuntu",
-        "fontWeight": "Bold",
-        "fontSize": "1.1rem",
-        "lineHeight": "150%",
-        "textDecoration": "underline"
-      },
-      "type": "typography"
-    },
-    "hover": {
-      "value": {
-        "fontFamily": "Ubuntu",
-        "fontWeight": "Bold",
-        "fontSize": "1.1rem",
-        "lineHeight": "150%",
-        "textDecoration": "none"
-      },
-      "type": "typography"
+    "Ubuntu": {
+      "value": "Ubuntu",
+      "type": "fontFamilies"
     }
   },
   "scale": {

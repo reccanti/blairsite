@@ -1,3 +1,4 @@
+import { walkObject, MapLeafNodes } from "@vanilla-extract/private";
 /**
  * The following Stackoverflow seems like it might be able to make a type-safe
  * tree-traversal function, but I can't get it working right now, so I'm using
@@ -37,8 +38,10 @@ function addToObjectAtPath<T>(
   cur[key] = value;
 }
 
+type Tree<T> = { [key: string]: Tree<T> | T };
+
 function createColors(tree: any) {
-  const colors: Record<string, any> = {};
+  const colors: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -54,7 +57,7 @@ function createColors(tree: any) {
 }
 
 function createBorders(tree: any) {
-  const borders: Record<string, any> = {};
+  const borders: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -73,7 +76,7 @@ function createBorders(tree: any) {
 }
 
 function createBorderWidths(tree: any) {
-  const borderWidths: Record<string, any> = {};
+  const borderWidths: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -90,7 +93,7 @@ function createBorderWidths(tree: any) {
 }
 
 function createBoxShadows(tree: any) {
-  const boxShadows: Record<string, any> = {};
+  const boxShadows: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -114,7 +117,7 @@ function createBoxShadows(tree: any) {
 }
 
 function createFontSizes(tree: any) {
-  const fontSizes: Record<string, any> = {};
+  const fontSizes: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -130,7 +133,7 @@ function createFontSizes(tree: any) {
 }
 
 function createFontFamilies(tree: any) {
-  const fontFamilies: Record<string, any> = {};
+  const fontFamilies: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -146,7 +149,7 @@ function createFontFamilies(tree: any) {
 }
 
 function createLineHeights(tree: any) {
-  const lineHeights: Record<string, any> = {};
+  const lineHeights: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -162,7 +165,7 @@ function createLineHeights(tree: any) {
 }
 
 function createFontWeights(tree: any) {
-  const fontWeights: Record<string, any> = {};
+  const fontWeights: Tree<string> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -185,7 +188,7 @@ const fmtTextDecoration = (value: string) => (!!value ? value : "none");
 const fmtTextCase = (value: string) => (!!value ? ` ${value}` : "");
 
 function createTypographies(tree: any) {
-  const typographies: Record<string, any> = {};
+  const typographies: Tree<{ font: string; textDecoration: string }> = {};
   visit([], tree, (path, node) => {
     if (
       typeof node === "object" &&
@@ -237,17 +240,42 @@ function createSpacings(tree: any) {
   return spacings;
 }
 
-export function createTheme<T extends object>(themeObj: T) {
-  return {
-    colors: createColors(themeObj),
-    borders: createBorders(themeObj),
-    borderWidths: createBorderWidths(themeObj),
-    boxShadows: createBoxShadows(themeObj),
-    fontSizes: createFontSizes(themeObj),
-    fontFamilies: createFontFamilies(themeObj),
-    fontWeights: createFontWeights(themeObj),
-    lineHeights: createLineHeights(themeObj),
-    typographies: createTypographies(themeObj),
-    spacing: createSpacings(themeObj),
+export function createThemeObject<T extends object>(tokens: T) {
+  /**
+   * Not a fan of this typing. I'm going to need to fix this.
+   *
+   * ~Blair 2/21/2024
+   */
+  const themeObj: Record<string, any> = {
+    colors: createColors(tokens),
+    borders: createBorders(tokens),
+    borderWidths: createBorderWidths(tokens),
+    boxShadows: createBoxShadows(tokens),
+    fontSizes: createFontSizes(tokens),
+    fontFamilies: createFontFamilies(tokens),
+    fontWeights: createFontWeights(tokens),
+    lineHeights: createLineHeights(tokens),
+    typographies: createTypographies(tokens),
+    spacing: createSpacings(tokens),
   };
+
+  const newObj: Partial<typeof themeObj> = {};
+  for (const [k, v] of Object.entries(themeObj)) {
+    if (typeof v === "object" && v !== null && Object.keys(v).length) {
+      newObj[k] = v;
+    }
+  }
+
+  return newObj;
+}
+
+// export function createThemeContractObject(theme: )
+export function createThemeContractObject<U, T = Tree<U>>(theme: T): Tree<""> {
+  const contract: Tree<""> = {};
+  visit([], theme, (path, node) => {
+    if (typeof node !== "object") {
+      addToObjectAtPath(contract, path, "");
+    }
+  });
+  return contract;
 }

@@ -1,31 +1,21 @@
 import {
   createGlobalTheme,
-  createGlobalThemeContract,
-  fontFace,
+  createThemeContract,
   globalFontFace,
-  globalStyle,
 } from "@vanilla-extract/css";
 import oleoRegular from "@/../public/fonts/Oleo_Script/OleoScript-Regular.ttf";
 import oleoBold from "@/../public/fonts/Oleo_Script/OleoScript-Bold.ttf";
-import { createTheme } from "@/themes/utils";
+import { createThemeObject, createThemeContractObject } from "@/themes/utils";
 
 // themes
 import lightJson from "../themes/compiled/light.json";
 import darkJson from "../themes/compiled/dark.json";
-import highContrast from "../themes/compiled/highContrast.json";
-import highContrastDark from "../themes/compiled/highContrast.dark.json";
-import lightSimpleJson from "../themes/compiled/light.simple.json";
-import darkSimpleJson from "../themes/compiled/dark.simple.json";
-import highContrastSimpleJson from "../themes/compiled/highContrast.simple.json";
-import highContrastDarkSimpleJson from "../themes/compiled/highContrast.dark.simple.json";
-import lightLargeScreenJson from "../themes/compiled/light.json";
-import darkLargeScreenJson from "../themes/compiled/light.json";
-import highContrastLargeScreenJson from "../themes/compiled/light.json";
-import highContrastDarkLargeScreenJson from "../themes/compiled/light.json";
-import lightJson from "../themes/compiled/light.json";
-import lightJson from "../themes/compiled/light.json";
-import lightJson from "../themes/compiled/light.json";
-import lightJson from "../themes/compiled/light.json";
+import highContrastJson from "../themes/compiled/highContrast.json";
+import highContrastDarkJson from "../themes/compiled/highContrastDark.json";
+import fontsJson from "../themes/compiled/fonts.json";
+import fontsLargeScreenJson from "../themes/compiled/fontsLargeScreen.json";
+import fontsSimple from "../themes/compiled/fontsSimple.json";
+import fontsLargeScreenSimple from "../themes/compiled/fontsLargeScreenSimple.json";
 
 const oleo = "Oleo Script";
 globalFontFace(oleo, {
@@ -37,4 +27,41 @@ globalFontFace(oleo, {
   fontWeight: "bold",
 });
 
-createGlobalTheme(".light", createTheme(lightJson));
+/**
+ * Create a color theme contract based on the "light" theme, which is the
+ * default
+ */
+export const colorTheme = createThemeContract(
+  createThemeContractObject(createThemeObject(lightJson))
+);
+
+/**
+ * Create a font theme contract based on the "fonts" theme, which is the default
+ */
+export const fontTheme = createThemeContract(
+  createThemeContractObject(createThemeObject(fontsJson))
+);
+
+createGlobalTheme(".light", colorTheme, createThemeObject(lightJson));
+createGlobalTheme(".dark", colorTheme, createThemeObject(darkJson));
+createGlobalTheme(
+  ".highContrast",
+  colorTheme,
+  createThemeObject(highContrastJson)
+);
+createGlobalTheme(
+  ".highContrastDark",
+  colorTheme,
+  createThemeObject(highContrastDarkJson)
+);
+createGlobalTheme(".fonts", fontTheme, createThemeObject(fontsJson));
+createGlobalTheme(
+  ".fontsLargeScreen",
+  fontTheme,
+  createThemeObject(fontsLargeScreenJson)
+);
+createGlobalTheme(".fontsSimple", fontTheme, createThemeObject(fontsSimple));
+createGlobalTheme(
+  ".fontsLargeScreenSimple",
+  createThemeObject(fontsLargeScreenSimple)
+);

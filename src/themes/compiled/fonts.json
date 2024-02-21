@@ -1,195 +1,7 @@
 {
-  "background": {
-    "default": {
-      "value": "#222222",
-      "type": "color"
-    },
-    "yellow": {
-      "value": "#BC5A00",
-      "type": "color"
-    },
-    "magenta": {
-      "value": "#750049",
-      "type": "color"
-    },
-    "blue": {
-      "value": "#005C99",
-      "type": "color"
-    },
-    "red": {
-      "value": "#8F1F14",
-      "type": "color"
-    },
-    "green": {
-      "value": "#005555",
-      "type": "color"
-    },
-    "gray1": {
-      "value": "#C3C3C3",
-      "type": "color"
-    },
-    "gray2": {
-      "value": "#9B9B9B",
-      "type": "color"
-    },
-    "inverted": {
-      "value": "#FFFFFF",
-      "type": "color"
-    },
-    "hover": {
-      "default": {
-        "value": "#363636",
-        "type": "color"
-      },
-      "yellow": {
-        "value": "#d3770d",
-        "type": "color"
-      },
-      "magenta": {
-        "value": "#A20065",
-        "type": "color"
-      },
-      "blue": {
-        "value": "#0E7EC8",
-        "type": "color"
-      },
-      "red": {
-        "value": "#B33225",
-        "type": "color"
-      },
-      "green": {
-        "value": "#007A7A",
-        "type": "color"
-      },
-      "gray1": {
-        "value": "{base.gray.4000}",
-        "type": "color",
-        "failedToResolve": true
-      },
-      "gray2": {
-        "value": "{base.gray.5500}",
-        "type": "color",
-        "failedToResolve": true
-      },
-      "inverted": {
-        "value": "#222222",
-        "type": "color"
-      }
-    }
-  },
-  "label": {
-    "default": {
-      "value": "#FFFFFF",
-      "type": "color"
-    },
-    "yellow": {
-      "value": "#fff7cc",
-      "type": "color"
-    },
-    "magenta": {
-      "value": "#ffe0ed",
-      "type": "color"
-    },
-    "blue": {
-      "value": "#9ee4ea",
-      "type": "color"
-    },
-    "red": {
-      "value": "#ffaaa2",
-      "type": "color"
-    },
-    "green": {
-      "value": "#a2e8bd",
-      "type": "color"
-    },
-    "white": {
-      "value": "#FFFFFF",
-      "type": "color"
-    },
-    "inverted": {
-      "value": "#222222",
-      "type": "color"
-    },
-    "inactive": {
-      "default": {
-        "value": "#9B9B9B",
-        "type": "color"
-      },
-      "yellow": {
-        "value": "#FFA700",
-        "type": "color"
-      },
-      "magenta": {
-        "value": "#FF3FAB",
-        "type": "color"
-      },
-      "blue": {
-        "value": "#00DAF2",
-        "type": "color"
-      },
-      "red": {
-        "value": "#FB5B5B",
-        "type": "color"
-      },
-      "green": {
-        "value": "#85E500",
-        "type": "color"
-      },
-      "white": {
-        "value": "#9B9B9B",
-        "type": "color"
-      },
-      "inverted": {
-        "value": "#727272",
-        "type": "color"
-      }
-    },
-    "highlight": {
-      "yellow": {
-        "value": "#FFA700",
-        "type": "color"
-      },
-      "magenta": {
-        "value": "#FF3FAB",
-        "type": "color"
-      },
-      "blue": {
-        "value": "#00DAF2",
-        "type": "color"
-      },
-      "red": {
-        "value": "#FF3434",
-        "type": "color"
-      },
-      "green": {
-        "value": "#85E500",
-        "type": "color"
-      }
-    },
-    "link": {
-      "default": {
-        "value": "#00DAF2",
-        "type": "color"
-      },
-      "hover": {
-        "value": "#8EF4FF",
-        "type": "color"
-      },
-      "visited": {
-        "default": {
-          "value": "#FF9CCD",
-          "type": "color"
-        },
-        "hover": {
-          "value": "#ffe0ed",
-          "type": "color"
-        }
-      }
-    }
-  },
   "fontFamilies": {
     "header": {
-      "value": "Oleo Script",
+      "value": "Ubuntu",
       "type": "fontFamilies"
     },
     "body": {
@@ -268,7 +80,7 @@
   "header": {
     "1": {
       "value": {
-        "fontFamily": "Oleo Script",
+        "fontFamily": "Ubuntu",
         "fontWeight": "Bold",
         "fontSize": "8.353125rem"
       },
@@ -276,7 +88,7 @@
     },
     "2": {
       "value": {
-        "fontFamily": "Oleo Script",
+        "fontFamily": "Ubuntu",
         "fontWeight": "Bold",
         "fontSize": "5.5687500000000005rem"
       },
@@ -284,7 +96,7 @@
     },
     "3": {
       "value": {
-        "fontFamily": "Oleo Script",
+        "fontFamily": "Ubuntu",
         "fontWeight": "Bold",
         "fontSize": "3.7125000000000004rem"
       },
@@ -292,7 +104,7 @@
     },
     "4": {
       "value": {
-        "fontFamily": "Oleo Script",
+        "fontFamily": "Ubuntu",
         "fontWeight": "Bold",
         "fontSize": "2.475rem"
       },
@@ -300,7 +112,7 @@
     },
     "5": {
       "value": {
-        "fontFamily": "Oleo Script",
+        "fontFamily": "Ubuntu",
         "fontWeight": "Bold",
         "fontSize": "1.6500000000000001rem"
       },
@@ -308,7 +120,7 @@
     },
     "6": {
       "value": {
-        "fontFamily": "Oleo Script",
+        "fontFamily": "Ubuntu",
         "fontWeight": "Bold",
         "fontSize": "1.1rem"
       },
