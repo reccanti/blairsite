@@ -1,105 +1,103 @@
 {
   "background": {
     "default": {
-      "value": "#222222",
+      "value": "#FFFFFF",
       "type": "color"
     },
     "yellow": {
-      "value": "#BC5A00",
-      "type": "color"
-    },
-    "magenta": {
-      "value": "#750049",
-      "type": "color"
-    },
-    "blue": {
-      "value": "#005C99",
-      "type": "color"
-    },
-    "red": {
-      "value": "#8F1F14",
-      "type": "color"
-    },
-    "green": {
-      "value": "#005555",
-      "type": "color"
-    },
-    "gray1": {
       "value": "#C3C3C3",
       "type": "color"
     },
-    "gray2": {
+    "magenta": {
       "value": "#9B9B9B",
       "type": "color"
     },
+    "blue": {
+      "value": "#C3C3C3",
+      "type": "color"
+    },
+    "red": {
+      "value": "#9B9B9B",
+      "type": "color"
+    },
+    "green": {
+      "value": "#9B9B9B",
+      "type": "color"
+    },
+    "gray1": {
+      "value": "#4A4A4A",
+      "type": "color"
+    },
+    "gray2": {
+      "value": "#222222",
+      "type": "color"
+    },
     "inverted": {
-      "value": "#FFFFFF",
+      "value": "#222222",
       "type": "color"
     },
     "hover": {
       "default": {
-        "value": "#363636",
+        "value": "#EBEBEB",
         "type": "color"
       },
       "yellow": {
-        "value": "#d3770d",
+        "value": "#D7D7D7",
         "type": "color"
       },
       "magenta": {
-        "value": "#A20065",
+        "value": "#AFAFAF",
         "type": "color"
       },
       "blue": {
-        "value": "#0E7EC8",
+        "value": "#D7D7D7",
         "type": "color"
       },
       "red": {
-        "value": "#B33225",
+        "value": "#AFAFAF",
         "type": "color"
       },
       "green": {
-        "value": "#007A7A",
+        "value": "#AFAFAF",
         "type": "color"
       },
       "gray1": {
-        "value": "{base.gray.4000}",
-        "type": "color",
-        "failedToResolve": true
+        "value": "#5E5E5E",
+        "type": "color"
       },
       "gray2": {
-        "value": "{base.gray.5500}",
-        "type": "color",
-        "failedToResolve": true
+        "value": "#363636",
+        "type": "color"
       },
       "inverted": {
-        "value": "#222222",
+        "value": "#363636",
         "type": "color"
       }
     }
   },
   "label": {
     "default": {
-      "value": "#FFFFFF",
+      "value": "#222222",
       "type": "color"
     },
     "yellow": {
-      "value": "#fff7cc",
+      "value": "#222222",
       "type": "color"
     },
     "magenta": {
-      "value": "#ffe0ed",
+      "value": "#222222",
       "type": "color"
     },
     "blue": {
-      "value": "#9ee4ea",
+      "value": "#222222",
       "type": "color"
     },
     "red": {
-      "value": "#ffaaa2",
+      "value": "#222222",
       "type": "color"
     },
     "green": {
-      "value": "#a2e8bd",
+      "value": "#222222",
       "type": "color"
     },
     "white": {
@@ -107,81 +105,81 @@
       "type": "color"
     },
     "inverted": {
-      "value": "#222222",
+      "value": "#FFFFFF",
       "type": "color"
-    },
-    "inactive": {
-      "default": {
-        "value": "#9B9B9B",
-        "type": "color"
-      },
-      "yellow": {
-        "value": "#FFA700",
-        "type": "color"
-      },
-      "magenta": {
-        "value": "#FF3FAB",
-        "type": "color"
-      },
-      "blue": {
-        "value": "#00DAF2",
-        "type": "color"
-      },
-      "red": {
-        "value": "#FB5B5B",
-        "type": "color"
-      },
-      "green": {
-        "value": "#85E500",
-        "type": "color"
-      },
-      "white": {
-        "value": "#9B9B9B",
-        "type": "color"
-      },
-      "inverted": {
-        "value": "#727272",
-        "type": "color"
-      }
     },
     "highlight": {
       "yellow": {
-        "value": "#FFA700",
+        "value": "#C3C3C3",
         "type": "color"
       },
       "magenta": {
-        "value": "#FF3FAB",
+        "value": "#9B9B9B",
         "type": "color"
       },
       "blue": {
-        "value": "#00DAF2",
+        "value": "#C3C3C3",
         "type": "color"
       },
       "red": {
-        "value": "#FF3434",
+        "value": "#9B9B9B",
         "type": "color"
       },
       "green": {
-        "value": "#85E500",
+        "value": "#9B9B9B",
+        "type": "color"
+      }
+    },
+    "inactive": {
+      "default": {
+        "value": "#868686",
+        "type": "color"
+      },
+      "yellow": {
+        "value": "#868686",
+        "type": "color"
+      },
+      "magenta": {
+        "value": "#868686",
+        "type": "color"
+      },
+      "blue": {
+        "value": "#868686",
+        "type": "color"
+      },
+      "red": {
+        "value": "#868686",
+        "type": "color"
+      },
+      "green": {
+        "value": "#868686",
+        "type": "color"
+      },
+      "white": {
+        "value": "#EBEBEB",
+        "type": "color"
+      },
+      "inverted": {
+        "value": "#EBEBEB",
         "type": "color"
       }
     },
     "link": {
       "default": {
-        "value": "#00DAF2",
+        "value": "#222222",
         "type": "color"
       },
       "hover": {
-        "value": "#8EF4FF",
+        "value": "#222222",
         "type": "color"
       },
       "visited": {
         "default": {
-          "value": "#FF9CCD",
+          "value": "#4A4A4A",
           "type": "color"
         },
         "hover": {
-          "value": "#ffe0ed",
+          "value": "#4A4A4A",
           "type": "color"
         }
       }
@@ -267,174 +265,93 @@
   },
   "header": {
     "1": {
-      "fontFamily": {
-        "value": "Oleo Script",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "8.353125rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "8.353125rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "2": {
-      "fontFamily": {
-        "value": "Oleo Script",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "5.5687500000000005rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "5.5687500000000005rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "3": {
-      "fontFamily": {
-        "value": "Oleo Script",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "3.7125000000000004rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "3.7125000000000004rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "4": {
-      "fontFamily": {
-        "value": "Oleo Script",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "2.475rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "2.475rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "5": {
-      "fontFamily": {
-        "value": "Oleo Script",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "1.6500000000000001rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.6500000000000001rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "6": {
-      "fontFamily": {
-        "value": "Oleo Script",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "1.1rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.1rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     }
   },
   "body": {
-    "fontFamily": {
-      "value": "Ubuntu",
-      "type": "fontFamilies"
+    "value": {
+      "fontFamily": "Ubuntu",
+      "fontWeight": "Regular",
+      "fontSize": "1.1rem",
+      "lineHeight": "150%"
     },
-    "fontWeight": {
-      "value": "Regular",
-      "type": "fontWeights"
-    },
-    "fontSize": {
-      "value": "1.1rem",
-      "type": "fontSizes"
-    },
-    "lineHeight": {
-      "value": "150%",
-      "type": "lineHeights"
-    }
+    "type": "typography"
   },
   "ui": {
-    "fontFamily": {
-      "value": "Ubuntu",
-      "type": "fontFamilies"
+    "value": {
+      "fontFamily": "Ubuntu",
+      "fontWeight": "Bold",
+      "fontSize": "1.1rem",
+      "textCase": "uppercase",
+      "lineHeight": "100%"
     },
-    "fontWeight": {
-      "value": "Bold",
-      "type": "fontWeights"
-    },
-    "fontSize": {
-      "value": "1.1rem",
-      "type": "fontSizes"
-    },
-    "textCase": {
-      "value": "uppercase",
-      "type": "textCase"
-    },
-    "lineHeight": {
-      "value": "100%",
-      "type": "lineHeights"
-    }
+    "type": "typography"
   },
   "link": {
     "default": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Ubuntu",
+        "fontWeight": "Bold",
+        "fontSize": "1.1rem",
+        "lineHeight": "150%",
+        "textDecoration": "underline"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.1rem",
-        "type": "fontSizes"
-      },
-      "lineHeight": {
-        "value": "150%",
-        "type": "lineHeights"
-      },
-      "textDecoration": {
-        "value": "underline",
-        "type": "textDecoration"
-      }
+      "type": "typography"
     },
     "hover": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Ubuntu",
+        "fontWeight": "Bold",
+        "fontSize": "1.1rem",
+        "lineHeight": "150%",
+        "textDecoration": "none"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.1rem",
-        "type": "fontSizes"
-      },
-      "lineHeight": {
-        "value": "150%",
-        "type": "lineHeights"
-      },
-      "textDecoration": {
-        "value": "none",
-        "type": "textDecoration"
-      }
+      "type": "typography"
     }
   },
   "scale": {
@@ -700,30 +617,15 @@
   },
   "layer": {
     "1": {
-      "x": {
-        "value": -10,
-        "type": "x"
+      "value": {
+        "x": -10,
+        "y": 10,
+        "blur": 0,
+        "spread": 0,
+        "color": "#22222240",
+        "type": "dropShadow"
       },
-      "y": {
-        "value": 10,
-        "type": "y"
-      },
-      "blur": {
-        "value": 0,
-        "type": "blur"
-      },
-      "spread": {
-        "value": 0,
-        "type": "spread"
-      },
-      "color": {
-        "value": "#22222240",
-        "type": "color"
-      },
-      "type": {
-        "value": "dropShadow",
-        "type": "type"
-      }
+      "type": "boxShadow"
     }
   },
   "strokeWeight": {

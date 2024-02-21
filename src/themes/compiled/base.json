@@ -302,30 +302,15 @@
   },
   "layer": {
     "1": {
-      "x": {
-        "value": -10,
-        "type": "x"
+      "value": {
+        "x": -10,
+        "y": 10,
+        "blur": 0,
+        "spread": 0,
+        "color": "#22222240",
+        "type": "dropShadow"
       },
-      "y": {
-        "value": 10,
-        "type": "y"
-      },
-      "blur": {
-        "value": 0,
-        "type": "blur"
-      },
-      "spread": {
-        "value": 0,
-        "type": "spread"
-      },
-      "color": {
-        "value": "#22222240",
-        "type": "color"
-      },
-      "type": {
-        "value": "dropShadow",
-        "type": "type"
-      }
+      "type": "boxShadow"
     }
   },
   "strokeWeight": {

@@ -189,7 +189,7 @@
   },
   "fontFamilies": {
     "header": {
-      "value": "Ubuntu",
+      "value": "Oleo Script",
       "type": "fontFamilies"
     },
     "body": {
@@ -267,174 +267,93 @@
   },
   "header": {
     "1": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "8.353125rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "8.353125rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "2": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "5.5687500000000005rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "5.5687500000000005rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "3": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "3.7125000000000004rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "3.7125000000000004rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "4": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "2.475rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "2.475rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "5": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "1.6500000000000001rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.6500000000000001rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     },
     "6": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Oleo Script",
+        "fontWeight": "Bold",
+        "fontSize": "1.1rem"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.1rem",
-        "type": "fontSizes"
-      }
+      "type": "typography"
     }
   },
   "body": {
-    "fontFamily": {
-      "value": "Ubuntu",
-      "type": "fontFamilies"
+    "value": {
+      "fontFamily": "Ubuntu",
+      "fontWeight": "Regular",
+      "fontSize": "1.1rem",
+      "lineHeight": "150%"
     },
-    "fontWeight": {
-      "value": "Regular",
-      "type": "fontWeights"
-    },
-    "fontSize": {
-      "value": "1.1rem",
-      "type": "fontSizes"
-    },
-    "lineHeight": {
-      "value": "150%",
-      "type": "lineHeights"
-    }
+    "type": "typography"
   },
   "ui": {
-    "fontFamily": {
-      "value": "Ubuntu",
-      "type": "fontFamilies"
+    "value": {
+      "fontFamily": "Ubuntu",
+      "fontWeight": "Bold",
+      "fontSize": "1.1rem",
+      "textCase": "uppercase",
+      "lineHeight": "100%"
     },
-    "fontWeight": {
-      "value": "Bold",
-      "type": "fontWeights"
-    },
-    "fontSize": {
-      "value": "1.1rem",
-      "type": "fontSizes"
-    },
-    "textCase": {
-      "value": "uppercase",
-      "type": "textCase"
-    },
-    "lineHeight": {
-      "value": "100%",
-      "type": "lineHeights"
-    }
+    "type": "typography"
   },
   "link": {
     "default": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Ubuntu",
+        "fontWeight": "Bold",
+        "fontSize": "1.1rem",
+        "lineHeight": "150%",
+        "textDecoration": "underline"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.1rem",
-        "type": "fontSizes"
-      },
-      "lineHeight": {
-        "value": "150%",
-        "type": "lineHeights"
-      },
-      "textDecoration": {
-        "value": "underline",
-        "type": "textDecoration"
-      }
+      "type": "typography"
     },
     "hover": {
-      "fontFamily": {
-        "value": "Ubuntu",
-        "type": "fontFamilies"
+      "value": {
+        "fontFamily": "Ubuntu",
+        "fontWeight": "Bold",
+        "fontSize": "1.1rem",
+        "lineHeight": "150%",
+        "textDecoration": "none"
       },
-      "fontWeight": {
-        "value": "Bold",
-        "type": "fontWeights"
-      },
-      "fontSize": {
-        "value": "1.1rem",
-        "type": "fontSizes"
-      },
-      "lineHeight": {
-        "value": "150%",
-        "type": "lineHeights"
-      },
-      "textDecoration": {
-        "value": "none",
-        "type": "textDecoration"
-      }
+      "type": "typography"
     }
   },
   "scale": {
@@ -700,30 +619,15 @@
   },
   "layer": {
     "1": {
-      "x": {
-        "value": -10,
-        "type": "x"
+      "value": {
+        "x": -10,
+        "y": 10,
+        "blur": 0,
+        "spread": 0,
+        "color": "#22222240",
+        "type": "dropShadow"
       },
-      "y": {
-        "value": 10,
-        "type": "y"
-      },
-      "blur": {
-        "value": 0,
-        "type": "blur"
-      },
-      "spread": {
-        "value": 0,
-        "type": "spread"
-      },
-      "color": {
-        "value": "#22222240",
-        "type": "color"
-      },
-      "type": {
-        "value": "dropShadow",
-        "type": "type"
-      }
+      "type": "boxShadow"
     }
   },
   "strokeWeight": {
