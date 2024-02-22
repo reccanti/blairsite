@@ -1,0 +1,171 @@
+{
+  "colors": {
+    "base": {
+      "black": null,
+      "white": null,
+      "yellow": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "red": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "blue": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "green": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "magenta": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "gray": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null
+      }
+    },
+    "overlay": null
+  },
+  "borderWidths": {
+    "strokeWeight": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null
+    }
+  },
+  "fontSizes": {
+    "fontSizes": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "body": null,
+      "header": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      }
+    }
+  },
+  "fontFamilies": {
+    "fontFamilies": {
+      "header": null,
+      "body": null,
+      "Oleo": null,
+      "Ubuntu": null
+    }
+  },
+  "fontWeights": {
+    "fontWeights": {
+      "regular": null,
+      "bold": null
+    }
+  },
+  "lineHeights": {
+    "lineheight": {
+      "1": null,
+      "2": null,
+      "3": null
+    }
+  },
+  "typographies": {
+    "header": {
+      "1": {
+        "font": null,
+        "textDecoration": null
+      },
+      "2": {
+        "font": null,
+        "textDecoration": null
+      },
+      "3": {
+        "font": null,
+        "textDecoration": null
+      },
+      "4": {
+        "font": null,
+        "textDecoration": null
+      },
+      "5": {
+        "font": null,
+        "textDecoration": null
+      },
+      "6": {
+        "font": null,
+        "textDecoration": null
+      }
+    },
+    "body": {
+      "font": null,
+      "textDecoration": null
+    },
+    "ui": {
+      "font": null,
+      "textDecoration": null
+    },
+    "link": {
+      "default": {
+        "font": null,
+        "textDecoration": null
+      },
+      "hover": {
+        "font": null,
+        "textDecoration": null
+      }
+    }
+  },
+  "spacing": {
+    "spacing": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null
+    }
+  }
+}

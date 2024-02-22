@@ -1,0 +1,210 @@
+{
+  "colors": {
+    "background": {
+      "default": null,
+      "yellow": null,
+      "magenta": null,
+      "blue": null,
+      "red": null,
+      "green": null,
+      "gray1": null,
+      "gray2": null,
+      "inverted": null,
+      "hover": {
+        "default": null,
+        "yellow": null,
+        "magenta": null,
+        "blue": null,
+        "red": null,
+        "green": null,
+        "gray1": null,
+        "gray2": null,
+        "inverted": null
+      }
+    },
+    "label": {
+      "default": null,
+      "yellow": null,
+      "magenta": null,
+      "blue": null,
+      "red": null,
+      "green": null,
+      "white": null,
+      "inverted": null,
+      "highlight": {
+        "yellow": null,
+        "magenta": null,
+        "blue": null,
+        "red": null,
+        "green": null
+      },
+      "inactive": {
+        "default": null,
+        "yellow": null,
+        "magenta": null,
+        "blue": null,
+        "red": null,
+        "green": null,
+        "white": null,
+        "inverted": null
+      },
+      "link": {
+        "default": null,
+        "hover": null,
+        "visited": {
+          "default": null,
+          "hover": null
+        }
+      }
+    },
+    "overlay": null,
+    "base": {
+      "black": null,
+      "white": null,
+      "yellow": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "red": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "blue": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "green": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "magenta": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null
+      },
+      "gray": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null
+      }
+    }
+  },
+  "borders": {
+    "focus": {
+      "default": null,
+      "link": {
+        "default": null,
+        "hover": null,
+        "visited": {
+          "default": null,
+          "hover": null
+        }
+      }
+    }
+  },
+  "borderWidths": {
+    "strokeWeight": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null
+    }
+  },
+  "boxShadows": {
+    "border": {
+      "focus": {
+        "default": null,
+        "green": null,
+        "blue": null,
+        "red": null,
+        "yellow": null,
+        "magenta": null,
+        "gray1": null,
+        "gray2": null,
+        "inverted": null,
+        "hover": {
+          "default": null,
+          "green": null,
+          "blue": null,
+          "red": null,
+          "yellow": null,
+          "magenta": null,
+          "gray1": null,
+          "gray2": null,
+          "inverted": null
+        }
+      }
+    }
+  },
+  "fontSizes": {
+    "fontSizes": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null
+    }
+  },
+  "fontFamilies": {
+    "fontFamilies": {
+      "Oleo": null,
+      "Ubuntu": null
+    }
+  },
+  "fontWeights": {
+    "fontWeights": {
+      "regular": null,
+      "bold": null
+    }
+  },
+  "lineHeights": {
+    "lineheight": {
+      "1": null,
+      "2": null,
+      "3": null
+    }
+  },
+  "spacing": {
+    "spacing": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null
+    }
+  }
+}
