@@ -72,21 +72,21 @@
   },
   "fontSizes": {
     "fontSizes": {
-      "1": "1.1rem",
-      "2": "1.6500000000000001rem",
-      "3": "2.475rem",
-      "4": "3.7125000000000004rem",
-      "5": "5.5687500000000005rem",
-      "6": "8.353125rem",
-      "7": "12.529687500000001rem",
-      "body": "1.1rem",
+      "1": "16px",
+      "2": "24px",
+      "3": "36px",
+      "4": "54px",
+      "5": "81px",
+      "6": "121.5px",
+      "7": "182.25px",
+      "body": "24px",
       "header": {
-        "1": "8.353125rem",
-        "2": "5.5687500000000005rem",
-        "3": "3.7125000000000004rem",
-        "4": "2.475rem",
-        "5": "1.6500000000000001rem",
-        "6": "1.1rem"
+        "1": "182.25px",
+        "2": "121.5px",
+        "3": "81px",
+        "4": "54px",
+        "5": "36px",
+        "6": "24px"
       }
     }
   },
@@ -114,45 +114,45 @@
   "typographies": {
     "header": {
       "1": {
-        "font": "Bold 8.353125rem Ubuntu",
+        "font": "Bold 182.25px Ubuntu",
         "textDecoration": "none"
       },
       "2": {
-        "font": "Bold 5.5687500000000005rem Ubuntu",
+        "font": "Bold 121.5px Ubuntu",
         "textDecoration": "none"
       },
       "3": {
-        "font": "Bold 3.7125000000000004rem Ubuntu",
+        "font": "Bold 81px Ubuntu",
         "textDecoration": "none"
       },
       "4": {
-        "font": "Bold 2.475rem Ubuntu",
+        "font": "Bold 54px Ubuntu",
         "textDecoration": "none"
       },
       "5": {
-        "font": "Bold 1.6500000000000001rem Ubuntu",
+        "font": "Bold 36px Ubuntu",
         "textDecoration": "none"
       },
       "6": {
-        "font": "Bold 1.1rem Ubuntu",
+        "font": "Bold 24px Ubuntu",
         "textDecoration": "none"
       }
     },
     "body": {
-      "font": "Regular 1.1rem/150% Ubuntu",
+      "font": "Regular 24px/150% Ubuntu",
       "textDecoration": "none"
     },
     "ui": {
-      "font": "uppercase Bold 1.1rem/100% Ubuntu",
+      "font": "uppercase Bold 16px/100% Ubuntu",
       "textDecoration": "none"
     },
     "link": {
       "default": {
-        "font": "Bold 1.1rem/150% Ubuntu",
+        "font": "Bold 24px/150% Ubuntu",
         "textDecoration": "underline"
       },
       "hover": {
-        "font": "Bold 1.1rem/150% Ubuntu",
+        "font": "Bold 24px/150% Ubuntu",
         "textDecoration": "none"
       }
     }

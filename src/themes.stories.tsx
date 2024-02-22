@@ -8,14 +8,20 @@ const Swatch = ({ colorClass }: { colorClass: string }) => (
 );
 
 const meta: Meta = {
-  title: "Themes",
+  title: "Examples/Themes",
+  component: Swatch,
   decorators: (Story) => {
     return (
-      <div className=".light">
+      <div className="light">
         <Swatch colorClass={colorStyle} />
+        <Story />
       </div>
     );
   },
 };
+
+type Story = StoryObj<typeof Swatch>;
+
+export const Green: Story = {};
 
 export default meta;

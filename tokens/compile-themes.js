@@ -360,7 +360,7 @@ async function writeThemeFile(fileName, contents) {
   const fontsLargeScreenTheme = compileThemes([
     "base",
     "fonts/semantic",
-    "fonts/largeScreen",
+    "fonts/largeScreens",
   ]);
   await writeThemeFile("fontsLargeScreen", fontsLargeScreenTheme);
   const fontsSimpleTheme = compileThemes([
@@ -372,7 +372,7 @@ async function writeThemeFile(fileName, contents) {
   const fontsLargeScreenSimpleTheme = compileThemes([
     "base",
     "fonts/semantic",
-    "fonts/largeScreen",
+    "fonts/largeScreens",
     "fonts/simple",
   ]);
   await writeThemeFile("fontsLargeScreenSimple", fontsLargeScreenSimpleTheme);

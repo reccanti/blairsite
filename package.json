@@ -20,6 +20,7 @@
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/addon-styling-webpack": "^0.0.6",
     "@storybook/blocks": "^7.6.17",
     "@storybook/nextjs": "^7.6.17",
     "@storybook/react": "^7.6.17",
@@ -33,11 +34,15 @@
     "@vanilla-extract/next-plugin": "^2.3.6",
     "@vanilla-extract/private": "^1.0.3",
     "@vanilla-extract/sprinkles": "^1.6.1",
+    "@vanilla-extract/webpack-plugin": "^2.3.6",
+    "css-loader": "^6.10.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "mini-css-extract-plugin": "^2.8.0",
     "storybook": "^7.6.17",
     "style-dictionary": "^3.9.2",
+    "style-loader": "^3.3.4",
     "token-transformer": "^0.0.33",
     "typescript": "^5"
   }
