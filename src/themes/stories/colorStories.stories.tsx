@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { lightClass } from "./global.css";
 import {
   colorSwatch,
   colorSwatches,
@@ -9,7 +8,7 @@ import {
   labelSwatches,
   palette,
   palettes,
-} from "./themes.css";
+} from "./colorStories.css";
 
 import {
   baseMagenta,
@@ -19,7 +18,6 @@ import {
   baseGray,
   baseYellow,
   backgroundDefaultColors,
-  colors,
   backgroundHoverColors,
   labelDefaultColors,
   labelInactiveColors,
@@ -28,9 +26,9 @@ import {
   labelLinkVisitedColors,
   backgroundColors,
   labelColors,
-} from "./sprinkles.css";
+} from "../sprinkles/colors.css";
 
-import { keys } from "./lib/utils/records";
+import { keys } from "../../lib/utils/records";
 
 const ColorSwatch = ({ color }: { color: keyof typeof backgroundColors }) => (
   <div className={colorSwatch({ color })} />
@@ -182,11 +180,6 @@ const Palettes = () => {
 const meta: Meta = {
   title: "Themes",
   component: Palettes,
-  decorators: (Story) => (
-    <div>
-      <Story />
-    </div>
-  ),
 };
 
 type Story = StoryObj<typeof Palettes>;

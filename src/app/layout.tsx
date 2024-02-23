@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 // import { theme } from "@/app/_global.css";
-import "@/global.css";
+import "@/themes/global.css";
 
 /**
  * Vanilla extract fonts and NextJS are kind of hard to get working together.

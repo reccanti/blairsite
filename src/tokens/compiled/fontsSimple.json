@@ -139,7 +139,7 @@
       }
     },
     "body": {
-      "font": "Regular 16px/150% Ubuntu",
+      "font": "16px/150% Ubuntu",
       "textDecoration": "none"
     },
     "ui": {

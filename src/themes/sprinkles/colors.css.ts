@@ -1,5 +1,5 @@
-import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
-import { colorVars } from "./global.css";
+import { defineProperties } from "@vanilla-extract/sprinkles";
+import { colorVars } from "../global.css";
 
 // base colors
 
@@ -231,7 +231,7 @@ export const backgroundColors = {
   ...backgroundHoverColors,
 };
 
-const backgroundColorProperties = defineProperties({
+export const backgroundColorProperties = defineProperties({
   properties: {
     backgroundColor: backgroundColors,
   },
@@ -246,14 +246,8 @@ export const labelColors = {
   ...labelLinkVisitedColors,
 };
 
-const labelColorProperties = defineProperties({
+export const labelColorProperties = defineProperties({
   properties: {
     color: labelColors,
   },
 });
-
-export const sprinkles = createSprinkles(
-  backgroundColorProperties,
-  labelColorProperties
-);
-export type Sprinkles = Parameters<typeof sprinkles>[0];

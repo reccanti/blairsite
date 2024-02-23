@@ -92,7 +92,7 @@
   },
   "fontFamilies": {
     "fontFamilies": {
-      "header": "Ubuntu",
+      "header": "Oleo Script",
       "body": "Ubuntu",
       "Oleo": "Oleo Script",
       "Ubuntu": "Ubuntu"
@@ -114,32 +114,32 @@
   "typographies": {
     "header": {
       "1": {
-        "font": "Bold 121.5px Ubuntu",
+        "font": "Bold 121.5px Oleo Script",
         "textDecoration": "none"
       },
       "2": {
-        "font": "Bold 81px Ubuntu",
+        "font": "Bold 81px Oleo Script",
         "textDecoration": "none"
       },
       "3": {
-        "font": "Bold 54px Ubuntu",
+        "font": "Bold 54px Oleo Script",
         "textDecoration": "none"
       },
       "4": {
-        "font": "Bold 36px Ubuntu",
+        "font": "Bold 36px Oleo Script",
         "textDecoration": "none"
       },
       "5": {
-        "font": "Bold 24px Ubuntu",
+        "font": "Bold 24px Oleo Script",
         "textDecoration": "none"
       },
       "6": {
-        "font": "Bold 16px Ubuntu",
+        "font": "Bold 16px Oleo Script",
         "textDecoration": "none"
       }
     },
     "body": {
-      "font": "Regular 16px/150% Ubuntu",
+      "font": "16px/150% Ubuntu",
       "textDecoration": "none"
     },
     "ui": {

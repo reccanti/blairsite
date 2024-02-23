@@ -1,5 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
-import { backgroundColors, labelColors, sprinkles } from "./sprinkles.css";
+import { backgroundColors, labelColors } from "../sprinkles/colors.css";
+import { sprinkles } from "../sprinkles.css";
 import { style, styleVariants } from "@vanilla-extract/css";
 
 export const colorSwatchVariants = styleVariants(backgroundColors, (v, k) => [

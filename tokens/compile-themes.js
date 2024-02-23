@@ -177,7 +177,8 @@ function createFontWeights(tree) {
 
 const fmtFontFamily = (value) => (!!value ? ` ${value}` : "");
 const fmtFontSize = (value) => (!!value ? ` ${value}` : "");
-const fmtFontWeight = (value) => (!!value ? ` ${value}` : "");
+const fmtFontWeight = (value) =>
+  !!value && value !== "Regular" ? ` ${value}` : "";
 const fmtLineHeight = (value) => (!!value ? `/${value}` : "");
 const fmtTextDecoration = (value) => (!!value ? value : "none");
 const fmtTextCase = (value) => (!!value ? ` ${value}` : "");
@@ -277,7 +278,7 @@ function createThemeContractObject(theme) {
   return contract;
 }
 
-const OUT_DIR = resolve(__dirname, "..", "src", "themes", "compiled");
+const OUT_DIR = resolve(__dirname, "..", "src", "tokens", "compiled");
 
 function compileThemes(tokenSets) {
   const resolved = transformTokens(tokens, tokenSets);
@@ -355,25 +356,21 @@ async function writeThemeFile(fileName, contents) {
   await writeThemeFile("colorThemeContract", colorThemeContract);
 
   // font themes
-  const fontsTheme = compileThemes(["base", "fonts/semantic"]);
+  const fontsTheme = compileThemes(["base", "fonts/semantic", "fonts/styled"]);
   await writeThemeFile("fonts", fontsTheme);
   const fontsLargeScreenTheme = compileThemes([
     "base",
     "fonts/semantic",
+    "fonts/styled",
     "fonts/largeScreens",
   ]);
   await writeThemeFile("fontsLargeScreen", fontsLargeScreenTheme);
-  const fontsSimpleTheme = compileThemes([
-    "base",
-    "fonts/semantic",
-    "fonts/simple",
-  ]);
+  const fontsSimpleTheme = compileThemes(["base", "fonts/semantic"]);
   await writeThemeFile("fontsSimple", fontsSimpleTheme);
   const fontsLargeScreenSimpleTheme = compileThemes([
     "base",
     "fonts/semantic",
     "fonts/largeScreens",
-    "fonts/simple",
   ]);
   await writeThemeFile("fontsLargeScreenSimple", fontsLargeScreenSimpleTheme);
 
