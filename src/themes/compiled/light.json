@@ -19,7 +19,7 @@
         "green": "#C7F881",
         "gray1": "#D7D7D7",
         "gray2": "#363636",
-        "inverted": "#222222"
+        "inverted": "#363636"
       }
     },
     "label": {
@@ -161,7 +161,7 @@
           "magenta": "inset 0px 0px 0px 4.5px #FF9CCD,inset 0px 0px 0px 9px #750049",
           "gray1": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #FFFFFF",
           "gray2": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF",
-          "inverted": "inset 0px 0px 0px 4.5px #222222,inset 0px 0px 0px 9px #FFFFFF"
+          "inverted": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF"
         }
       }
     }

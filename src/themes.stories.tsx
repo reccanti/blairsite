@@ -1,27 +1,91 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { lightClass } from "./global.css";
-import { colorStyle } from "./themes.css";
-import { style } from "@vanilla-extract/css";
+import { swatch, swatches } from "./themes.css";
 
-const Swatch = ({ colorClass }: { colorClass: string }) => (
-  <div className={colorClass} />
+import {
+  baseMagenta,
+  baseGreen,
+  baseBlue,
+  baseRed,
+  baseGray,
+  baseColors,
+  baseYellow,
+} from "./sprinkles.css";
+
+import { keys } from "./lib/utils/records";
+
+const Swatch = ({ color }: { color: keyof typeof baseColors }) => (
+  <div className={swatch({ color })} />
 );
 
-const meta: Meta = {
-  title: "Examples/Themes",
-  component: Swatch,
-  decorators: (Story) => {
-    return (
-      <div className="light">
-        <Swatch colorClass={colorStyle} />
-        <Story />
+const Palettes = () => {
+  return (
+    <>
+      <h1>Base Color Palette</h1>
+      <div className={swatches}>
+        <Swatch color="baseBlack" />
+        <Swatch color="baseWhite" />
       </div>
-    );
-  },
+      <div className={swatches}>
+        {keys(baseMagenta).map((variant) => (
+          <Swatch key={variant} color={variant} />
+        ))}
+      </div>
+      <div className={swatches}>
+        {keys(baseGreen).map((variant) => (
+          <Swatch key={variant} color={variant} />
+        ))}
+      </div>
+      <div className={swatches}>
+        {keys(baseBlue).map((variant) => (
+          <Swatch key={variant} color={variant} />
+        ))}
+      </div>
+      <div className={swatches}>
+        {keys(baseRed).map((variant) => (
+          <Swatch key={variant} color={variant} />
+        ))}
+      </div>
+      <div className={swatches}>
+        {keys(baseYellow).map((variant) => (
+          <Swatch key={variant} color={variant} />
+        ))}
+      </div>
+      <div className={swatches}>
+        {keys(baseGray).map((variant) => (
+          <Swatch key={variant} color={variant} />
+        ))}
+      </div>
+
+      <h1>Semantic Backgrounds</h1>
+      {/* <div className={palette}>
+        <div className={swatches}>
+          {keys(backgroundVariants).map((variant) => (
+            <Swatch key={variant} variant={swatch({ color: variant })} />
+          ))}
+        </div>
+        <div className={swatches}>
+          {keys(hoveredBackgroundVariants).map((variant) => (
+            <Swatch key={variant} variant={swatch({ color: variant })} />
+          ))}
+        </div>
+      </div> */}
+    </>
+  );
 };
 
-type Story = StoryObj<typeof Swatch>;
+const meta: Meta = {
+  title: "Themes",
+  component: Palettes,
+  decorators: (Story) => (
+    <div>
+      <Story />
+    </div>
+  ),
+};
 
-export const Green: Story = {};
+type Story = StoryObj<typeof Palettes>;
+
+export const Colors: Story = {};
 
 export default meta;

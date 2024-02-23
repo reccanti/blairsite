@@ -17,9 +17,9 @@
         "blue": "#0E7EC8",
         "red": "#B33225",
         "green": "#007A7A",
-        "gray1": "{base.gray.4000}",
-        "gray2": "{base.gray.5500}",
-        "inverted": "#222222"
+        "gray1": "#D7D7D7",
+        "gray2": "#AFAFAF",
+        "inverted": "#C3C3C3"
       }
     },
     "label": {
@@ -159,9 +159,9 @@
           "red": "inset 0px 0px 0px 4.5px #B33225,inset 0px 0px 0px 9px #ffaaa2",
           "yellow": "inset 0px 0px 0px 4.5px #d3770d,inset 0px 0px 0px 9px #fff7cc",
           "magenta": "inset 0px 0px 0px 4.5px #A20065,inset 0px 0px 0px 9px #ffe0ed",
-          "gray1": "inset 0px 0px 0px 4.5px {base.gray.4000},inset 0px 0px 0px 9px #222222",
-          "gray2": "inset 0px 0px 0px 4.5px {base.gray.5500},inset 0px 0px 0px 9px #222222",
-          "inverted": "inset 0px 0px 0px 4.5px #222222,inset 0px 0px 0px 9px #222222"
+          "gray1": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #222222",
+          "gray2": "inset 0px 0px 0px 4.5px #AFAFAF,inset 0px 0px 0px 9px #222222",
+          "inverted": "inset 0px 0px 0px 4.5px #C3C3C3,inset 0px 0px 0px 9px #222222"
         }
       }
     }
