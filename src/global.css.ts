@@ -9,18 +9,18 @@ import oleoRegular from "../public/fonts/Oleo_Script/OleoScript-Regular.ttf";
 import oleoBold from "../public/fonts/Oleo_Script/OleoScript-Bold.ttf";
 
 // themes
-import lightJson from "./themes/compiled/light.json";
-import darkJson from "./themes/compiled/dark.json";
-import highContrastJson from "./themes/compiled/highContrast.json";
-import highContrastDarkJson from "./themes/compiled/highContrastDark.json";
-import fontsJson from "./themes/compiled/fonts.json";
-import fontsLargeScreenJson from "./themes/compiled/fontsLargeScreen.json";
-import fontsSimple from "./themes/compiled/fontsSimple.json";
-import fontsLargeScreenSimple from "./themes/compiled/fontsLargeScreenSimple.json";
+import lightJson from "./tokens/compiled/light.json";
+import darkJson from "./tokens/compiled/dark.json";
+import highContrastJson from "./tokens/compiled/highContrast.json";
+import highContrastDarkJson from "./tokens/compiled/highContrastDark.json";
+import fontsJson from "./tokens/compiled/fonts.json";
+import fontsLargeScreenJson from "./tokens/compiled/fontsLargeScreen.json";
+import fontsSimple from "./tokens/compiled/fontsSimple.json";
+import fontsLargeScreenSimple from "./tokens/compiled/fontsLargeScreenSimple.json";
 
 // theme contracts
-import colorThemeContract from "./themes/compiled/colorThemeContract.json";
-import fontsThemeContract from "./themes/compiled/fontsThemeContract.json";
+import colorThemeContract from "./tokens/compiled/colorThemeContract.json";
+import fontsThemeContract from "./tokens/compiled/fontsThemeContract.json";
 
 const oleo = "Oleo Script";
 globalFontFace(oleo, {

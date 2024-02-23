@@ -80,13 +80,180 @@ export const baseColors = {
   ...baseGray,
 };
 
-const baseColorProperties = defineProperties({
+// semantic colors
+
+const {
+  default: backgroundDefault,
+  magenta: backgroundMagenta,
+  green: backgroundGreen,
+  blue: backgroundBlue,
+  red: backgroundRed,
+  yellow: backgroundYellow,
+  gray1: backgroundGray1,
+  gray2: backgroundGray2,
+  inverted: backgroundInverted,
+} = colorVars.colors.background;
+
+export const backgroundDefaultColors = {
+  backgroundDefault,
+  backgroundMagenta,
+  backgroundGreen,
+  backgroundBlue,
+  backgroundRed,
+  backgroundYellow,
+  backgroundGray1,
+  backgroundGray2,
+  backgroundInverted,
+};
+
+const {
+  default: backgroundHoverDefault,
+  magenta: backgroundHoverMagenta,
+  green: backgroundHoverGreen,
+  blue: backgroundHoverBlue,
+  red: backgroundHoverRed,
+  yellow: backgroundHoverYellow,
+  gray1: backgroundHoverGray1,
+  gray2: backgroundHoverGray2,
+  inverted: backgroundHoverInverted,
+} = colorVars.colors.background.hover;
+
+export const backgroundHoverColors = {
+  backgroundHoverDefault,
+  backgroundHoverMagenta,
+  backgroundHoverGreen,
+  backgroundHoverBlue,
+  backgroundHoverRed,
+  backgroundHoverYellow,
+  backgroundHoverGray1,
+  backgroundHoverGray2,
+  backgroundHoverInverted,
+};
+
+const {
+  default: labelDefault,
+  magenta: labelMagenta,
+  green: labelGreen,
+  blue: labelBlue,
+  red: labelRed,
+  yellow: labelYellow,
+  white: labelGray1,
+  inverted: labelInverted,
+} = colorVars.colors.label;
+
+export const labelDefaultColors = {
+  labelDefault,
+  labelMagenta,
+  labelGreen,
+  labelBlue,
+  labelRed,
+  labelYellow,
+  labelGray1,
+  labelInverted,
+};
+
+const {
+  default: labelInactiveDefault,
+  magenta: labelInactiveMagenta,
+  green: labelInactiveGreen,
+  blue: labelInactiveBlue,
+  red: labelInactiveRed,
+  yellow: labelInactiveYellow,
+  white: labelInactiveGray1,
+  inverted: labelInactiveInverted,
+} = colorVars.colors.label.inactive;
+
+export const labelInactiveColors = {
+  labelInactiveDefault,
+  labelInactiveMagenta,
+  labelInactiveGreen,
+  labelInactiveBlue,
+  labelInactiveRed,
+  labelInactiveYellow,
+  labelInactiveGray1,
+  labelInactiveInverted,
+};
+
+const {
+  magenta: labelHighlightMagenta,
+  green: labelHighlightGreen,
+  blue: labelHighlightBlue,
+  red: labelHighlightRed,
+  yellow: labelHighlightYellow,
+} = colorVars.colors.label.highlight;
+
+export const labelHighlightColors = {
+  labelHighlightMagenta,
+  labelHighlightGreen,
+  labelHighlightBlue,
+  labelHighlightRed,
+  labelHighlightYellow,
+};
+
+const { default: labelLinkDefault, hover: labelLinkHover } =
+  colorVars.colors.label.link;
+
+export const labelLinkColors = {
+  labelLinkDefault,
+  labelLinkHover,
+};
+
+const { default: labelLinkVisitedDefault, hover: labelLinkVisitedHover } =
+  colorVars.colors.label.link.visited;
+
+export const labelLinkVisitedColors = {
+  labelLinkVisitedDefault,
+  labelLinkVisitedHover,
+};
+
+export const semanticColors = {
+  ...backgroundDefaultColors,
+  ...backgroundHoverColors,
+  ...labelDefaultColors,
+  ...labelInactiveColors,
+  ...labelHighlightColors,
+  ...labelLinkColors,
+  ...labelLinkVisitedColors,
+};
+
+// export all colors
+
+export const colors = {
+  ...baseColors,
+  ...semanticColors,
+};
+
+// define all Sprinkles properties
+
+export const backgroundColors = {
+  ...baseColors,
+  ...backgroundDefaultColors,
+  ...backgroundHoverColors,
+};
+
+const backgroundColorProperties = defineProperties({
   properties: {
-    backgroundColor: baseColors,
-    color: baseColors,
-    borderColor: baseColors,
+    backgroundColor: backgroundColors,
   },
 });
 
-export const sprinkles = createSprinkles(baseColorProperties);
+export const labelColors = {
+  ...baseColors,
+  ...labelDefaultColors,
+  ...labelInactiveColors,
+  ...labelHighlightColors,
+  ...labelLinkColors,
+  ...labelLinkVisitedColors,
+};
+
+const labelColorProperties = defineProperties({
+  properties: {
+    color: labelColors,
+  },
+});
+
+export const sprinkles = createSprinkles(
+  backgroundColorProperties,
+  labelColorProperties
+);
 export type Sprinkles = Parameters<typeof sprinkles>[0];
