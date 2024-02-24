@@ -30,11 +30,6 @@ function FontListing() {
 const meta: Meta = {
   title: "Themes",
   component: FontListing,
-  decorators: (Story) => (
-    <div>
-      <Story />
-    </div>
-  ),
 };
 
 type Story = StoryObj<typeof FontListing>;

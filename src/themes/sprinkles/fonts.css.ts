@@ -1,5 +1,5 @@
 import { defineProperties } from "@vanilla-extract/sprinkles";
-import { fontVars } from "../global.css";
+import { fontVars } from "../base.css";
 
 // attempt to mimic Token Studio's "Typography" token, which combines the
 // features of CSS's `font` and `textDecoration
@@ -39,15 +39,3 @@ export const typographyProperties = defineProperties({
     typography: ["font", "textDecoration"],
   },
 });
-
-// const { Oleo, Ubuntu, header, body } = fontVars.fontFamilies.fontFamilies;
-
-// export const baseFontFamilies = {
-//   Oleo,
-//   Ubuntu,
-// };
-
-// export const semanticFontFamilies = {
-//   header,
-//   body,
-// };

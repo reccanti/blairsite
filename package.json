@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "compileTokens": "node ./tokens/compile-themes.js"
   },
   "dependencies": {
     "lodash": "^4.17.21",

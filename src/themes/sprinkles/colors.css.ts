@@ -1,5 +1,5 @@
 import { defineProperties } from "@vanilla-extract/sprinkles";
-import { colorVars } from "../global.css";
+import { colorVars } from "../base.css";
 
 // base colors
 
@@ -137,7 +137,7 @@ const {
   blue: labelBlue,
   red: labelRed,
   yellow: labelYellow,
-  white: labelGray1,
+  white: labelWhite,
   inverted: labelInverted,
 } = colorVars.colors.label;
 
@@ -148,7 +148,7 @@ export const labelDefaultColors = {
   labelBlue,
   labelRed,
   labelYellow,
-  labelGray1,
+  labelWhite,
   labelInverted,
 };
 
@@ -159,7 +159,7 @@ const {
   blue: labelInactiveBlue,
   red: labelInactiveRed,
   yellow: labelInactiveYellow,
-  white: labelInactiveGray1,
+  white: labelInactiveWhite,
   inverted: labelInactiveInverted,
 } = colorVars.colors.label.inactive;
 
@@ -170,7 +170,7 @@ export const labelInactiveColors = {
   labelInactiveBlue,
   labelInactiveRed,
   labelInactiveYellow,
-  labelInactiveGray1,
+  labelInactiveWhite,
   labelInactiveInverted,
 };
 
