@@ -8,7 +8,7 @@ export function Tile({
   fullWidth = false,
 }: {
   children: ReactNode;
-  color: keyof typeof backgroundDefaultColors;
+  color?: keyof typeof backgroundDefaultColors;
   fullWidth?: boolean;
 }) {
   const hasPadding = !fullWidth;

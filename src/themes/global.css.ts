@@ -12,17 +12,15 @@ import { typeDecorations, typeFonts } from "./sprinkles/fonts.css";
 globalStyle(":root", {
   backgroundColor: backgroundDefaultColors.backgroundDefault,
   color: labelDefaultColors.labelDefault,
+  fontSize: fontVars.fontSizes.fontSizes.body,
+  font: typeFonts.bodyType,
+  textDecoration: typeDecorations.bodyType,
 });
-
-// globalStyle(":root", sprinkles({ backgroundColor: "backgroundDefault" }));
 
 globalStyle("*", {
   boxSizing: "border-box",
   margin: 0,
   padding: 0,
-  fontSize: fontVars.fontSizes.fontSizes.body,
-  font: typeFonts.bodyType,
-  textDecoration: typeDecorations.bodyType,
 });
 
 globalStyle("h1, h2, h3, h4, h5, h6", {

@@ -48,32 +48,3 @@ export const tile = recipe({
     },
   },
 });
-
-// style inner text of a Tile
-// globalStyle(`${tile({ color: "backgroundDefault" })} > *`, {
-//   color: sprinkles({ color: "labelDefault" }),
-// });
-// globalStyle(`${tile({ color: "backgroundMagenta" })} > *`, {
-//   color: sprinkles({ color: "labelMagenta" }),
-// });
-// globalStyle(`${tile({ color: "backgroundBlue" })} > *`, {
-//   color: sprinkles({ color: "labelBlue" }),
-// });
-// globalStyle(`${tile({ color: "backgroundGreen" })} > *`, {
-//   color: sprinkles({ color: "labelGreen" }),
-// });
-// globalStyle(`${tile({ color: "backgroundYellow" })} > *`, {
-//   color: sprinkles({ color: "labelYellow" }),
-// });
-// globalStyle(`${tile({ color: "backgroundRed" })} > *`, {
-//   color: sprinkles({ color: "labelRed" }),
-// });
-// globalStyle(`${tile({ color: "backgroundGray1" })} > *`, {
-//   color: sprinkles({ color: "labelWhite" }),
-// });
-// globalStyle(`${tile({ color: "backgroundGray2" })} > *`, {
-//   color: sprinkles({ color: "labelWhite" }),
-// });
-// globalStyle(`${tile({ color: "backgroundInverted" })} > *`, {
-//   color: sprinkles({ color: "labelInverted" }),
-// });
