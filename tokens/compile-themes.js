@@ -205,16 +205,18 @@ function createTypographies(tree) {
       } = node.value;
 
       const fontValue =
-        fmtTextCase(textCase) +
         fmtFontWeight(fontWeight) +
         fmtFontSize(fontSize) +
         fmtLineHeight(lineHeight) +
         fmtFontFamily(fontFamily);
 
       const textDecorationValue = fmtTextDecoration(textDecoration);
+      const textTransformValue = fmtTextCase(textCase);
+
       const newValue = {
         font: fontValue.trim(),
-        textDecoration: textDecorationValue,
+        textDecoration: textDecorationValue.trim(),
+        textTransform: textTransformValue.trim(),
       };
       addToObjectAtPath(typographies, path, newValue);
     }

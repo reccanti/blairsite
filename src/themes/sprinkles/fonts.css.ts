@@ -1,10 +1,25 @@
 import { defineProperties } from "@vanilla-extract/sprinkles";
 import { fontVars } from "../base.css";
+import { CSSVarFunction } from "@vanilla-extract/private";
 
 // attempt to mimic Token Studio's "Typography" token, which combines the
 // features of CSS's `font` and `textDecoration
 
-const { body, header } = fontVars.typographies;
+const { body, header, link, ui } = fontVars.typographies;
+
+// we use this contract to ensure all "typography" values can be set at once
+interface FontContract {
+  bodyType: CSSVarFunction;
+  header1Type: CSSVarFunction;
+  header2Type: CSSVarFunction;
+  header3Type: CSSVarFunction;
+  header4Type: CSSVarFunction;
+  header5Type: CSSVarFunction;
+  header6Type: CSSVarFunction;
+  uiType: CSSVarFunction;
+  linkType: CSSVarFunction;
+  linkHoverType: CSSVarFunction;
+}
 
 export const typeFonts = {
   bodyType: body.font,
@@ -14,7 +29,10 @@ export const typeFonts = {
   header4Type: header["4"].font,
   header5Type: header["5"].font,
   header6Type: header["6"].font,
-};
+  uiType: ui.font,
+  linkType: link.default.font,
+  linkHoverType: link.hover.font,
+} satisfies FontContract;
 
 export const typeDecorations = {
   bodyType: body.textDecoration,
@@ -24,7 +42,23 @@ export const typeDecorations = {
   header4Type: header["4"].textDecoration,
   header5Type: header["5"].textDecoration,
   header6Type: header["6"].textDecoration,
-};
+  uiType: ui.textDecoration,
+  linkType: link.default.textDecoration,
+  linkHoverType: link.hover.textDecoration,
+} satisfies FontContract;
+
+export const typeTransforms = {
+  bodyType: body.textTransform,
+  header1Type: header["1"].textTransform,
+  header2Type: header["2"].textTransform,
+  header3Type: header["3"].textTransform,
+  header4Type: header["4"].textTransform,
+  header5Type: header["5"].textTransform,
+  header6Type: header["6"].textTransform,
+  uiType: ui.textTransform,
+  linkType: link.default.textTransform,
+  linkHoverType: link.hover.textTransform,
+} satisfies FontContract;
 
 // export const typeShorthands = {
 //   typeography: ["font", "textDecoration"],
@@ -34,8 +68,9 @@ export const typographyProperties = defineProperties({
   properties: {
     font: typeFonts,
     textDecoration: typeDecorations,
+    textTransform: typeTransforms,
   },
   shorthands: {
-    typography: ["font", "textDecoration"],
+    typography: ["font", "textDecoration", "textTransform"],
   },
 });

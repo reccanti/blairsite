@@ -115,45 +115,55 @@
     "header": {
       "1": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       },
       "2": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       },
       "3": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       },
       "4": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       },
       "5": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       },
       "6": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       }
     },
     "body": {
       "font": null,
-      "textDecoration": null
+      "textDecoration": null,
+      "textTransform": null
     },
     "ui": {
       "font": null,
-      "textDecoration": null
+      "textDecoration": null,
+      "textTransform": null
     },
     "link": {
       "default": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       },
       "hover": {
         "font": null,
-        "textDecoration": null
+        "textDecoration": null,
+        "textTransform": null
       }
     }
   },
