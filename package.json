@@ -12,6 +12,10 @@
     "compileTokens": "node ./tokens/compile-themes.js"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.0",
+    "@types/mdx": "^2.0.11",
     "classnames": "^2.5.1",
     "lodash": "^4.17.21",
     "next": "14.1.0",

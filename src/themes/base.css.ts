@@ -33,6 +33,7 @@ import fontsLargeScreenSimple from "../tokens/compiled/fontsLargeScreenSimple.js
 import colorThemeContract from "../tokens/compiled/colorThemeContract.json";
 import fontsThemeContract from "../tokens/compiled/fontsThemeContract.json";
 import { themeRootClass } from "../components/ThemeProvider/ThemeProvider.css";
+import { tabletQuery } from "./utlities/breakpoints.css";
 
 const oleo = "Oleo Script";
 globalFontFace(oleo, {
@@ -96,7 +97,6 @@ export const fontVars = createThemeContract(fontsThemeContract);
 export const lightClass = "light";
 export const darkClass = "dark";
 export const highContrastClass = "highContrast";
-// export const highContrastDarkClass = "highContrastDark";
 export const fontsClass = "fonts";
 export const fontsLargeScreenClass = "fontsLargeScreen";
 export const simpleClass = "simple";
@@ -143,7 +143,7 @@ globalStyle("html", {
     "(prefers-color-scheme: dark)": {
       vars: assignVars(colorVars, darkJson),
     },
-    "(min-width: 744px)": {
+    [tabletQuery]: {
       vars: assignVars(fontVars, fontsLargeScreenJson),
     },
   },

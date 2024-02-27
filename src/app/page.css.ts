@@ -1,58 +1,56 @@
-import { keyframes, style, globalStyle } from "@vanilla-extract/css";
-import image1 from "../../public/assets/BackgroundImage1.png";
-import image2 from "../../public/assets/BackgroundImage2.png";
-import image3 from "../../public/assets/BackgroundImage3.png";
+import { style, globalStyle } from "@vanilla-extract/css";
 import { sprinkles } from "../themes/sprinkles.css";
 import { highlight } from "../components/Highlight/Highlight.css";
 import { header } from "../components/Header/Header.css";
 import { lineHeights } from "../themes/sprinkles/fonts.css";
-import { reducedMotionClass } from "../themes/base.css";
+import {
+  desktopQuery,
+  desktopSize,
+  tabletQuery,
+} from "@/themes/utlities/breakpoints.css";
+import { tile } from "@/components/Tile/Tile.css";
 
-const scrollingBackgroundFrames = keyframes({
-  from: {
-    backgroundPositionY: "calc(0% - 100vh)",
-  },
-  to: {
-    backgroundPositionY: "calc(-100%)",
-  },
+// styles that can be re-used per section
+
+export const contentWrapper = style({
+  maxWidth: desktopSize,
+  margin: "0 auto",
 });
 
-export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
-  backgroundImage: `
-    url("${image1.src}"), 
-    url("${image2.src}"), 
-    url("${image3.src}")`,
-  backgroundPositionX: `
-    left,
-    right,
-    center`,
-  backgroundAttachment: "fixed",
-  backgroundRepeat: "repeat-y",
-  willChange: "background-position-y",
-  transform: "translateZ(0)",
-
-  animation: `${scrollingBackgroundFrames} 240s linear infinite`,
-};
-
-export const scrollingBackground = style({
-  "@media": {
-    "not (prefers-reduced-motion)": {
-      ...scrollingBackgroundStyles,
-    },
-  },
-  selectors: {
-    [`.themeRoot:not(.${reducedMotionClass}) &`]: {
-      ...scrollingBackgroundStyles,
-    },
-  },
+export const sectionHeader = style({
+  aspectRatio: "1 auto",
+  gridArea: "header",
+  height: "100%",
+  width: "100%",
 });
 
-export const pageWrapper = style([
-  scrollingBackground,
-  {
-    minHeight: "100vh",
-  },
-]);
+export const sectionImage = style({
+  aspectRatio: "1 auto",
+  gridArea: "image",
+  position: "relative",
+  overflow: "hidden",
+  height: "100%",
+  width: "100%",
+});
+
+export const sectionImageImg = style({
+  objectFit: "cover",
+});
+
+export const sectionContent = style({
+  aspectRatio: "1 auto",
+  gridArea: "content",
+  height: "100%",
+  width: "100%",
+});
+
+globalStyle(`.${contentWrapper} .${tile()}`, {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+// splash section with centered text
 
 export const splash = style([
   sprinkles({ padding: "spacing3", lineHeight: "lineHeight2" }),
@@ -75,4 +73,29 @@ globalStyle(`${splashHeader} ${highlight()}`, {
 
 globalStyle(`${splashHeader} ${header()}`, {
   lineHeight: lineHeights.lineHeight2,
+});
+
+// about section: large title block with an image and text
+
+export const about = style({
+  display: "flex",
+  flexDirection: "column",
+  "@media": {
+    [tabletQuery]: {
+      display: "grid",
+      gridTemplateAreas: `
+        "header header"
+        "image content"
+      `,
+      gridTemplateColumns: "50% 50%",
+    },
+    [desktopQuery]: {
+      display: "grid",
+      gridTemplateAreas: `
+        "header header image"
+        "header header content"
+      `,
+      gridTemplateColumns: "calc(100% / 3) calc(100% / 3) calc(100% / 3)",
+    },
+  },
 });

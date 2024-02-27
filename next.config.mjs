@@ -1,9 +1,13 @@
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 
+import createMDX from "@next/mdx";
+
+const withMDX = createMDX();
 const withVanillaExtraction = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx", "md"],
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(ttf)$/i,
@@ -14,4 +18,4 @@ const nextConfig = {
   },
 };
 
-export default withVanillaExtraction(nextConfig);
+export default withVanillaExtraction(withMDX(nextConfig));
