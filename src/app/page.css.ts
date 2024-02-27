@@ -2,10 +2,11 @@ import { keyframes, style, globalStyle } from "@vanilla-extract/css";
 import image1 from "../../public/assets/BackgroundImage1.png";
 import image2 from "../../public/assets/BackgroundImage2.png";
 import image3 from "../../public/assets/BackgroundImage3.png";
-import { sprinkles } from "@/themes/sprinkles.css";
-import { highlight } from "@/components/Highlight/Highlight.css";
-import { header } from "@/components/Header/Header.css";
-import { lineHeights } from "@/themes/sprinkles/fonts.css";
+import { sprinkles } from "../themes/sprinkles.css";
+import { highlight } from "../components/Highlight/Highlight.css";
+import { header } from "../components/Header/Header.css";
+import { lineHeights } from "../themes/sprinkles/fonts.css";
+import { reducedMotionClass } from "../themes/base.css";
 
 const scrollingBackgroundFrames = keyframes({
   from: {
@@ -16,7 +17,7 @@ const scrollingBackgroundFrames = keyframes({
   },
 });
 
-export const scrollingBackground = style({
+export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
   backgroundImage: `
     url("${image1.src}"), 
     url("${image2.src}"), 
@@ -31,6 +32,19 @@ export const scrollingBackground = style({
   transform: "translateZ(0)",
 
   animation: `${scrollingBackgroundFrames} 240s linear infinite`,
+};
+
+export const scrollingBackground = style({
+  "@media": {
+    "not (prefers-reduced-motion)": {
+      ...scrollingBackgroundStyles,
+    },
+  },
+  selectors: {
+    [`.themeRoot:not(.${reducedMotionClass}) &`]: {
+      ...scrollingBackgroundStyles,
+    },
+  },
 });
 
 export const pageWrapper = style([

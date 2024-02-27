@@ -1,11 +1,6 @@
 import { Header } from "@/components/Header";
 import { Highlight } from "@/components/Highlight";
-import {
-  pageWrapper,
-  scrollingBackground,
-  splash,
-  splashHeader,
-} from "./page.css";
+import { pageWrapper, splash, splashHeader } from "@/app/page.css";
 
 export default function Home() {
   return (

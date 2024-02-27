@@ -32,6 +32,7 @@ import fontsLargeScreenSimple from "../tokens/compiled/fontsLargeScreenSimple.js
 // theme contracts
 import colorThemeContract from "../tokens/compiled/colorThemeContract.json";
 import fontsThemeContract from "../tokens/compiled/fontsThemeContract.json";
+import { themeRootClass } from "../components/ThemeProvider/ThemeProvider.css";
 
 const oleo = "Oleo Script";
 globalFontFace(oleo, {
@@ -99,25 +100,34 @@ export const highContrastClass = "highContrast";
 export const fontsClass = "fonts";
 export const fontsLargeScreenClass = "fontsLargeScreen";
 export const simpleClass = "simple";
+export const reducedMotionClass = "reduceMotion";
 
-createGlobalTheme(`.${lightClass}`, colorVars, lightJson);
-createGlobalTheme(`.${darkClass}`, colorVars, darkJson);
-createGlobalTheme(`.${highContrastClass}`, colorVars, highContrastJson);
+createGlobalTheme(`.${themeRootClass}.${lightClass}`, colorVars, lightJson);
+createGlobalTheme(`.${themeRootClass}.${darkClass}`, colorVars, darkJson);
 createGlobalTheme(
-  `.${highContrastClass}.${darkClass}`,
+  `.${themeRootClass}.${highContrastClass}`,
+  colorVars,
+  highContrastJson
+);
+createGlobalTheme(
+  `.${themeRootClass}.${highContrastClass}.${darkClass}`,
   colorVars,
   highContrastDarkJson
 );
 
-createGlobalTheme(`.${fontsClass}:not(.${simpleClass})`, fontVars, fontsJson);
 createGlobalTheme(
-  `.${fontsLargeScreenClass}:not(.${simpleClass})`,
+  `.${themeRootClass}.${fontsClass}:not(.${simpleClass})`,
+  fontVars,
+  fontsJson
+);
+createGlobalTheme(
+  `.${themeRootClass}.${fontsLargeScreenClass}:not(.${simpleClass})`,
   fontVars,
   fontsLargeScreenJson
 );
-createGlobalTheme(`.${simpleClass}`, fontVars, fontsSimple);
+createGlobalTheme(`.${themeRootClass}.${simpleClass}`, fontVars, fontsSimple);
 createGlobalTheme(
-  `.${fontsLargeScreenClass}.${simpleClass}`,
+  `.${themeRootClass}.${fontsLargeScreenClass}.${simpleClass}`,
   fontVars,
   fontsLargeScreenSimple
 );

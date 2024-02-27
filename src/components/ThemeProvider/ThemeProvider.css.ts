@@ -1,0 +1,1 @@
+export const themeRootClass = "themeRoot";

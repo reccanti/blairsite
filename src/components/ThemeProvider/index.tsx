@@ -4,10 +4,12 @@ import {
   darkClass,
   highContrastClass,
   lightClass,
+  reducedMotionClass,
   simpleClass,
 } from "../../themes/base.css";
 import { ReactNode, createContext, useContext, useState, useMemo } from "react";
 import cx from "classnames";
+import { themeRootClass } from "./ThemeProvider.css";
 
 // Theme State - this is for internal use, to make sure certain themes don't
 // conflict with each other (for example, we might have separate functions to
@@ -188,6 +190,8 @@ export function ControlledThemeProvider({
     [darkClass]: darkMode,
     [highContrastClass]: highContrastMode,
     [simpleClass]: simpleLayoutMode,
+    [reducedMotionClass]: reducedMotionMode,
+    [themeRootClass]: true,
   });
 
   return (
