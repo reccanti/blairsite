@@ -95,22 +95,29 @@ export const fontVars = createThemeContract(fontsThemeContract);
 export const lightClass = "light";
 export const darkClass = "dark";
 export const highContrastClass = "highContrast";
-export const highContrastDarkClass = "highContrastDark";
+// export const highContrastDarkClass = "highContrastDark";
 export const fontsClass = "fonts";
 export const fontsLargeScreenClass = "fontsLargeScreen";
-export const fontsSimpleClass = "fontsSimple";
-export const fontsLargeScreenSimpleClass = "fontsLargeScreenSimple";
+export const simpleClass = "simple";
 
 createGlobalTheme(`.${lightClass}`, colorVars, lightJson);
 createGlobalTheme(`.${darkClass}`, colorVars, darkJson);
 createGlobalTheme(`.${highContrastClass}`, colorVars, highContrastJson);
-createGlobalTheme(`.${highContrastDarkClass}`, colorVars, highContrastDarkJson);
-
-createGlobalTheme(`.${fontsClass}`, fontVars, fontsJson);
-createGlobalTheme(`.${fontsLargeScreenClass}`, fontVars, fontsLargeScreenJson);
-createGlobalTheme(`.${fontsSimpleClass}`, fontVars, fontsSimple);
 createGlobalTheme(
-  `.${fontsLargeScreenSimple}`,
+  `.${highContrastClass}.${darkClass}`,
+  colorVars,
+  highContrastDarkJson
+);
+
+createGlobalTheme(`.${fontsClass}:not(.${simpleClass})`, fontVars, fontsJson);
+createGlobalTheme(
+  `.${fontsLargeScreenClass}:not(.${simpleClass})`,
+  fontVars,
+  fontsLargeScreenJson
+);
+createGlobalTheme(`.${simpleClass}`, fontVars, fontsSimple);
+createGlobalTheme(
+  `.${fontsLargeScreenClass}.${simpleClass}`,
   fontVars,
   fontsLargeScreenSimple
 );
@@ -128,6 +135,22 @@ globalStyle("html", {
     },
     "(min-width: 744px)": {
       vars: assignVars(fontVars, fontsLargeScreenJson),
+    },
+  },
+});
+
+globalStyle(`html :not(.${darkClass}).${highContrastClass}`, {
+  "@media": {
+    "(prefers-color-scheme: light)": {
+      vars: assignVars(colorVars, highContrastJson),
+    },
+  },
+});
+
+globalStyle(`html :not(.${lightClass}).${highContrastClass}`, {
+  "@media": {
+    "(prefers-color-scheme: dark)": {
+      vars: assignVars(colorVars, highContrastDarkJson),
     },
   },
 });

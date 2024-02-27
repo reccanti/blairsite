@@ -12,6 +12,7 @@
     "compileTokens": "node ./tokens/compile-themes.js"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "lodash": "^4.17.21",
     "next": "14.1.0",
     "react": "^18",
