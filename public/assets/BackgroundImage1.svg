@@ -1,14 +1,14 @@
 <svg width="4000" height="6000" viewBox="0 0 4000 6000" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.5">
-<rect x="25" y="25" width="25" height="25" fill="black"/>
-<rect x="1181" y="1185" width="25" height="25" fill="black"/>
-<rect x="2330" y="602" width="25" height="25" fill="black"/>
-<rect x="3689" y="1684" width="25" height="25" fill="black"/>
-<rect x="608" y="2325" width="25" height="25" fill="black"/>
-<rect x="1975" y="3092" width="25" height="25" fill="black"/>
-<rect x="2463" y="1996" width="25" height="25" fill="black"/>
-<rect x="3219" y="4188" width="25" height="25" fill="black"/>
-<rect x="856" y="4764" width="25" height="25" fill="black"/>
-<rect x="2862" y="5526" width="25" height="25" fill="black"/>
+<rect x="25" y="25" width="25" height="25" fill="#888888"/>
+<rect x="1181" y="1185" width="25" height="25" fill="#888888"/>
+<rect x="2330" y="602" width="25" height="25" fill="#888888"/>
+<rect x="3689" y="1684" width="25" height="25" fill="#888888"/>
+<rect x="608" y="2325" width="25" height="25" fill="#888888"/>
+<rect x="1975" y="3092" width="25" height="25" fill="#888888"/>
+<rect x="2463" y="1996" width="25" height="25" fill="#888888"/>
+<rect x="3219" y="4188" width="25" height="25" fill="#888888"/>
+<rect x="856" y="4764" width="25" height="25" fill="#888888"/>
+<rect x="2862" y="5526" width="25" height="25" fill="#888888"/>
 </g>
 </svg>

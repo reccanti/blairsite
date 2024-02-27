@@ -8,7 +8,7 @@ import { CSSVarFunction } from "@vanilla-extract/private";
 const { body, header, link, ui } = fontVars.typographies;
 
 // we use this contract to ensure all "typography" values can be set at once
-interface FontContract {
+interface TypographyContract {
   bodyType: CSSVarFunction;
   header1Type: CSSVarFunction;
   header2Type: CSSVarFunction;
@@ -32,7 +32,7 @@ export const typeFonts = {
   uiType: ui.font,
   linkType: link.default.font,
   linkHoverType: link.hover.font,
-} satisfies FontContract;
+} satisfies TypographyContract;
 
 export const typeDecorations = {
   bodyType: body.textDecoration,
@@ -45,7 +45,7 @@ export const typeDecorations = {
   uiType: ui.textDecoration,
   linkType: link.default.textDecoration,
   linkHoverType: link.hover.textDecoration,
-} satisfies FontContract;
+} satisfies TypographyContract;
 
 export const typeTransforms = {
   bodyType: body.textTransform,
@@ -58,17 +58,24 @@ export const typeTransforms = {
   uiType: ui.textTransform,
   linkType: link.default.textTransform,
   linkHoverType: link.hover.textTransform,
-} satisfies FontContract;
+} satisfies TypographyContract;
 
-// export const typeShorthands = {
-//   typeography: ["font", "textDecoration"],
-// };
+// line heights
+
+const { lineheight: lineHeightVars } = fontVars.lineHeights;
+
+export const lineHeights = {
+  lineHeight1: lineHeightVars["1"],
+  lineHeight2: lineHeightVars["2"],
+  lineHeight3: lineHeightVars["3"],
+};
 
 export const typographyProperties = defineProperties({
   properties: {
     font: typeFonts,
     textDecoration: typeDecorations,
     textTransform: typeTransforms,
+    lineHeight: lineHeights,
   },
   shorthands: {
     typography: ["font", "textDecoration", "textTransform"],

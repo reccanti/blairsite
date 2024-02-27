@@ -1,3 +1,5 @@
+"use client";
+
 import {
   darkClass,
   highContrastClass,
@@ -53,7 +55,13 @@ interface ThemeContext {
 export const ThemeContext = createContext<ThemeContext>();
 
 export const useTheme = function () {
-  return useContext(ThemeContext);
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw Error(
+      "Component needs to be wrapped in a ThemeProvider in order to use the ThemeContext"
+    );
+  }
+  return context;
 };
 
 interface Props extends Partial<ThemeState> {

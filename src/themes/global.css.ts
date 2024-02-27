@@ -1,5 +1,6 @@
-import { globalStyle } from "@vanilla-extract/css";
+import "./base.css";
 
+import { globalStyle } from "@vanilla-extract/css";
 import {
   backgroundDefaultColors,
   labelDefaultColors,
