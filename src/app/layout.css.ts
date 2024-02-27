@@ -9,10 +9,10 @@ import { lineHeights } from "../themes/sprinkles/fonts.css";
 import { reducedMotionClass } from "../themes/base.css";
 
 const scrollingBackgroundFrames = keyframes({
-  from: {
+  "0%": {
     backgroundPositionY: "calc(0% - 100vh)",
   },
-  to: {
+  "100%": {
     backgroundPositionY: "calc(-100%)",
   },
 });
