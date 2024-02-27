@@ -8,6 +8,7 @@ const withVanillaExtraction = createVanillaExtractPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx", "md"],
+  outputFileTracing: false,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(ttf)$/i,
