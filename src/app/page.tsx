@@ -5,6 +5,11 @@ import { Highlight } from "@/components/Highlight";
 import {
   about,
   contentWrapper,
+  project,
+  projectContent,
+  projectHeader,
+  projectList,
+  projects,
   sectionContent,
   sectionHeader,
   sectionImage,
@@ -15,9 +20,12 @@ import {
 import { Tile } from "@/components/Tile";
 
 import ProfilePicture from "../../public/assets/ProfilePicture.png";
-import aboutContent from "@/data/homepage/about.md";
 import { desktopSize, tabletSize } from "@/themes/utlities/breakpoints.css";
 import Markdown from "react-markdown";
+
+import aboutContent from "@/data/homepage/about.md";
+import projectSummaryContent from "@/data/homepage/projects/summary.md";
+import projectHomebaseThemerContent from "@/data/homepage/projects/homebase-themer.md";
 
 export default function Home() {
   return (
@@ -53,6 +61,32 @@ export default function Home() {
           <Tile className={sectionContent}>
             <Markdown>{aboutContent}</Markdown>
           </Tile>
+        </section>
+        <section className={projects}>
+          <Tile color="backgroundYellow" className={sectionHeader}>
+            <Header renderAs="h2" size={3}>
+              Cool Stuff I&#39;ve Worked on
+            </Header>
+          </Tile>
+          <Tile className={sectionContent}>
+            <Markdown>{projectSummaryContent}</Markdown>
+          </Tile>
+          <dl className={projectList}>
+            <div className={project}>
+              <Tile
+                renderAs="dt"
+                color="backgroundMagenta"
+                className={projectHeader}
+              >
+                <Header renderAs="h3" size={4}>
+                  Homebase Themer
+                </Header>
+              </Tile>
+              <Tile renderAs="dd" className={projectContent}>
+                <Markdown>{projectHomebaseThemerContent}</Markdown>
+              </Tile>
+            </div>
+          </dl>
         </section>
       </div>
     </main>
