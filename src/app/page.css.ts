@@ -17,11 +17,20 @@ export const contentWrapper = style({
   margin: "0 auto",
 });
 
+// globalStyle(`.${contentWrapper} .${tile()}`, {
+//   display: "flex",
+//   justifyContent: "center",
+//   alignItems: "center",
+// });
+
 export const sectionHeader = style({
   aspectRatio: "1 auto",
   gridArea: "header",
   height: "100%",
   width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 });
 
 export const sectionImage = style({
@@ -40,13 +49,7 @@ export const sectionImageImg = style({
 export const sectionContent = style({
   aspectRatio: "1 auto",
   gridArea: "content",
-  height: "100%",
-  width: "100%",
-});
-
-globalStyle(`.${contentWrapper} .${tile()}`, {
   display: "flex",
-  justifyContent: "center",
   alignItems: "center",
 });
 

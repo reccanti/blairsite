@@ -1,11 +1,7 @@
-import { keyframes, style, globalStyle } from "@vanilla-extract/css";
+import { keyframes, style } from "@vanilla-extract/css";
 import image1 from "../../public/assets/BackgroundImage1.png";
 import image2 from "../../public/assets/BackgroundImage2.png";
 import image3 from "../../public/assets/BackgroundImage3.png";
-import { sprinkles } from "../themes/sprinkles.css";
-import { highlight } from "../components/Highlight/Highlight.css";
-import { header } from "../components/Header/Header.css";
-import { lineHeights } from "../themes/sprinkles/fonts.css";
 import { reducedMotionClass } from "../themes/base.css";
 
 const scrollingBackgroundFrames = keyframes({
@@ -29,7 +25,7 @@ export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
   backgroundAttachment: "fixed",
   backgroundRepeat: "repeat-y",
   willChange: "background-position-y",
-  transform: "translateZ(0)",
+  // transform: "translateZ(0)",
 
   animation: `${scrollingBackgroundFrames} 240s linear infinite`,
 };
