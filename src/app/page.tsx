@@ -15,8 +15,9 @@ import {
 import { Tile } from "@/components/Tile";
 
 import ProfilePicture from "../../public/assets/ProfilePicture.png";
-import AboutContent from "@/data/homepage/about.mdx";
+import aboutContent from "@/data/homepage/about.md";
 import { desktopSize, tabletSize } from "@/themes/utlities/breakpoints.css";
+import Markdown from "react-markdown";
 
 export default function Home() {
   return (
@@ -50,7 +51,7 @@ export default function Home() {
             />
           </Tile>
           <Tile className={sectionContent}>
-            <AboutContent />
+            <Markdown>{aboutContent}</Markdown>
           </Tile>
         </section>
       </div>

@@ -12,15 +12,11 @@
     "compileTokens": "node ./tokens/compile-themes.js"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.1.0",
-    "@types/mdx": "^2.0.11",
     "classnames": "^2.5.1",
-    "lodash": "^4.17.21",
     "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.17",
@@ -33,11 +29,9 @@
     "@storybook/react": "^7.6.17",
     "@storybook/test": "^7.6.17",
     "@tokens-studio/sd-transforms": "^0.14.2",
-    "@types/flat": "^5.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/safe-flat": "^2.0.2",
     "@vanilla-extract/css": "^1.14.1",
     "@vanilla-extract/dynamic": "^2.1.0",
     "@vanilla-extract/next-plugin": "^2.3.6",
@@ -49,12 +43,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.8.0",
-    "flat": "^6.0.1",
-    "flatten-ts": "^1.0.1",
     "mini-css-extract-plugin": "^2.8.0",
-    "morphism": "^1.12.3",
-    "ramda": "^0.29.1",
-    "safe-flat": "^2.1.0",
     "storybook": "^7.6.17",
     "style-dictionary": "^3.9.2",
     "style-loader": "^3.3.4",

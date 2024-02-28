@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "../themes/global.css";
 import { innerWrapper, pageWrapper } from "./layout.css";
-import { Footer } from "./Footer";
+import { Footer } from "./_components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
