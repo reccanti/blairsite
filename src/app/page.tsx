@@ -26,6 +26,9 @@ import Markdown from "react-markdown";
 import aboutContent from "@/data/homepage/about.md";
 import projectSummaryContent from "@/data/homepage/projects/summary.md";
 import projectHomebaseThemerContent from "@/data/homepage/projects/homebase-themer.md";
+import projectHomebaseCoverageContent from "@/data/homepage/projects/homebase-coverage.md";
+import projectHomebaseUIContent from "@/data/homepage/projects/homebase-ui.md";
+import projectHomebaseDocsContent from "@/data/homepage/projects/homebase-docs.md";
 
 export default function Home() {
   return (
@@ -84,6 +87,48 @@ export default function Home() {
               </Tile>
               <Tile renderAs="dd" className={projectContent}>
                 <Markdown>{projectHomebaseThemerContent}</Markdown>
+              </Tile>
+            </div>
+            <div className={project}>
+              <Tile
+                renderAs="dt"
+                color="backgroundBlue"
+                className={projectHeader}
+              >
+                <Header renderAs="h3" size={4}>
+                  Homebase Coverage Extension
+                </Header>
+              </Tile>
+              <Tile renderAs="dd" className={projectContent}>
+                <Markdown>{projectHomebaseCoverageContent}</Markdown>
+              </Tile>
+            </div>
+            <div className={project}>
+              <Tile
+                renderAs="dt"
+                color="backgroundGreen"
+                className={projectHeader}
+              >
+                <Header renderAs="h3" size={4}>
+                  Homebase UI Library
+                </Header>
+              </Tile>
+              <Tile renderAs="dd" className={projectContent}>
+                <Markdown>{projectHomebaseUIContent}</Markdown>
+              </Tile>
+            </div>
+            <div className={project}>
+              <Tile
+                renderAs="dt"
+                color="backgroundYellow"
+                className={projectHeader}
+              >
+                <Header renderAs="h3" size={4}>
+                  Homebase Docs Site
+                </Header>
+              </Tile>
+              <Tile renderAs="dd" className={projectContent}>
+                <Markdown>{projectHomebaseDocsContent}</Markdown>
               </Tile>
             </div>
           </dl>

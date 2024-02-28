@@ -156,7 +156,7 @@ export const project = style({
           gridTemplateAreas: `"header content"`,
         },
         "&:nth-child(2n)": {
-          gridTemplateAreas: `"content content"`,
+          gridTemplateAreas: `"content header"`,
         },
       },
     },
