@@ -5,7 +5,6 @@ import { Highlight } from "@/components/Highlight";
 import {
   about,
   contentWrapper,
-  main,
   sectionContent,
   sectionHeader,
   sectionImage,
@@ -21,7 +20,7 @@ import { desktopSize, tabletSize } from "@/themes/utlities/breakpoints.css";
 
 export default function Home() {
   return (
-    <main className={main}>
+    <main>
       <section className={splash}>
         <header className={splashHeader}>
           <Header renderAs="h1" size={3}>
@@ -34,7 +33,7 @@ export default function Home() {
         <section className={about}>
           <Tile color="backgroundRed" className={sectionHeader}>
             <Header renderAs="h2" size={3}>
-              Who Am I?
+              Who's this gal?
             </Header>
           </Tile>
           <Tile fullWidth className={sectionImage}>

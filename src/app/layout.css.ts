@@ -14,6 +14,9 @@ const scrollingBackgroundFrames = keyframes({
 });
 
 export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
+  content: "",
+  width: "100vw",
+  height: "100vh",
   backgroundImage: `
     url("${image1.src}"), 
     url("${image2.src}"), 
@@ -22,22 +25,35 @@ export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
     left,
     right,
     center`,
-  backgroundAttachment: "fixed",
   backgroundRepeat: "repeat-y",
   willChange: "background-position-y",
-  // transform: "translateZ(0)",
+  position: "fixed",
 
   animation: `${scrollingBackgroundFrames} 240s linear infinite`,
 };
 
+/**
+ * We're applying this scrolling animation to a fixed pseudo selector rather
+ * than using `background-attachment: fixed` because the effect is jittery in
+ * Safari. The comment below suggested using a `position: fixed` element, which
+ * seems to do the trick:
+ *
+ * https://discourse.webflow.com/t/fixed-images-scroll-jumpy-and-glitchy-in-safari/108874
+ *
+ * ~Blair, 2/28/2024
+ */
 export const scrollingBackground = style({
   "@media": {
     "not (prefers-reduced-motion)": {
-      ...scrollingBackgroundStyles,
+      selectors: {
+        "&::before": {
+          ...scrollingBackgroundStyles,
+        },
+      },
     },
   },
   selectors: {
-    [`.themeRoot:not(.${reducedMotionClass}) &`]: {
+    [`.themeRoot:not(.${reducedMotionClass}) &::before`]: {
       ...scrollingBackgroundStyles,
     },
   },
@@ -47,5 +63,7 @@ export const pageWrapper = style([
   scrollingBackground,
   {
     minHeight: "100vh",
+    position: "relative",
+    zIndex: 1,
   },
 ]);

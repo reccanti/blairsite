@@ -16,12 +16,6 @@ export const contentWrapper = style({
   margin: "0 auto",
 });
 
-// globalStyle(`.${contentWrapper} .${tile()}`, {
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "center",
-// });
-
 export const sectionHeader = style({
   aspectRatio: "1 auto",
   gridArea: "header",
@@ -50,14 +44,6 @@ export const sectionContent = style({
   gridArea: "content",
   display: "flex",
   alignItems: "center",
-});
-
-// main section
-
-export const main = style({
-  position: "relative",
-  transform: "translate(0, 0, 0)",
-  // zIndex: 1,
 });
 
 // splash section with centered text
