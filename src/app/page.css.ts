@@ -8,7 +8,6 @@ import {
   desktopSize,
   tabletQuery,
 } from "@/themes/utlities/breakpoints.css";
-import { tile } from "@/components/Tile/Tile.css";
 
 // styles that can be re-used per section
 
@@ -51,6 +50,14 @@ export const sectionContent = style({
   gridArea: "content",
   display: "flex",
   alignItems: "center",
+});
+
+// main section
+
+export const main = style({
+  position: "relative",
+  transform: "translate(0, 0, 0)",
+  // zIndex: 1,
 });
 
 // splash section with centered text

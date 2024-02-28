@@ -5,6 +5,7 @@ import { Highlight } from "@/components/Highlight";
 import {
   about,
   contentWrapper,
+  main,
   sectionContent,
   sectionHeader,
   sectionImage,
@@ -20,7 +21,7 @@ import { desktopSize, tabletSize } from "@/themes/utlities/breakpoints.css";
 
 export default function Home() {
   return (
-    <main>
+    <main className={main}>
       <section className={splash}>
         <header className={splashHeader}>
           <Header renderAs="h1" size={3}>

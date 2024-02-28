@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "../themes/global.css";
 import { pageWrapper } from "./layout.css";
+import { Footer } from "./Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <div className={pageWrapper}>{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

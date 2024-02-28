@@ -31,4 +31,10 @@ export const spacingProperties = defineProperties({
     top: spacing,
     bottom: spacing,
   },
+  shorthands: {
+    paddingX: ["paddingLeft", "paddingRight"],
+    paddingY: ["paddingTop", "paddingBottom"],
+    marginX: ["marginLeft", "marginRight"],
+    marginY: ["marginTop", "marginBottom"],
+  },
 });
