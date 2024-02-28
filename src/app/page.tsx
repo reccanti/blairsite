@@ -33,7 +33,7 @@ export default function Home() {
         <section className={about}>
           <Tile color="backgroundRed" className={sectionHeader}>
             <Header renderAs="h2" size={3}>
-              Who's this gal?
+              Who&#39;s this gal?
             </Header>
           </Tile>
           <Tile fullWidth className={sectionImage}>

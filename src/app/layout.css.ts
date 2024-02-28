@@ -63,7 +63,10 @@ export const pageWrapper = style([
   scrollingBackground,
   {
     minHeight: "100vh",
-    position: "relative",
-    zIndex: 1,
   },
 ]);
+
+export const innerWrapper = style({
+  position: "relative",
+  zIndex: 1,
+});
