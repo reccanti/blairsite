@@ -1,8 +1,12 @@
 import { recipe } from "@vanilla-extract/recipes";
-import { style, styleVariants } from "@vanilla-extract/css";
+import { globalStyle, style, styleVariants } from "@vanilla-extract/css";
 import { sprinkles } from "../../themes/sprinkles.css";
-import { backgroundHoverColors } from "../../themes/sprinkles/colors.css";
+import {
+  backgroundHoverColors,
+  labelDefaultColors,
+} from "../../themes/sprinkles/colors.css";
 import { shadowFocus, shadowActive } from "../../themes/sprinkles/focus.css";
+import { typeFonts } from "../../themes/sprinkles/fonts.css";
 
 export const colorVariants = {
   Default: "",
@@ -19,6 +23,10 @@ export const colorVariants = {
 const variants = styleVariants(colorVariants, (v, color) => [
   sprinkles({ color: `label${color}`, backgroundColor: `background${color}` }),
   {
+    // color: labelDefaultColors[`label${color}`],
+    // font: typeFonts[`uiType`],
+    // border: "none",
+    // outline: "none",
     selectors: {
       "&:hover, &:focus, &:focus-within": {
         backgroundColor: backgroundHoverColors[`backgroundHover${color}`],
@@ -35,10 +43,10 @@ const variants = styleVariants(colorVariants, (v, color) => [
 
 export const button = recipe({
   base: [
-    sprinkles({ padding: "spacing2", typography: "uiType" }),
     {
       display: "inline-block",
     },
+    sprinkles({ padding: "spacing2", typography: "uiType" }),
   ],
   variants: {
     color: variants,

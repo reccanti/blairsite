@@ -77,7 +77,7 @@ export const sectionContent = style([
 export const splash = style([
   sprinkles({ padding: "spacing3", lineHeight: "lineHeight2" }),
   {
-    minHeight: "90vh",
+    minHeight: "80vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

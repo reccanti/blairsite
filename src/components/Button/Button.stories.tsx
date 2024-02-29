@@ -25,4 +25,19 @@ export const AsButton: Story = {
   },
 };
 
+export const AsLink: Story = {
+  render: () => {
+    const colors = keys(colorVariants);
+    return (
+      <>
+        {colors.map((color) => (
+          <Button href="#" key={color} color={color}>
+            My Button
+          </Button>
+        ))}
+      </>
+    );
+  },
+};
+
 export default meta;

@@ -9,6 +9,7 @@ import {
 } from "./sprinkles/colors.css";
 import { typeDecorations, typeFonts } from "./sprinkles/fonts.css";
 import { labelFocus } from "./sprinkles/focus.css";
+import { button } from "../components/Button/Button.css";
 
 globalStyle("*", {
   boxSizing: "border-box",
@@ -28,36 +29,38 @@ globalStyle("h1, h2, h3, h4, h5, h6", {
   textDecoration: typeDecorations.header6Type,
 });
 
-globalStyle("a", {
+const aSelector = `a:not(.${button()})`;
+
+globalStyle(aSelector, {
   color: labelLinkColors.labelLinkDefault,
   font: typeFonts.linkType,
   textDecoration: typeDecorations.linkType,
 });
-globalStyle("a:focus", {
+globalStyle(`${aSelector}:focus`, {
   border: labelFocus.focusLink,
 });
-globalStyle("a:hover", {
+globalStyle(`${aSelector}:hover`, {
   color: labelLinkColors.labelLinkHover,
   font: typeFonts.linkHoverType,
   textDecoration: typeDecorations.linkHoverType,
 });
-globalStyle("a:focus:hover", {
+globalStyle(`${aSelector}:focus:hover`, {
   border: labelFocus.focusLinkHover,
 });
-globalStyle("a:visited", {
+globalStyle(`${aSelector}:visited`, {
   color: labelLinkVisitedColors.labelLinkVisitedDefault,
 });
-globalStyle("a:visited:focus", {
+globalStyle(`${aSelector}:visited:focus`, {
   border: labelFocus.focusLinkVisited,
 });
-globalStyle("a:visited:hover", {
+globalStyle(`${aSelector}:hover`, {
   color: labelLinkVisitedColors.labelLinkVisitedHover,
 });
-globalStyle("a:visited:focus:hover", {
+globalStyle(`${aSelector}:visited:focus:hover`, {
   border: labelFocus.focuslinkVisitedHover,
 });
 
-globalStyle("button", {
+globalStyle(`button`, {
   all: "unset",
   cursor: "pointer",
 });
