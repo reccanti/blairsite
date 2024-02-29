@@ -60,7 +60,7 @@ export const scrollingBackground = style({
 });
 
 export const pageWrapper = style([
-  scrollingBackground,
+  // scrollingBackground,
   {
     minHeight: "100vh",
   },
