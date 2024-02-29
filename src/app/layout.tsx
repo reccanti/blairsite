@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "../themes/global.css";
-import { innerWrapper, pageWrapper } from "./layout.css";
 import { Footer } from "./_components/Footer";
+import { AnimatedPageWrapper } from "./_components/AnimatedPageWrapper";
+import "../themes/global.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <div className={pageWrapper}>
-            <div className={innerWrapper}>{children}</div>
-          </div>
+          <AnimatedPageWrapper>{children}</AnimatedPageWrapper>
           <Footer />
         </ThemeProvider>
       </body>
