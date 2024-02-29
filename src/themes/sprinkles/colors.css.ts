@@ -137,8 +137,10 @@ const {
   blue: labelBlue,
   red: labelRed,
   yellow: labelYellow,
-  white: labelWhite,
+  gray1: labelGray1,
+  gray2: labelGray2,
   inverted: labelInverted,
+  white: labelWhite,
 } = colorVars.colors.label;
 
 export const labelDefaultColors = {
@@ -149,6 +151,8 @@ export const labelDefaultColors = {
   labelRed,
   labelYellow,
   labelWhite,
+  labelGray1,
+  labelGray2,
   labelInverted,
 };
 
@@ -159,8 +163,8 @@ const {
   blue: labelInactiveBlue,
   red: labelInactiveRed,
   yellow: labelInactiveYellow,
-  white: labelInactiveWhite,
   inverted: labelInactiveInverted,
+  white: labelInactiveWhite,
 } = colorVars.colors.label.inactive;
 
 export const labelInactiveColors = {
@@ -171,6 +175,9 @@ export const labelInactiveColors = {
   labelInactiveRed,
   labelInactiveYellow,
   labelInactiveWhite,
+  // adding these two as aliases to labelWhite to make generating styles easier
+  labelInactiveGray1: labelInactiveWhite,
+  labelInactiveGray2: labelInactiveWhite,
   labelInactiveInverted,
 };
 

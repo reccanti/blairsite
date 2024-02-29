@@ -30,6 +30,8 @@
       "red": "#222222",
       "green": "#222222",
       "white": "#FFFFFF",
+      "gray1": "#FFFFFF",
+      "gray2": "#FFFFFF",
       "inverted": "#FFFFFF",
       "highlight": {
         "yellow": "#C3C3C3",
@@ -143,26 +145,37 @@
   "boxShadows": {
     "border": {
       "focus": {
-        "default": "inset 0px 0px 0px 4.5px #FFFFFF,inset 0px 0px 0px 9px #222222",
-        "green": "inset 0px 0px 0px 4.5px #9B9B9B,inset 0px 0px 0px 9px #222222",
-        "blue": "inset 0px 0px 0px 4.5px #C3C3C3,inset 0px 0px 0px 9px #222222",
-        "red": "inset 0px 0px 0px 4.5px #9B9B9B,inset 0px 0px 0px 9px #222222",
-        "yellow": "inset 0px 0px 0px 4.5px #C3C3C3,inset 0px 0px 0px 9px #222222",
-        "magenta": "inset 0px 0px 0px 4.5px #9B9B9B,inset 0px 0px 0px 9px #222222",
-        "gray1": "inset 0px 0px 0px 4.5px #4A4A4A,inset 0px 0px 0px 9px #FFFFFF",
-        "gray2": "inset 0px 0px 0px 4.5px #222222,inset 0px 0px 0px 9px #FFFFFF",
-        "inverted": "inset 0px 0px 0px 4.5px #222222,inset 0px 0px 0px 9px #FFFFFF",
+        "default": "inset 0px 0px 0px 4.5px #222222",
+        "green": "inset 0px 0px 0px 4.5px #222222",
+        "blue": "inset 0px 0px 0px 4.5px #222222",
+        "red": "inset 0px 0px 0px 4.5px #222222",
+        "yellow": "inset 0px 0px 0px 4.5px #222222",
+        "magenta": "inset 0px 0px 0px 4.5px #222222",
+        "gray1": "inset 0px 0px 0px 4.5px #FFFFFF",
+        "gray2": "inset 0px 0px 0px 4.5px #FFFFFF",
+        "inverted": "inset 0px 0px 0px 4.5px #FFFFFF",
         "hover": {
-          "default": "inset 0px 0px 0px 4.5px #EBEBEB,inset 0px 0px 0px 9px #222222",
-          "green": "inset 0px 0px 0px 4.5px #AFAFAF,inset 0px 0px 0px 9px #222222",
-          "blue": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #222222",
-          "red": "inset 0px 0px 0px 4.5px #AFAFAF,inset 0px 0px 0px 9px #222222",
-          "yellow": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #222222",
-          "magenta": "inset 0px 0px 0px 4.5px #AFAFAF,inset 0px 0px 0px 9px #222222",
-          "gray1": "inset 0px 0px 0px 4.5px #5E5E5E,inset 0px 0px 0px 9px #FFFFFF",
-          "gray2": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF",
-          "inverted": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF"
+          "default": "inset 0px 0px 0px 4.5px #222222",
+          "green": "inset 0px 0px 0px 4.5px #222222",
+          "blue": "inset 0px 0px 0px 4.5px #222222",
+          "red": "inset 0px 0px 0px 4.5px #222222",
+          "yellow": "inset 0px 0px 0px 4.5px #222222",
+          "magenta": "inset 0px 0px 0px 4.5px #222222",
+          "gray1": "inset 0px 0px 0px 4.5px #FFFFFF",
+          "gray2": "inset 0px 0px 0px 4.5px #FFFFFF",
+          "inverted": "inset 0px 0px 0px 4.5px #FFFFFF"
         }
+      },
+      "active": {
+        "default": "inset 0px 0px 0px 4.5px #EBEBEB,inset 0px 0px 0px 9px #222222",
+        "green": "inset 0px 0px 0px 4.5px #AFAFAF,inset 0px 0px 0px 9px #222222",
+        "blue": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #222222",
+        "red": "inset 0px 0px 0px 4.5px #AFAFAF,inset 0px 0px 0px 9px #222222",
+        "yellow": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #222222",
+        "magenta": "inset 0px 0px 0px 4.5px #AFAFAF,inset 0px 0px 0px 9px #222222",
+        "gray1": "inset 0px 0px 0px 4.5px #5E5E5E,inset 0px 0px 0px 9px #FFFFFF",
+        "gray2": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF",
+        "inverted": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF"
       }
     }
   },

@@ -56,3 +56,8 @@ globalStyle("a:visited:hover", {
 globalStyle("a:visited:focus:hover", {
   border: labelFocus.focuslinkVisitedHover,
 });
+
+globalStyle("button", {
+  all: "unset",
+  cursor: "pointer",
+});

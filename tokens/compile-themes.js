@@ -35,6 +35,25 @@ function addToObjectAtPath(obj, path, value) {
   cur[key] = value;
 }
 
+// function convertToArray(arrayObj) {
+//   if (Array.isArray(arrayObj)) {
+//     return arrayObj;
+//   } else if (typeof arrayObj === "object" && arrayObj !== null) {
+//     const arr = Object.entries(arrayObj)
+//       .map(([key, value]) => {
+//         const k = Number(key);
+//         if (Number.isNaN(k)) {
+//           throw Error(`${key} cannot be converted into an array index`);
+//         }
+//         return [Number(key), value];
+//       })
+//       .sort((a, b) => a[0] - b[0])
+//       .map(([_k, value]) => value);
+//     return arr;
+//   }
+//   throw Error("Object could not be converted into an array");
+// }
+
 function createColors(tree) {
   const colors = {};
   visit([], tree, (path, node) => {
@@ -297,38 +316,6 @@ async function writeThemeFile(fileName, contents) {
   const outFile = resolve(OUT_DIR, `${fileName}.json`);
   await writeFile(outFile, JSON.stringify(contents, null, 2));
 }
-
-// const generateVarFromFile = (filename) => {
-//   const parts = filename.replace(".json", "").split(".");
-//   const camelCasedParts = parts.map((part, i) => {
-//     if (i !== 0) {
-//       const [firstChar, ...rest] = part;
-//       return `${firstChar.toUpperCase()}${rest.join("")}`;
-//     }
-//     return part;
-//   });
-//   return camelCasedParts.join("");
-// };
-
-// async function generateTypescriptTypeFile() {
-//   const files = (await readdir(OUT_DIR)).filter((file) => file !== "index.ts");
-//   const outFile = resolve(OUT_DIR, "index.ts");
-//   const contents = `
-// /**
-//  * AUTO-GENERATED. Do not edit directly
-//  */
-
-// ${files
-//   .map((file) => `import ${generateVarFromFile(file)} from "./${file}"`)
-//   .join("\n")}
-
-// export type TreeType = ${files
-//     .map((file) => `typeof ${generateVarFromFile(file)}`)
-//     .join(" | ")}
-//   `;
-
-//   await writeFile(outFile, contents);
-// }
 
 (async function () {
   // base theme

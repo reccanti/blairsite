@@ -29,8 +29,10 @@
       "blue": "#002944",
       "red": "#FEFFCB",
       "green": "#001C1C",
-      "white": "#FFFFFF",
+      "gray1": "#222222",
+      "gray2": "#FFFFFF",
       "inverted": "#FFFFFF",
+      "white": "#FFFFFF",
       "highlight": {
         "yellow": "#FFA700",
         "magenta": "#FF3FAB",
@@ -143,26 +145,37 @@
   "boxShadows": {
     "border": {
       "focus": {
-        "default": "inset 0px 0px 0px 4.5px #FFFFFF,inset 0px 0px 0px 9px #222222",
-        "green": "inset 0px 0px 0px 4.5px #85E500,inset 0px 0px 0px 9px #001C1C",
-        "blue": "inset 0px 0px 0px 4.5px #00DAF2,inset 0px 0px 0px 9px #002944",
-        "red": "inset 0px 0px 0px 4.5px #FF3434,inset 0px 0px 0px 9px #FEFFCB",
-        "yellow": "inset 0px 0px 0px 4.5px #FFA700,inset 0px 0px 0px 9px #4f1800",
-        "magenta": "inset 0px 0px 0px 4.5px #FF3FAB,inset 0px 0px 0px 9px #750049",
-        "gray1": "inset 0px 0px 0px 4.5px #C3C3C3,inset 0px 0px 0px 9px #FFFFFF",
-        "gray2": "inset 0px 0px 0px 4.5px #222222,inset 0px 0px 0px 9px #FFFFFF",
-        "inverted": "inset 0px 0px 0px 4.5px #222222,inset 0px 0px 0px 9px #FFFFFF",
+        "default": "inset 0px 0px 0px 4.5px #222222",
+        "green": "inset 0px 0px 0px 4.5px #001C1C",
+        "blue": "inset 0px 0px 0px 4.5px #002944",
+        "red": "inset 0px 0px 0px 4.5px #FEFFCB",
+        "yellow": "inset 0px 0px 0px 4.5px #4f1800",
+        "magenta": "inset 0px 0px 0px 4.5px #750049",
+        "gray1": "inset 0px 0px 0px 4.5px #222222",
+        "gray2": "inset 0px 0px 0px 4.5px #FFFFFF",
+        "inverted": "inset 0px 0px 0px 4.5px #FFFFFF",
         "hover": {
-          "default": "inset 0px 0px 0px 4.5px #EBEBEB,inset 0px 0px 0px 9px #222222",
-          "green": "inset 0px 0px 0px 4.5px #C7F881,inset 0px 0px 0px 9px #001C1C",
-          "blue": "inset 0px 0px 0px 4.5px #8EF4FF,inset 0px 0px 0px 9px #002944",
-          "red": "inset 0px 0px 0px 4.5px #FB5B5B,inset 0px 0px 0px 9px #FEFFCB",
-          "yellow": "inset 0px 0px 0px 4.5px #FFD484,inset 0px 0px 0px 9px #4f1800",
-          "magenta": "inset 0px 0px 0px 4.5px #FF9CCD,inset 0px 0px 0px 9px #750049",
-          "gray1": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #FFFFFF",
-          "gray2": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF",
-          "inverted": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF"
+          "default": "inset 0px 0px 0px 4.5px #222222",
+          "green": "inset 0px 0px 0px 4.5px #001C1C",
+          "blue": "inset 0px 0px 0px 4.5px #002944",
+          "red": "inset 0px 0px 0px 4.5px #FEFFCB",
+          "yellow": "inset 0px 0px 0px 4.5px #4f1800",
+          "magenta": "inset 0px 0px 0px 4.5px #750049",
+          "gray1": "inset 0px 0px 0px 4.5px #222222",
+          "gray2": "inset 0px 0px 0px 4.5px #FFFFFF",
+          "inverted": "inset 0px 0px 0px 4.5px #FFFFFF"
         }
+      },
+      "active": {
+        "default": "inset 0px 0px 0px 4.5px #EBEBEB,inset 0px 0px 0px 9px #222222",
+        "green": "inset 0px 0px 0px 4.5px #C7F881,inset 0px 0px 0px 9px #001C1C",
+        "blue": "inset 0px 0px 0px 4.5px #8EF4FF,inset 0px 0px 0px 9px #002944",
+        "red": "inset 0px 0px 0px 4.5px #FB5B5B,inset 0px 0px 0px 9px #FEFFCB",
+        "yellow": "inset 0px 0px 0px 4.5px #FFD484,inset 0px 0px 0px 9px #4f1800",
+        "magenta": "inset 0px 0px 0px 4.5px #FF9CCD,inset 0px 0px 0px 9px #750049",
+        "gray1": "inset 0px 0px 0px 4.5px #D7D7D7,inset 0px 0px 0px 9px #222222",
+        "gray2": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF",
+        "inverted": "inset 0px 0px 0px 4.5px #363636,inset 0px 0px 0px 9px #FFFFFF"
       }
     }
   },

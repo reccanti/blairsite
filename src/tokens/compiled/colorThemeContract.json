@@ -29,8 +29,10 @@
       "blue": null,
       "red": null,
       "green": null,
-      "white": null,
+      "gray1": null,
+      "gray2": null,
       "inverted": null,
+      "white": null,
       "highlight": {
         "yellow": null,
         "magenta": null,
@@ -163,6 +165,17 @@
           "gray2": null,
           "inverted": null
         }
+      },
+      "active": {
+        "default": null,
+        "green": null,
+        "blue": null,
+        "red": null,
+        "yellow": null,
+        "magenta": null,
+        "gray1": null,
+        "gray2": null,
+        "inverted": null
       }
     }
   },

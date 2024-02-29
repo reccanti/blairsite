@@ -2,7 +2,8 @@ import { defineProperties } from "@vanilla-extract/sprinkles";
 import { colorVars } from "../base.css";
 
 const { focus: labelFocusStyles } = colorVars.borders;
-const { focus: shadowFocusStyles } = colorVars.boxShadows.border;
+const { focus: shadowFocusStyles, active: shadowActiveStyles } =
+  colorVars.boxShadows.border;
 
 export const labelFocus = {
   focusDefault: labelFocusStyles.default,
@@ -33,9 +34,26 @@ export const shadowFocus = {
   focusHoverInverted: shadowFocusStyles.hover.inverted,
 };
 
+export const shadowActive = {
+  activeDefault: shadowActiveStyles.default,
+  activeMagenta: shadowActiveStyles.magenta,
+  activeGreen: shadowActiveStyles.green,
+  activeBlue: shadowActiveStyles.blue,
+  activeRed: shadowActiveStyles.red,
+  activeYellow: shadowActiveStyles.yellow,
+  activeGray1: shadowActiveStyles.gray1,
+  activeGray2: shadowActiveStyles.gray2,
+  activeInverted: shadowActiveStyles.inverted,
+};
+
+export const shadows = {
+  ...shadowFocus,
+  ...shadowActive,
+};
+
 export const focusProperties = defineProperties({
   properties: {
     border: labelFocus,
-    boxShadow: shadowFocus,
+    boxShadow: shadows,
   },
 });
