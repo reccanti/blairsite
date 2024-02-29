@@ -16,7 +16,9 @@ export const AsButton: Story = {
     return (
       <>
         {colors.map((color) => (
-          <Button color={color}>My Button</Button>
+          <Button key={color} color={color}>
+            My Button
+          </Button>
         ))}
       </>
     );
