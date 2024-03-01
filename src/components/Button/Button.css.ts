@@ -44,11 +44,15 @@ const variants = styleVariants(colorVariants, (v, color) => [
 export const button = recipe({
   base: [
     {
-      display: "inline-block",
+      display: "inline-flex",
+      alignItems: "center",
     },
-    sprinkles({ padding: "spacing2", typography: "uiType" }),
+    sprinkles({ typography: "uiType", gap: "spacing1" }),
   ],
   variants: {
     color: variants,
+    hasPadding: {
+      true: sprinkles({ padding: "spacing2" }),
+    },
   },
 });

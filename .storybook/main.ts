@@ -3,6 +3,7 @@ import type { StorybookConfig } from "@storybook/nextjs";
 import { VanillaExtractPlugin } from "@vanilla-extract/webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
+import svgrConfig from "../svgr.config";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -12,6 +13,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-styling-webpack",
+    // { name: "@newhighsco/storybook-addon-svgr", options: svgrConfig },
     {
       name: "@storybook/addon-styling-webpack",
       options: {
@@ -56,12 +58,154 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   webpackFinal: (config) => {
+    // add nextjs @ aliases
     config.resolve = config.resolve || {};
     config.resolve.alias = config.resolve.alias || {};
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "..", "src"),
     };
+
+    // // disable whatever is already set to load SVGs
+    // config.module = config.module || {};
+    // config.module.rules = config.module.rules || [];
+
+    // // console.log(config.module);
+    // const fileLoaderRule = config.module.rules.find(
+    //   (rule) =>
+    //     rule &&
+    //     typeof rule === "object" &&
+    //     "test" in rule &&
+    //     rule.test instanceof RegExp &&
+    //     rule.test?.test?.(".svg")
+    // );
+
+    // if (fileLoaderRule && typeof fileLoaderRule === "object") {
+    //   config.module.rules.push({
+    //     ...fileLoaderRule,
+    //     test: /\.svg$/i,
+    //     resourceQuery: /url/, // *.svg?url
+    //   });
+    //   fileLoaderRule.exclude = /\.svg$/i;
+    // }
+
+    // // if (fileLoaderRule)
+    // // Convert all other *.svg imports to React components
+    // if (fileLoaderRule && typeof fileLoaderRule === "object") {
+    //   const newRule: (typeof config.module.rules)[number] = {
+    //     test: /\.svg$/i,
+    //     use: ["@svgr/webpack"],
+    //   };
+
+    //   if ("issuer" in fileLoaderRule) {
+    //     newRule.issuer = fileLoaderRule.issuer;
+    //   }
+
+    //   // if ("resourceQuery" in fileLoaderRule) {
+    //   //   console.log(fileLoaderRule.resourceQuery);
+    //   // }
+    //   // fileLoaderRule.resourceQuery = fileLoaderRule.resourceQuery || {};
+
+    //   // fileLoaderRule.resourceQuery
+    //   if (
+    //     "resourceQuery" in fileLoaderRule &&
+    //     typeof fileLoaderRule.resourceQuery === "object" &&
+    //     "not" in fileLoaderRule.resourceQuery
+    //   ) {
+    //     const { not } = fileLoaderRule.resourceQuery;
+    //     if (Array.isArray(not)) {
+    //       const notRules = [...not, /url/];
+    //       newRule.resourceQuery = {
+    //         not: notRules,
+    //       };
+    //     } else if (not instanceof RegExp || typeof not === "string") {
+    //       const notRules = [not, /url/];
+    //       newRule.resourceQuery = {
+    //         not: notRules,
+    //       };
+    //     }
+    //   }
+
+    //   config.module.rules.push(newRule);
+    // }
+    // // }
+
+    // // config.module.rules.push(
+    // //   // Reapply the existing rule, but only for svg imports ending in ?url
+    // //   {
+    // //     ...fileLoaderRule,
+    // //     test: /\.svg$/i,
+    // //     resourceQuery: /url/, // *.svg?url
+    // //   },
+    // //   // Convert all other *.svg imports to React components
+    // //   {
+    // //     test: /\.svg$/i,
+    // //     issuer: fileLoaderRule.issuer,
+    // //     resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
+    // //     use: ["@svgr/webpack"],
+    // //   }
+    // // );
+
+    // // config.module.rules
+    // //   .filter(
+    // //     (rule) =>
+    // //       typeof rule === "object" &&
+    // //       rule !== null &&
+    // //       "test" in rule &&
+    // //       rule.test instanceof RegExp &&
+    // //       rule.test.test(".svg")
+    // //   )
+    // //   .forEach((rule) => {
+    // //     if (typeof rule === "object" && rule !== null) {
+    // //       rule.exclude = /\.svg$/i;
+    // //     }
+    // //   });
+
+    // // // add SVGR instead
+    // // config.module.rules.push({
+    // //   test: /\.svg$/,
+    // //   use: [
+    // //     {
+    // //       loader: "@svgr/webpack",
+    // //     },
+    // //     {
+    // //       loader: "file-loader",
+    // //       options: {
+    // //         name: "static/media/[path][name].[ext]",
+    // //       },
+    // //     },
+    // //   ],
+    // //   type: "javascript/auto",
+    // //   issuer: {
+    // //     and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+    // //   },
+    // // });
+
+    // // // import SVGs as react components. Config taken from this guide:
+    // // // https://react-svgr.com/docs/next/
+
+    // // // Grab the existing rule that handles SVG imports
+    // // const fileLoaderRule = config.module.rules.find((rule) =>
+    // //   rule.test?.test?.(".svg")
+    // // );
+    // // config.module.rules.push(
+    // //   // Reapply the existing rule, but only for svg imports ending in ?url
+    // //   {
+    // //     ...fileLoaderRule,
+    // //     test: /\.svg$/i,
+    // //     resourceQuery: /url/, // *.svg?url
+    // //   },
+    // //   // Convert all other *.svg imports to React components
+    // //   {
+    // //     test: /\.svg$/i,
+    // //     issuer: fileLoaderRule.issuer,
+    // //     resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
+    // //     use: ["@svgr/webpack"],
+    // //   }
+    // // );
+    // // // Modify the file loader rule to ignore *.svg, since we have it handled now.
+    // // fileLoaderRule.exclude = /\.svg$/i;
+
     return config;
   },
 };

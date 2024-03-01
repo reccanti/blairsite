@@ -8,10 +8,16 @@ type NextLinkProps = ComponentProps<typeof NextLink>;
 
 type Props = (ButtonProps | NextLinkProps) & {
   color?: keyof typeof colorVariants;
+  hasPadding?: boolean;
 };
 
-export function Button({ color = "Default", className = "", ...props }: Props) {
-  const newClassNames = cx(button({ color }), className);
+export function Button({
+  color = "Default",
+  hasPadding = true,
+  className = "",
+  ...props
+}: Props) {
+  const newClassNames = cx(className, button({ color, hasPadding }));
   const sharedProps = { ...props, className: newClassNames };
 
   if ("href" in sharedProps) {

@@ -4,6 +4,7 @@ import "../themes/global.css";
 import { Footer } from "./_components/Footer";
 import { AnimatedPageWrapper } from "./_components/AnimatedPageWrapper";
 import "../themes/global.css";
+import { SiteHeader } from "./_components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
+          <SiteHeader />
           <AnimatedPageWrapper>{children}</AnimatedPageWrapper>
           <Footer />
         </ThemeProvider>
