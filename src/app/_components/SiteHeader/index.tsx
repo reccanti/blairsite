@@ -1,18 +1,17 @@
-import { Tile } from "../../../components/Tile";
-import { Highlight } from "../../../components/Highlight";
-import { Header } from "../../../components/Header";
-import Link from "next/link";
-import { Button } from "../../../components/Button";
+import { Tile } from "@/components/Tile";
+import { Highlight } from "@/components/Highlight";
+import { Button } from "@/components/Button";
+import { header } from "./SiteHeader.css";
 
 export function SiteHeader() {
   return (
     <Tile renderAs="header" fullWidth color="backgroundInverted">
-      <Link href="/">
-        <Header renderAs="h1" size={6}>
+      <Button href="/" color="Inverted">
+        <h1 className={header}>
           Blair Makes{" "}
           <Highlight color="labelHighlightMagenta">Cool Things</Highlight>
-        </Header>
-      </Link>
+        </h1>
+      </Button>
       <Button color="Inverted"></Button>
     </Tile>
   );

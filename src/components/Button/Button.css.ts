@@ -25,8 +25,8 @@ const variants = styleVariants(colorVariants, (v, color) => [
   {
     // color: labelDefaultColors[`label${color}`],
     // font: typeFonts[`uiType`],
-    // border: "none",
-    // outline: "none",
+    border: "none",
+    outline: "none",
     selectors: {
       "&:hover, &:focus, &:focus-within": {
         backgroundColor: backgroundHoverColors[`backgroundHover${color}`],
