@@ -15,10 +15,11 @@ export function Button({
   color = "Default",
   hasPadding = true,
   className = "",
+  tabIndex = 0,
   ...props
 }: Props) {
   const newClassNames = cx(className, button({ color, hasPadding }));
-  const sharedProps = { ...props, className: newClassNames };
+  const sharedProps = { ...props, tabIndex, className: newClassNames };
 
   if ("href" in sharedProps) {
     return <NextLink {...sharedProps} />;

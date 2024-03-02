@@ -1,5 +1,15 @@
 import { sprinkles } from "@/themes/sprinkles.css";
-import { style } from "@vanilla-extract/css";
+import { globalStyle, style } from "@vanilla-extract/css";
+
+// .sr-only:not(:focus):not(:active) {
+//   clip: rect(0 0 0 0);
+//   clip-path: inset(50%);
+//   height: 1px;
+//   overflow: hidden;
+//   position: absolute;
+//   white-space: nowrap;
+//   width: 1px;
+// }
 
 export const siteHeader = style([
   {
@@ -23,10 +33,47 @@ export const header = style([
   },
 ]);
 
-export const menuButtons = style({
+export const menus = style({
   flex: "1",
   display: "flex",
-  alignItems: "stretch",
-  justifyContent: "end",
+  justifyContent: "flex-end",
 });
-export const menuButton = style([sprinkles({ padding: "spacing1" })]);
+export const menuWrapper = style({
+  position: "relative",
+  // display: "flex",
+});
+export const menu = style({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-end",
+  position: "absolute",
+  width: "auto",
+  height: "auto",
+  right: 0,
+});
+
+/**
+ * Visually hidden styles. This way, the menu won't show up unless
+ */
+globalStyle(`.${menuWrapper}:not(:focus-within) .${menu}`, {
+  clipPath: "inset(50%)",
+  height: "1px",
+  overflow: "hidden",
+  position: "absolute",
+  whiteSpace: "nowrap",
+  width: "1px",
+});
+
+export const menuListItem = style({
+  display: "flex",
+  justifyContent: "flex-end",
+});
+
+export const menuToggleButtonWrapper = style({
+  display: "flex",
+  height: "100%",
+});
+export const menuToggleButton = style([sprinkles({ padding: "spacing1" })]);
+export const menuButton = style({
+  width: "max-content",
+});
