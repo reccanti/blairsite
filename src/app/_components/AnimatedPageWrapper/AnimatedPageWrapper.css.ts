@@ -28,6 +28,7 @@ export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
   backgroundRepeat: "repeat-y",
   willChange: "background-position-y",
   position: "fixed",
+  transform: "translate3d(0, 0, 0)",
 
   animation: `${scrollingBackgroundFrames} 240s linear infinite`,
 };

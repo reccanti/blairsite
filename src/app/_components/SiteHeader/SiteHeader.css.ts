@@ -5,6 +5,9 @@ export const siteHeader = style([
   {
     display: "flex",
     alignItems: "stretch",
+    position: "sticky",
+    top: 0,
+    zIndex: 1,
   },
 ]);
 export const headerLink = style([
