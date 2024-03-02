@@ -7,7 +7,7 @@ export const siteHeader = style([
     alignItems: "stretch",
     position: "sticky",
     top: 0,
-    zIndex: 1,
+    zIndex: 2,
   },
 ]);
 export const headerLink = style([
