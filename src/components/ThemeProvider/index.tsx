@@ -92,28 +92,25 @@ export function ThemeProvider({
   const reducedMotionMode = reduceMotion === "reduced";
 
   const toggleLightMode = () => {
-    // if dark mode is enabled, turn it off and turn light mode on
-    if (darkMode && !lightMode) {
-      setBrightness("light");
-    }
+    console.log("toggling...");
     // if light mode is enabled, unset the current mode and default to user
     // preferences. The user will need to explicitly toggle dark mode to enable
     // that
     if (lightMode) {
       setBrightness("unset");
+    } else {
+      setBrightness("light");
     }
   };
 
   const toggleDarkMode = () => {
-    // if light mode is enabled, turn it off and turn dark mode on
-    if (lightMode && !darkMode) {
-      setBrightness("dark");
-    }
     // if dark mode is enabled, unset the current mode and default to user
     // preferences. The user will need to explicitly toggle light mode to enable
     // that
     if (darkMode) {
       setBrightness("unset");
+    } else {
+      setBrightness("dark");
     }
   };
 
@@ -193,6 +190,36 @@ export function ControlledThemeProvider({
     [reducedMotionClass]: reducedMotionMode,
     [themeRootClass]: true,
   });
+
+  console.log(classNames);
+
+  // const value = useMemo(() => {
+  //   console.log("memoizing...");
+  //   console.log(toggleLightMode);
+  //   return {
+  //     lightMode,
+  //     darkMode,
+  //     highContrastMode,
+  //     simpleLayoutMode,
+  //     reducedMotionMode,
+  //     toggleLightMode,
+  //     toggleDarkMode,
+  //     toggleHighContrastMode,
+  //     toggleSimpleLayoutMode,
+  //     toggleReducedMotionMode,
+  //   };
+  // }, [
+  //   lightMode,
+  //   darkMode,
+  //   highContrastMode,
+  //   simpleLayoutMode,
+  //   reducedMotionMode,
+  //   toggleLightMode,
+  //   toggleDarkMode,
+  //   toggleHighContrastMode,
+  //   toggleSimpleLayoutMode,
+  //   toggleReducedMotionMode,
+  // ]);
 
   return (
     <ThemeContext.Provider

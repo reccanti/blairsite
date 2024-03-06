@@ -1,5 +1,5 @@
 import { ReactNode, JSX } from "react";
-import { dropdown, item } from "./DropdownMenu.css";
+import { dropdown, item, toggleWrapper } from "./DropdownMenu.css";
 import { menu } from "./DropdownMenu.css";
 
 interface MenuListItemProps {
@@ -32,7 +32,7 @@ interface DropdownMenuProps {
 export function DropdownMenu({ children, toggleButton }: DropdownMenuProps) {
   return (
     <div className={dropdown}>
-      <div>{toggleButton}</div>
+      <div className={toggleWrapper}>{toggleButton}</div>
       {children}
     </div>
   );

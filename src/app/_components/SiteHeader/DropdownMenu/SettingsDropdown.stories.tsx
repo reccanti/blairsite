@@ -1,12 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { NavDropdown } from "./NavDropdown";
+import { SettingsDropdown } from "./SettingsDropdown";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const meta: Meta = {
-  title: "Molecules/NavDropdown",
-  component: NavDropdown,
+  title: "Molecules/SettingsDropdown",
+  component: SettingsDropdown,
+  decorators: (Story) => (
+    <ThemeProvider>
+      <Story />
+    </ThemeProvider>
+  ),
 };
 
-type Story = StoryObj<typeof NavDropdown>;
+type Story = StoryObj<typeof SettingsDropdown>;
 
 export const Default: Story = {
   render: () => {
@@ -18,7 +24,7 @@ export const Default: Story = {
           position: "relative",
         }}
       >
-        <NavDropdown />
+        <SettingsDropdown />
       </div>
     );
   },
@@ -34,8 +40,8 @@ export const MultipleMenus: Story = {
           position: "relative",
         }}
       >
-        <NavDropdown />
-        <NavDropdown />
+        <SettingsDropdown />
+        <SettingsDropdown />
       </div>
     );
   },

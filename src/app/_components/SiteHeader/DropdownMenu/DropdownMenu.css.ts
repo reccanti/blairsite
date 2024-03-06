@@ -36,10 +36,17 @@ export const menu = style({
   },
 });
 
+export const toggleWrapper = style({
+  display: "flex",
+  flex: 1,
+});
+
 export const dropdown = style({
   "@media": {
     [tabletQuery]: {
       position: "relative",
+      display: "flex",
+      flexDirection: "column",
     },
   },
 });

@@ -8,7 +8,7 @@ export const toggleButton = style([
   sprinkles({ padding: "spacing1" }),
   {
     display: "flex",
-    height: "100%",
+    // height: "100%",
   },
 ]);
 
