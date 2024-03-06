@@ -18,8 +18,8 @@ export function Menu({
   children: ReactNode;
 }) {
   return (
-    <Element className={menu}>
-      <ul>{children}</ul>
+    <Element>
+      <ul className={menu}>{children}</ul>
     </Element>
   );
 }

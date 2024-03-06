@@ -15,7 +15,7 @@ type Story = StoryObj<typeof DropdownMenu>;
 export const Default: Story = {
   render: () => {
     return (
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <DropdownMenu
           toggleButton={
             <DropdownMenuToggleButton

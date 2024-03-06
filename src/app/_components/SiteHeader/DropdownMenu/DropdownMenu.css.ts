@@ -3,7 +3,17 @@ import { visuallyHiddenProperties } from "@/themes/utlities/visuallyHidden.css";
 
 export const item = style({
   display: "flex",
+  width: "100%",
+  flex: 1,
   justifyContent: "flex-end",
+  // width: "max-content",
+});
+
+export const itemButton = style({
+  flex: 1,
+  justifyContent: "flex-end",
+  // width: "100%",
+  // textAlign: "right",
 });
 
 export const menu = style({
@@ -11,13 +21,16 @@ export const menu = style({
   flexDirection: "column",
   alignItems: "flex-end",
   position: "absolute",
-  width: "auto",
+  width: "100%",
+  minHeight: "60vh",
+  // height: ""
+  // width: "auto%",
   height: "auto",
   right: 0,
 });
 
 export const dropdown = style({
-  position: "relative",
+  // position: "relative",
 });
 
 /**
