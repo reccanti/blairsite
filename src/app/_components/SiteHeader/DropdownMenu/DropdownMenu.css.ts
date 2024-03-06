@@ -1,19 +1,22 @@
 import { style, globalStyle } from "@vanilla-extract/css";
 import { visuallyHiddenProperties } from "@/themes/utlities/visuallyHidden.css";
+import { tabletQuery } from "@/themes/utlities/breakpoints.css";
 
 export const item = style({
   display: "flex",
   width: "100%",
   flex: 1,
   justifyContent: "flex-end",
-  // width: "max-content",
+  "@media": {
+    [tabletQuery]: {
+      width: "max-content",
+    },
+  },
 });
 
 export const itemButton = style({
   flex: 1,
   justifyContent: "flex-end",
-  // width: "100%",
-  // textAlign: "right",
 });
 
 export const menu = style({
@@ -23,14 +26,22 @@ export const menu = style({
   position: "absolute",
   width: "100%",
   minHeight: "60vh",
-  // height: ""
-  // width: "auto%",
   height: "auto",
   right: 0,
+  "@media": {
+    [tabletQuery]: {
+      width: "auto",
+      minHeight: "auto",
+    },
+  },
 });
 
 export const dropdown = style({
-  // position: "relative",
+  "@media": {
+    [tabletQuery]: {
+      position: "relative",
+    },
+  },
 });
 
 /**
