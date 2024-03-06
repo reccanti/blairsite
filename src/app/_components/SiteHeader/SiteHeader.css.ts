@@ -40,22 +40,12 @@ export const menus = style({
 });
 export const menuWrapper = style({
   position: "relative",
-  // display: "flex",
-});
-export const menu = style({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "flex-end",
-  position: "absolute",
-  width: "auto",
-  height: "auto",
-  right: 0,
 });
 
 /**
  * Visually hidden styles. This way, the menu won't show up unless
  */
-globalStyle(`.${menuWrapper}:not(:focus-within) .${menu}`, {
+globalStyle(`.${menuWrapper}:not(:focus-within) .test`, {
   clipPath: "inset(50%)",
   height: "1px",
   overflow: "hidden",
@@ -69,10 +59,7 @@ export const menuListItem = style({
   justifyContent: "flex-end",
 });
 
-export const menuToggleButtonWrapper = style({
-  display: "flex",
-  height: "100%",
-});
+export const menuToggleButtonWrapper = style({});
 export const menuToggleButton = style([sprinkles({ padding: "spacing1" })]);
 export const menuButton = style({
   width: "max-content",

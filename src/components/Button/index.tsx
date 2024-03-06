@@ -6,13 +6,13 @@ import cx from "classnames";
 type ButtonProps = ComponentProps<"button">;
 type NextLinkProps = ComponentProps<typeof NextLink>;
 
-type Props = (ButtonProps | NextLinkProps) & {
+export type Props = (ButtonProps | NextLinkProps) & {
   color?: keyof typeof colorVariants;
   hasPadding?: boolean;
 };
 
 export function Button({
-  color = "Default",
+  color,
   hasPadding = true,
   className = "",
   tabIndex = 0,

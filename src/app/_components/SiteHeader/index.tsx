@@ -4,7 +4,6 @@ import { Button } from "@/components/Button";
 import {
   header,
   headerLink,
-  menu,
   menuToggleButton,
   menus,
   siteHeader,
@@ -52,7 +51,7 @@ export function SiteHeader() {
               <CloseIcon width={26} height={26} />
             </Button>
           </div>
-          <nav className={menu}>
+          <nav>
             <ul>
               <li className={menuListItem}>
                 <Button className={menuButton} color="Gray1">
@@ -90,7 +89,7 @@ export function SiteHeader() {
               <CloseIcon width={26} height={26} />
             </Button>
           </div>
-          <nav className={menu}>
+          <nav>
             <ul>
               <li className={menuListItem}>
                 <Button className={menuButton} color="Red" tabIndex={0}>
