@@ -92,7 +92,6 @@ export function ThemeProvider({
   const reducedMotionMode = reduceMotion === "reduced";
 
   const toggleLightMode = () => {
-    console.log("toggling...");
     // if light mode is enabled, unset the current mode and default to user
     // preferences. The user will need to explicitly toggle dark mode to enable
     // that
@@ -190,36 +189,6 @@ export function ControlledThemeProvider({
     [reducedMotionClass]: reducedMotionMode,
     [themeRootClass]: true,
   });
-
-  console.log(classNames);
-
-  // const value = useMemo(() => {
-  //   console.log("memoizing...");
-  //   console.log(toggleLightMode);
-  //   return {
-  //     lightMode,
-  //     darkMode,
-  //     highContrastMode,
-  //     simpleLayoutMode,
-  //     reducedMotionMode,
-  //     toggleLightMode,
-  //     toggleDarkMode,
-  //     toggleHighContrastMode,
-  //     toggleSimpleLayoutMode,
-  //     toggleReducedMotionMode,
-  //   };
-  // }, [
-  //   lightMode,
-  //   darkMode,
-  //   highContrastMode,
-  //   simpleLayoutMode,
-  //   reducedMotionMode,
-  //   toggleLightMode,
-  //   toggleDarkMode,
-  //   toggleHighContrastMode,
-  //   toggleSimpleLayoutMode,
-  //   toggleReducedMotionMode,
-  // ]);
 
   return (
     <ThemeContext.Provider
