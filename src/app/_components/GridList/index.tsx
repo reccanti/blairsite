@@ -1,25 +1,53 @@
-import { ReactNode } from "react";
+import { ReactNode, ComponentProps } from "react";
+import Image, { ImageProps } from "next/image";
+import { SimplifiableTile } from "../SimplifiableTile";
+import { image, imageImg, item, label as labelStyle } from "./GridList.css";
+import cx from "classnames";
+import { desktopSize } from "@/themes/utlities/breakpoints.css";
 
-interface GridListItemProps {
-  // not a fan of using "any" here, but this is the type returned by NextJS when
-  // it imports an image, so I'm keeping it like this for now
-  //
-  // ~Blair, 3/7/2024
-  img: any;
-  label: string;
-}
+interface ItemImageProps extends ImageProps {}
 
-export function GridListItem({ img, label }: GridListItemProps) {
+export function ItemImage(props: ItemImageProps) {
+  const tileClassName = cx(image);
+  const imgClassName = cx(props.className, imageImg);
   return (
-    <li>
-      <span>{label}</span>
-    </li>
+    <SimplifiableTile className={tileClassName}>
+      <Image
+        {...props}
+        className={imgClassName}
+        fill
+        sizes={`
+                (min-width: ${desktopSize}) 400px,
+                50vw`}
+      />
+    </SimplifiableTile>
   );
 }
 
-interface GridListProps {
+interface ItemLabelProps {
+  label: string;
+  color: ComponentProps<typeof SimplifiableTile>["color"];
+}
+
+export function ItemLabel({ label, color }: ItemLabelProps) {
+  return (
+    <SimplifiableTile renderAs="span" className={labelStyle} color={color}>
+      {label}
+    </SimplifiableTile>
+  );
+}
+
+interface ItemProps {
+  children: ReactNode;
+}
+
+export function Item({ children }: ItemProps) {
+  return <li className={item}>{children}</li>;
+}
+
+interface ListProps {
   children?: ReactNode;
 }
-export function GridList({ children }: GridListProps) {
+export function List({ children }: ListProps) {
   return <ul>{children}</ul>;
 }

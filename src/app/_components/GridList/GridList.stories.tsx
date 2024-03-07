@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { GridList } from ".";
+import { List } from ".";
 
 const meta: Meta = {
   title: "Molecules/GridList/List",
-  component: GridList,
+  component: List,
 };
 
-type Story = StoryObj<typeof GridList>;
+type Story = StoryObj<typeof List>;
 
 export const Default: Story = {
   render: () => {
     return (
-      <GridList>
+      <List>
         <li>Foo</li>
         <li>Bar</li>
-      </GridList>
+      </List>
     );
   },
 };

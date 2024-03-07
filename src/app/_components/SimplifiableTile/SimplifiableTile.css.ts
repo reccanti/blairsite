@@ -8,6 +8,7 @@ import {
 import { styleVariants } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 import { sprinkles } from "@/themes/sprinkles.css";
+import { spacing } from "@/themes/sprinkles/sizes.css";
 
 const colorVariants = styleVariants(semanticColorKeymap, (v, color) => [
   {
@@ -23,7 +24,13 @@ const colorVariants = styleVariants(semanticColorKeymap, (v, color) => [
 export const simplifiableTile = recipe({
   variants: {
     hasPadding: {
-      true: sprinkles({ padding: "spacing3" }),
+      true: {
+        selectors: {
+          [`.${themeRootClass}:not(.${simpleClass}) &`]: {
+            padding: spacing["spacing3"],
+          },
+        },
+      },
     },
     color: colorVariants,
   },
