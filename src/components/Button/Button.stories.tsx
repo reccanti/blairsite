@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from ".";
-import { colorVariants } from "./Button.css";
 import { keys } from "../../lib/utils/records";
+import { semanticColorKeymap } from "@/themes/sprinkles/colors.css";
 
 const meta: Meta = {
   title: "Component/Button",
@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Button>;
 
 export const AsButton: Story = {
   render: () => {
-    const colors = keys(colorVariants);
+    const colors = keys(semanticColorKeymap);
     return (
       <>
         {colors.map((color) => (
@@ -27,7 +27,7 @@ export const AsButton: Story = {
 
 export const AsLink: Story = {
   render: () => {
-    const colors = keys(colorVariants);
+    const colors = keys(semanticColorKeymap);
     return (
       <>
         {colors.map((color) => (
