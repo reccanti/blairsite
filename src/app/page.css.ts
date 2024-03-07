@@ -205,7 +205,8 @@ export const projectContent = style([
   },
 ]);
 
-// skills section: Large block title with summary text, followed by a list of items
+// skills section: Large block title with summary text, followed by a list of
+// grid items
 
 export const skills = style({
   display: "flex",
@@ -223,4 +224,20 @@ export const skills = style({
 
 export const skillSection = style({
   gridColumn: "span 3",
+});
+
+// contact section: Large block title with summary tex
+
+export const contact = style({
+  display: "flex",
+  flexDirection: "column",
+  "@media": {
+    [desktopQuery]: {
+      display: "grid",
+      gridTemplateAreas: `
+        "content header header"
+      `,
+      gridTemplateColumns: "calc(100% / 3) calc(100% / 3) calc(100% / 3)",
+    },
+  },
 });

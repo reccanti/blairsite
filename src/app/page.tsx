@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Highlight } from "@/components/Highlight";
 import {
   about,
+  contact,
   contentWrapper,
   project,
   projectContent,
@@ -62,6 +63,7 @@ import projectHomebaseThemerContent from "@/data/homepage/projects/homebase-them
 import projectHomebaseCoverageContent from "@/data/homepage/projects/homebase-coverage.md";
 import projectHomebaseUIContent from "@/data/homepage/projects/homebase-ui.md";
 import projectHomebaseDocsContent from "@/data/homepage/projects/homebase-docs.md";
+import contactContent from "@/data/homepage/contacts.md";
 
 export default function Home() {
   return (
@@ -75,9 +77,9 @@ export default function Home() {
         </header>
       </section>
       <div className={contentWrapper}>
-        <section className={about}>
+        <section className={about} id="about">
           <Tile color="Red" className={sectionHeader}>
-            <Header renderAs="h2" size={3} id="about">
+            <Header renderAs="h2" size={3}>
               Who&#39;s this gal?
             </Header>
           </Tile>
@@ -98,7 +100,7 @@ export default function Home() {
             <Markdown>{aboutContent}</Markdown>
           </Tile>
         </section>
-        <section className={projects}>
+        <section className={projects} id="projects">
           <Tile color="Yellow" className={sectionHeader}>
             <Header renderAs="h2" size={3}>
               Cool Stuff I&#39;ve Worked on
@@ -150,7 +152,7 @@ export default function Home() {
             </div>
           </dl>
         </section>
-        <section className={skills}>
+        <section className={skills} id="skills">
           <Tile color="Blue" className={sectionHeader}>
             <Header renderAs="h2" size={3}>
               Things I&#39;ve Used
@@ -227,6 +229,10 @@ export default function Home() {
                   <GridListItemImage src={SketchLogo.src} alt="" />
                   <GridListItemLabel label="Sketch" color="Magenta" />
                 </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={BuildkiteLogo.src} alt="" />
+                  <GridListItemLabel label="Buildkite" color="Blue" />
+                </GridListItem>
               </GridList>
             </section>
             <section>
@@ -259,6 +265,29 @@ export default function Home() {
               </GridList>
             </section>
           </div>
+        </section>
+        <section className={contact} id="contact">
+          <Tile color="Green" className={sectionHeader}>
+            <Header renderAs="h2" size={3}>
+              Wanna Reach Out?
+            </Header>
+          </Tile>
+          <Tile fullWidth className={sectionImage}>
+            <Image
+              src={ProfilePicture.src}
+              className={sectionImageImg}
+              alt="Profile picture of me, Blair"
+              fill
+              sizes={`
+                (min-width: ${desktopSize}) 400px,
+                (min-width: ${tabletSize}) 50vw,
+                100vw
+                `}
+            />
+          </Tile>
+          <Tile className={sectionContent}>
+            <Markdown>{contactContent}</Markdown>
+          </Tile>
         </section>
       </div>
     </main>
