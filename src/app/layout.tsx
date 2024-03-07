@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "../themes/global.css";
 import { Footer } from "./_components/Footer";
-import { AnimatedPageWrapper } from "./_components/AnimatedPageWrapper";
+// import { AnimatedPageWrapper } from "./_components/AnimatedPageWrapper";
 import "../themes/global.css";
 import { SiteHeader } from "./_components/SiteHeader";
 
