@@ -10,6 +10,7 @@ import {
 import { typeDecorations, typeFonts } from "./sprinkles/fonts.css";
 import { labelFocus } from "./sprinkles/focus.css";
 import { button } from "../components/Button/Button.css";
+import { themeRootClass } from "@/components/ThemeProvider/ThemeProvider.css";
 
 globalStyle("*", {
   boxSizing: "border-box",
@@ -17,7 +18,7 @@ globalStyle("*", {
   padding: 0,
 });
 
-globalStyle(":root", {
+globalStyle(`:root, .${themeRootClass}`, {
   backgroundColor: backgroundDefaultColors.backgroundDefault,
   color: labelDefaultColors.labelDefault,
   font: typeFonts.bodyType,

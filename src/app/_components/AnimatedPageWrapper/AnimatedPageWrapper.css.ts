@@ -3,6 +3,7 @@ import image1 from "../../../../public/assets/BackgroundImage1.png";
 import image2 from "../../../../public/assets/BackgroundImage2.png";
 import image3 from "../../../../public/assets/BackgroundImage3.png";
 import { reducedMotionClass } from "../../../themes/base.css";
+import { backgroundDefaultColors } from "@/themes/sprinkles/colors.css";
 
 const scrollingBackgroundFrames = keyframes({
   "0%": {
@@ -17,6 +18,7 @@ export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
   content: "",
   width: "100vw",
   height: "100vh",
+  backgroundColor: backgroundDefaultColors["backgroundDefault"],
   backgroundImage: `
     url("${image1.src}"), 
     url("${image2.src}"), 
@@ -26,11 +28,10 @@ export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
     right,
     center`,
   backgroundRepeat: "repeat-y",
-  willChange: "background-position-y",
   position: "fixed",
-  transform: "translate3d(0, 0, 0)",
-
-  animation: `${scrollingBackgroundFrames} 240s linear infinite`,
+  // transform: "translate3d(0, 0, 0)",
+  // willChange: "background-position-y",
+  // animation: `${scrollingBackgroundFrames} 240s linear infinite`,
 };
 
 /**

@@ -69,7 +69,7 @@ export default function Home() {
       <div className={contentWrapper}>
         <section className={about}>
           <Tile color="backgroundRed" className={sectionHeader}>
-            <Header renderAs="h2" size={3}>
+            <Header renderAs="h2" size={3} id="about">
               Who&#39;s this gal?
             </Header>
           </Tile>
