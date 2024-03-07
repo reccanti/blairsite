@@ -5,7 +5,11 @@ import {
   typeTransforms,
 } from "@/themes/sprinkles/fonts.css";
 import { spacing } from "@/themes/sprinkles/sizes.css";
-import { tabletQuery } from "@/themes/utlities/breakpoints.css";
+import {
+  beforeDesktopQuery,
+  desktopQuery,
+  tabletQuery,
+} from "@/themes/utlities/breakpoints.css";
 import {
   globalSimpleModeStyles,
   globalStyledModeStyles,
@@ -53,9 +57,49 @@ globalStyledModeStyles(`${item}`, {
   aspectRatio: "2 auto",
 });
 
-globalStyledModeStyles(`${item}:nth-of-type(2n)`, {
-  listStyle: "none",
-  display: "flex",
-  aspectRatio: "2 auto",
-  flexDirection: "row-reverse",
+export const list = style({});
+
+globalStyledModeStyles(`${list}`, {
+  "@media": {
+    [desktopQuery]: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr 1fr",
+    },
+  },
+});
+
+globalStyledModeStyles(`.${list} > .${item}`, {
+  "@media": {
+    [desktopQuery]: {
+      aspectRatio: "0.5 auto",
+      flexDirection: "column",
+    },
+  },
+});
+
+globalStyledModeStyles(
+  `.${list} > .${item} > .${image}, .${list} > .${item} > .${label}`,
+  {
+    "@media": {
+      [desktopQuery]: {
+        width: "100%",
+        height: "50%",
+      },
+    },
+  }
+);
+globalStyledModeStyles(`.${list} > .${item}:nth-of-type(2n + 1)`, {
+  "@media": {
+    [beforeDesktopQuery]: {
+      flexDirection: "row-reverse",
+    },
+  },
+});
+
+globalStyledModeStyles(`.${list} > .${item}:nth-of-type(3n + 2)`, {
+  "@media": {
+    [desktopQuery]: {
+      flexDirection: "column-reverse",
+    },
+  },
 });

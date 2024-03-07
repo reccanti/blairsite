@@ -1,7 +1,13 @@
 import { ReactNode, ComponentProps } from "react";
 import Image, { ImageProps } from "next/image";
 import { SimplifiableTile } from "../SimplifiableTile";
-import { image, imageImg, item, label as labelStyle } from "./GridList.css";
+import {
+  image,
+  imageImg,
+  item,
+  label as labelStyle,
+  list,
+} from "./GridList.css";
 import cx from "classnames";
 import { desktopSize } from "@/themes/utlities/breakpoints.css";
 
@@ -49,5 +55,5 @@ interface ListProps {
   children?: ReactNode;
 }
 export function List({ children }: ListProps) {
-  return <ul>{children}</ul>;
+  return <ul className={list}>{children}</ul>;
 }
