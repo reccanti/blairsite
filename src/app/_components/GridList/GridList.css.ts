@@ -37,6 +37,7 @@ globalStyledModeStyles(`${label}`, {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  textAlign: "center",
   font: typeFonts["header5Type"],
   textDecoration: typeDecorations["header5Type"],
   textTransform: typeTransforms["header5Type"],

@@ -14,10 +14,18 @@ import {
   sectionHeader,
   sectionImage,
   sectionImageImg,
+  skillSection,
+  skills,
   splash,
   splashHeader,
 } from "@/app/page.css";
 import { Tile } from "@/components/Tile";
+import {
+  List as GridList,
+  Item as GridListItem,
+  ItemImage as GridListItemImage,
+  ItemLabel as GridListItemLabel,
+} from "./_components/GridList";
 
 // images
 import ProfilePicture from "../../public/assets/ProfilePicture.png";
@@ -101,7 +109,7 @@ export default function Home() {
           </Tile>
           <dl className={projectList}>
             <div className={project}>
-              <Tile renderAs="dt" color="Magenta" className={projectHeader}>
+              <Tile renderAs="dt" color="Blue" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase Themer
                 </Header>
@@ -111,7 +119,7 @@ export default function Home() {
               </Tile>
             </div>
             <div className={project}>
-              <Tile renderAs="dt" color="Blue" className={projectHeader}>
+              <Tile renderAs="dt" color="Green" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase Coverage Extension
                 </Header>
@@ -121,7 +129,7 @@ export default function Home() {
               </Tile>
             </div>
             <div className={project}>
-              <Tile renderAs="dt" color="Green" className={projectHeader}>
+              <Tile renderAs="dt" color="Magenta" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase UI Library
                 </Header>
@@ -131,7 +139,7 @@ export default function Home() {
               </Tile>
             </div>
             <div className={project}>
-              <Tile renderAs="dt" color="Yellow" className={projectHeader}>
+              <Tile renderAs="dt" color="Red" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase Docs Site
                 </Header>
@@ -141,6 +149,116 @@ export default function Home() {
               </Tile>
             </div>
           </dl>
+        </section>
+        <section className={skills}>
+          <Tile color="Blue" className={sectionHeader}>
+            <Header renderAs="h2" size={3}>
+              Things I&#39;ve Used
+            </Header>
+          </Tile>
+          <Tile className={sectionContent}>
+            <Markdown>{projectSummaryContent}</Markdown>
+          </Tile>
+          <div className={skillSection}>
+            <section>
+              <Tile>Languages</Tile>
+              <GridList>
+                <GridListItem>
+                  <GridListItemImage src={HTMLLogo.src} alt="" />
+                  <GridListItemLabel label="HTML" color="Blue" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={CSSLogo.src} alt="" />
+                  <GridListItemLabel label="CSS" color="Green" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={SassLogo.src} alt="" />
+                  <GridListItemLabel label="Sass" color="Yellow" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={JSLogo.src} alt="" />
+                  <GridListItemLabel label="JavaScript" color="Magenta" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={TypescriptLogo.src} alt="" />
+                  <GridListItemLabel label="TypeScript" color="Blue" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={PHPLogo.src} alt="" />
+                  <GridListItemLabel label="PHP" color="Red" />
+                </GridListItem>
+              </GridList>
+            </section>
+            <section>
+              <Tile>Tools</Tile>
+              <GridList>
+                <GridListItem>
+                  <GridListItemImage src={DockerLogo.src} alt="" />
+                  <GridListItemLabel label="Docker" color="Green" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={KubernetesLogo.src} alt="" />
+                  <GridListItemLabel label="Kubernetes" color="Yellow" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={TerraformLogo.src} alt="" />
+                  <GridListItemLabel label="Terraform" color="Magenta" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={GoogleAnalyticsLogo.src} alt="" />
+                  <GridListItemLabel label="Google Analytics" color="Blue" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={LookerStudioLogo.src} alt="" />
+                  <GridListItemLabel label="Looker Studio" color="Red" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={GCPLogo.src} alt="" />
+                  <GridListItemLabel
+                    label="Google Cloud Platform"
+                    color="Green"
+                  />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={FigmaLogo.src} alt="" />
+                  <GridListItemLabel label="Figma" color="Yellow" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={SketchLogo.src} alt="" />
+                  <GridListItemLabel label="Sketch" color="Magenta" />
+                </GridListItem>
+              </GridList>
+            </section>
+            <section>
+              <Tile>Frameworks</Tile>
+              <GridList>
+                <GridListItem>
+                  <GridListItemImage src={ReactLogo.src} alt="" />
+                  <GridListItemLabel label="React" color="Blue" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={NextJSLogo.src} alt="" />
+                  <GridListItemLabel label="NextJS" color="Magenta" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={NodeJSLogo.src} alt="" />
+                  <GridListItemLabel label="NodeJS" color="Green" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={WordpressLogo.src} alt="" />
+                  <GridListItemLabel label="Wordpress" color="Red" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={LaravelLogo.src} alt="" />
+                  <GridListItemLabel label="Laravel" color="Yellow" />
+                </GridListItem>
+                <GridListItem>
+                  <GridListItemImage src={MagentoLogo.src} alt="" />
+                  <GridListItemLabel label="Magento" color="Blue" />
+                </GridListItem>
+              </GridList>
+            </section>
+          </div>
         </section>
       </div>
     </main>
