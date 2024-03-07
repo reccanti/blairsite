@@ -21,7 +21,8 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <SiteHeader />
-          <AnimatedPageWrapper>{children}</AnimatedPageWrapper>
+          {children}
+          {/* <AnimatedPageWrapper>{children}</AnimatedPageWrapper> */}
           <Footer />
         </ThemeProvider>
       </body>
