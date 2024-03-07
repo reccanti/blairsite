@@ -10,13 +10,6 @@ export function split<S extends string, D extends string>(
   return str.split(delimiter) as Split<S, D>;
 }
 
-// type Head<A extends readonly string[]> = A extends readonly [infer Head, ...any]
-//   ? Head
-//   : never;
-// type Tail<A extends readonly string[]> = A extends readonly [any, ...infer Tail]
-//   ? Tail
-//   : [];
-
 type Join<A extends readonly string[], D extends string> = A extends readonly []
   ? ""
   : A extends readonly [infer S extends string]
@@ -25,10 +18,6 @@ type Join<A extends readonly string[], D extends string> = A extends readonly []
   ? `${H}${D}${Join<T, D>}`
   : never;
 
-const myArr = ["Hello", "World", "How", "are", "you"] as const;
-const myArr2 = [] as const;
-
-type J = Join<typeof myArr, "-">;
 export function join<A extends readonly string[], D extends string>(
   arr: A,
   delimiter: D
@@ -36,10 +25,13 @@ export function join<A extends readonly string[], D extends string>(
   return arr.join(delimiter) as Join<A, D>;
 }
 
-const str = join(["amber", "is", "cute!!!"] as const, ".");
+type Titlecase<S extends string> = S extends `${infer P0}${infer D}`
+  ? `${Uppercase<P0>}${D}`
+  : S extends ""
+  ? ""
+  : Uppercase<S>;
 
-// type H = Head<typeof myArr>;
-// type T = Tail<typeof myArr>;
-// type ET = Tail<typeof myArr2>;
-
-[1, 2, 3, 4, 5];
+export function toTitleCase<S extends string>(s: S): Titlecase<S> {
+  const [first, ...rest] = s.split("");
+  return `${first.toUpperCase()}${rest.join("")}` as Titlecase<S>;
+}
