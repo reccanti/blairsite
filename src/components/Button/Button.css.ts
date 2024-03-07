@@ -1,26 +1,13 @@
 import { recipe } from "@vanilla-extract/recipes";
-import { globalStyle, style, styleVariants } from "@vanilla-extract/css";
+import { styleVariants } from "@vanilla-extract/css";
 import { sprinkles } from "../../themes/sprinkles.css";
 import {
   backgroundHoverColors,
-  labelDefaultColors,
+  semanticColorKeymap,
 } from "../../themes/sprinkles/colors.css";
 import { shadowFocus, shadowActive } from "../../themes/sprinkles/focus.css";
-import { typeFonts } from "../../themes/sprinkles/fonts.css";
 
-export const colorVariants = {
-  Default: "",
-  Magenta: "",
-  Green: "",
-  Blue: "",
-  Red: "",
-  Yellow: "",
-  Gray1: "",
-  Gray2: "",
-  Inverted: "",
-};
-
-const variants = styleVariants(colorVariants, (v, color) => [
+const variants = styleVariants(semanticColorKeymap, (v, color) => [
   sprinkles({ color: `label${color}`, backgroundColor: `background${color}` }),
   {
     // color: labelDefaultColors[`label${color}`],

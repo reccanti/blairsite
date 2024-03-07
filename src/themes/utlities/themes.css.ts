@@ -81,3 +81,13 @@ export function globalSimpleModeStyles(
     ...rules,
   });
 }
+
+export function globalStyledModeStyles(
+  className: string,
+  rules: GlobalStyleRule
+) {
+  const baseSelector = `.${themeRootClass}:not(.${simpleClass})`;
+  globalStyle(`${baseSelector} ${className}`, {
+    ...rules,
+  });
+}

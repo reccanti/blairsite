@@ -149,6 +149,14 @@ globalStyle("html", {
   },
 });
 
+globalStyle(`.${themeRootClass}.${simpleClass}`, {
+  "@media": {
+    [tabletQuery]: {
+      vars: assignVars(fontVars, fontsLargeScreenSimple),
+    },
+  },
+});
+
 globalStyle(`html :not(.${darkClass}).${highContrastClass}`, {
   "@media": {
     "(prefers-color-scheme: light)": {

@@ -1,5 +1,6 @@
 import { defineProperties } from "@vanilla-extract/sprinkles";
-import { colorVars } from "../base.css";
+import { colorVars, simpleClass } from "../base.css";
+import { themeRootClass } from "@/components/ThemeProvider/ThemeProvider.css";
 
 // base colors
 
@@ -81,6 +82,22 @@ export const baseColors = {
 };
 
 // semantic colors
+
+// we have all sorts of semantic colors where the values are similar, but the
+// shade can change depending on the context. This keymap is useful for
+// generating some of these styles
+
+export const semanticColorKeymap = {
+  Default: "",
+  Magenta: "",
+  Green: "",
+  Blue: "",
+  Red: "",
+  Yellow: "",
+  Gray1: "",
+  Gray2: "",
+  Inverted: "",
+};
 
 const {
   default: backgroundDefault,

@@ -68,7 +68,7 @@ export default function Home() {
       </section>
       <div className={contentWrapper}>
         <section className={about}>
-          <Tile color="backgroundRed" className={sectionHeader}>
+          <Tile color="Red" className={sectionHeader}>
             <Header renderAs="h2" size={3} id="about">
               Who&#39;s this gal?
             </Header>
@@ -91,7 +91,7 @@ export default function Home() {
           </Tile>
         </section>
         <section className={projects}>
-          <Tile color="backgroundYellow" className={sectionHeader}>
+          <Tile color="Yellow" className={sectionHeader}>
             <Header renderAs="h2" size={3}>
               Cool Stuff I&#39;ve Worked on
             </Header>
@@ -101,11 +101,7 @@ export default function Home() {
           </Tile>
           <dl className={projectList}>
             <div className={project}>
-              <Tile
-                renderAs="dt"
-                color="backgroundMagenta"
-                className={projectHeader}
-              >
+              <Tile renderAs="dt" color="Magenta" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase Themer
                 </Header>
@@ -115,11 +111,7 @@ export default function Home() {
               </Tile>
             </div>
             <div className={project}>
-              <Tile
-                renderAs="dt"
-                color="backgroundBlue"
-                className={projectHeader}
-              >
+              <Tile renderAs="dt" color="Blue" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase Coverage Extension
                 </Header>
@@ -129,11 +121,7 @@ export default function Home() {
               </Tile>
             </div>
             <div className={project}>
-              <Tile
-                renderAs="dt"
-                color="backgroundGreen"
-                className={projectHeader}
-              >
+              <Tile renderAs="dt" color="Green" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase UI Library
                 </Header>
@@ -143,11 +131,7 @@ export default function Home() {
               </Tile>
             </div>
             <div className={project}>
-              <Tile
-                renderAs="dt"
-                color="backgroundYellow"
-                className={projectHeader}
-              >
+              <Tile renderAs="dt" color="Yellow" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase Docs Site
                 </Header>

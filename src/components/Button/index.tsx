@@ -1,13 +1,14 @@
 import { ComponentProps } from "react";
 import NextLink from "next/link";
-import { button, colorVariants } from "./Button.css";
+import { button } from "./Button.css";
 import cx from "classnames";
+import { semanticColorKeymap } from "@/themes/sprinkles/colors.css";
 
 type ButtonProps = ComponentProps<"button">;
 type NextLinkProps = ComponentProps<typeof NextLink>;
 
 export type Props = (ButtonProps | NextLinkProps) & {
-  color?: keyof typeof colorVariants;
+  color?: keyof typeof semanticColorKeymap;
   hasPadding?: boolean;
 };
 

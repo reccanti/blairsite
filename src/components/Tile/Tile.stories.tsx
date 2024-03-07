@@ -12,15 +12,15 @@ export const Default: Story = {
   render: () => {
     return (
       <>
-        <Tile color="backgroundDefault">Some Content</Tile>
-        <Tile color="backgroundMagenta">Some Content</Tile>
-        <Tile color="backgroundBlue">Some Content</Tile>
-        <Tile color="backgroundGreen">Some Content</Tile>
-        <Tile color="backgroundYellow">Some Content</Tile>
-        <Tile color="backgroundRed">Some Content</Tile>
-        <Tile color="backgroundGray1">Some Content</Tile>
-        <Tile color="backgroundGray2">Some Content</Tile>
-        <Tile color="backgroundInverted">Some Content</Tile>
+        <Tile color="Default">Some Content</Tile>
+        <Tile color="Magenta">Some Content</Tile>
+        <Tile color="Blue">Some Content</Tile>
+        <Tile color="Green">Some Content</Tile>
+        <Tile color="Yellow">Some Content</Tile>
+        <Tile color="Red">Some Content</Tile>
+        <Tile color="Gray1">Some Content</Tile>
+        <Tile color="Gray2">Some Content</Tile>
+        <Tile color="Inverted">Some Content</Tile>
       </>
     );
   },
@@ -30,31 +30,31 @@ export const FullWidth: Story = {
   render: () => {
     return (
       <>
-        <Tile color="backgroundDefault" fullWidth>
+        <Tile color="Default" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundMagenta" fullWidth>
+        <Tile color="Magenta" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundBlue" fullWidth>
+        <Tile color="Blue" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundGreen" fullWidth>
+        <Tile color="Green" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundYellow" fullWidth>
+        <Tile color="Yellow" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundRed" fullWidth>
+        <Tile color="Red" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundGray1" fullWidth>
+        <Tile color="Gray1" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundGray2" fullWidth>
+        <Tile color="Gray2" fullWidth>
           Some Content
         </Tile>
-        <Tile color="backgroundInverted" fullWidth>
+        <Tile color="Inverted" fullWidth>
           Some Content
         </Tile>
       </>
