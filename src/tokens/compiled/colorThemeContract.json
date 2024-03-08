@@ -59,7 +59,6 @@
         }
       }
     },
-    "overlay": null,
     "base": {
       "black": null,
       "white": null,
@@ -117,7 +116,8 @@
         "11": null,
         "12": null
       }
-    }
+    },
+    "overlay": null
   },
   "borders": {
     "focus": {

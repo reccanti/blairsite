@@ -59,7 +59,6 @@
         }
       }
     },
-    "overlay": "linear-gradient(45deg, transparent, #222222 100%)",
     "base": {
       "black": "#222222",
       "white": "#FFFFFF",
@@ -117,7 +116,8 @@
         "11": "#363636",
         "12": "#222222"
       }
-    }
+    },
+    "overlay": "linear-gradient(264deg, #00000080 0%, #00000040 100%)"
   },
   "borders": {
     "focus": {
