@@ -4,6 +4,7 @@ import image2 from "../../../../public/assets/BackgroundImage2.png";
 import image3 from "../../../../public/assets/BackgroundImage3.png";
 import { reducedMotionClass } from "../../../themes/base.css";
 import { backgroundDefaultColors } from "@/themes/sprinkles/colors.css";
+import { timing } from "@/themes/sprinkles/timing.css";
 
 const scrollingBackgroundFrames = keyframes({
   "0%": {
@@ -29,6 +30,7 @@ export const scrollingBackgroundStyles: Parameters<typeof style>[0] = {
     center`,
   backgroundRepeat: "repeat-y",
   position: "fixed",
+
   // transform: "translate3d(0, 0, 0)",
   // willChange: "background-position-y",
   // animation: `${scrollingBackgroundFrames} 240s linear infinite`,

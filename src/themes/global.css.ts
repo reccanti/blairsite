@@ -11,6 +11,7 @@ import { typeDecorations, typeFonts } from "./sprinkles/fonts.css";
 import { labelFocus } from "./sprinkles/focus.css";
 import { button } from "../components/Button/Button.css";
 import { themeRootClass } from "@/components/ThemeProvider/ThemeProvider.css";
+import { timing } from "./sprinkles/timing.css";
 
 globalStyle("*", {
   boxSizing: "border-box",
@@ -24,6 +25,11 @@ globalStyle(`:root, .${themeRootClass}`, {
   font: typeFonts.bodyType,
   textDecoration: typeDecorations.bodyType,
   scrollBehavior: "smooth",
+});
+
+globalStyle(`:root *, .${themeRootClass} *`, {
+  transitionProperty: "background",
+  transitionDuration: `${timing.timing1}`,
 });
 
 globalStyle("h1, h2, h3, h4, h5, h6", {
