@@ -272,19 +272,6 @@ export default function Home() {
               Wanna Reach Out?
             </Header>
           </Tile>
-          <Tile fullWidth className={sectionImage}>
-            <Image
-              src={ProfilePicture.src}
-              className={sectionImageImg}
-              alt="Profile picture of me, Blair"
-              fill
-              sizes={`
-                (min-width: ${desktopSize}) 400px,
-                (min-width: ${tabletSize}) 50vw,
-                100vw
-                `}
-            />
-          </Tile>
           <Tile className={sectionContent}>
             <Markdown>{contactContent}</Markdown>
           </Tile>
