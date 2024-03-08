@@ -81,6 +81,10 @@ export const baseColors = {
   ...baseGray,
 };
 
+// overlay
+
+export const overlay = colorVars.colors.overlay;
+
 // semantic colors
 
 // we have all sorts of semantic colors where the values are similar, but the
