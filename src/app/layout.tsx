@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider>
+        <ThemeProvider styledLayout="simple">
           <SiteHeader />
           {children}
           {/* <AnimatedPageWrapper>{children}</AnimatedPageWrapper> */}

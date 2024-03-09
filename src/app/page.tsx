@@ -12,10 +12,12 @@ import {
   projectList,
   projects,
   sectionContent,
+  sectionContentWrapper,
   sectionHeader,
   sectionImage,
   sectionImageImg,
   skillSection,
+  skillSectionHeader,
   skills,
   splash,
   splashHeader,
@@ -83,22 +85,24 @@ export default function Home() {
               Who&#39;s this gal?
             </Header>
           </Tile>
-          <Tile fullWidth className={sectionImage}>
-            <Image
-              src={ProfilePicture.src}
-              className={sectionImageImg}
-              alt="Profile picture of me, Blair"
-              fill
-              sizes={`
+          <div className={sectionContentWrapper}>
+            <Tile fullWidth className={sectionImage}>
+              <Image
+                src={ProfilePicture.src}
+                className={sectionImageImg}
+                alt="Profile picture of me, Blair"
+                fill
+                sizes={`
                 (min-width: ${desktopSize}) 400px,
                 (min-width: ${tabletSize}) 50vw,
                 100vw
                 `}
-            />
-          </Tile>
-          <Tile className={sectionContent}>
-            <Markdown>{aboutContent}</Markdown>
-          </Tile>
+              />
+            </Tile>
+            <Tile className={sectionContent}>
+              <Markdown>{aboutContent}</Markdown>
+            </Tile>
+          </div>
         </section>
         <section className={projects} id="projects">
           <Tile color="Yellow" className={sectionHeader}>
@@ -163,7 +167,9 @@ export default function Home() {
           </Tile>
           <div className={skillSection}>
             <section>
-              <Tile>Languages</Tile>
+              <Tile renderAs="h3" className={skillSectionHeader}>
+                Languages
+              </Tile>
               <GridList>
                 <GridListItem>
                   <GridListItemImage src={HTMLLogo.src} alt="" />
@@ -192,7 +198,9 @@ export default function Home() {
               </GridList>
             </section>
             <section>
-              <Tile>Tools</Tile>
+              <Tile renderAs="h3" className={skillSectionHeader}>
+                Tools
+              </Tile>
               <GridList>
                 <GridListItem>
                   <GridListItemImage src={DockerLogo.src} alt="" />
@@ -236,7 +244,9 @@ export default function Home() {
               </GridList>
             </section>
             <section>
-              <Tile>Frameworks</Tile>
+              <Tile renderAs="h3" className={skillSectionHeader}>
+                Frameworks
+              </Tile>
               <GridList>
                 <GridListItem>
                   <GridListItemImage src={ReactLogo.src} alt="" />

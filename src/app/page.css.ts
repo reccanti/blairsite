@@ -1,13 +1,23 @@
-import { style, globalStyle } from "@vanilla-extract/css";
+import { style, globalStyle, ComplexStyleRule } from "@vanilla-extract/css";
 import { sprinkles } from "../themes/sprinkles.css";
 import { highlight } from "../components/Highlight/Highlight.css";
 import { header } from "../components/Header/Header.css";
-import { lineHeights } from "../themes/sprinkles/fonts.css";
+import {
+  lineHeights,
+  typeDecorations,
+  typeFonts,
+  typeTransforms,
+} from "../themes/sprinkles/fonts.css";
 import {
   desktopQuery,
   desktopSize,
   tabletQuery,
 } from "@/themes/utlities/breakpoints.css";
+import {
+  globalSimpleModeStyles,
+  globalStyledModeStyles,
+} from "@/themes/utlities/themes.css";
+import { spacing } from "@/themes/sprinkles/sizes.css";
 
 // styles that can be re-used per section
 
@@ -16,61 +26,99 @@ export const contentWrapper = style({
   margin: "0 auto",
 });
 
-const titleBlock = style({
+// const titleBlock = style({
+//   height: "100%",
+//   width: "100%",
+//   display: "flex",
+//   justifyContent: "center",
+//   alignItems: "center",
+//   textAlign: "center",
+// });
+
+// const stretchBlock = style([sprinkles({ gap: "spacing2" }), {}]);
+
+const stretchBlockStyles: ComplexStyleRule = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  alignSelf: "stretch",
+  width: "100%",
+};
+
+export const sectionHeader = style({
+  textAlign: "center",
+});
+
+globalStyledModeStyles(sectionHeader, {
+  aspectRatio: "1 auto",
+  gridArea: "header",
   height: "100%",
   width: "100%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  textAlign: "center",
 });
 
-const stretchBlock = style([
-  sprinkles({ gap: "spacing2" }),
-  {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "stretch",
-    width: "100%",
+export const sectionContentWrapper = style({
+  display: "flex",
+  gridArea: "content",
+  flexDirection: "column",
+  position: "relative",
+  "@media": {
+    [tabletQuery]: {
+      flexDirection: "row",
+    },
   },
-]);
+});
 
-export const sectionHeader = style([
-  titleBlock,
-  {
-    aspectRatio: "1 auto",
-    gridArea: "header",
+globalSimpleModeStyles(sectionContentWrapper, {
+  padding: spacing["spacing3"],
+});
+
+globalStyledModeStyles(sectionContentWrapper, {
+  "@media": {
+    [desktopQuery]: {
+      flexDirection: "column",
+    },
   },
-]);
+});
 
 export const sectionImage = style({
   aspectRatio: "1 auto",
-  gridArea: "image",
   position: "relative",
+  gridArea: "image",
   overflow: "hidden",
   height: "100%",
   width: "100%",
 });
 
+// globalSimpleModeStyles(sectionImage, {
+//   width: "50%",
+// });
+
+globalStyledModeStyles(sectionImage, {});
+
 export const sectionImageImg = style({
   objectFit: "cover",
 });
 
-export const sectionContent = style([
-  stretchBlock,
-  {
-    gridArea: "content",
-    "@media": {
-      // we don't want to force the aspect ratio of the content if the entry is
-      // "stacked". It leads to a lot of whitespace
-      [desktopQuery]: {
-        aspectRatio: "1 auto",
-      },
+export const sectionContent = style({
+  gap: spacing["spacing2"],
+  ...stretchBlockStyles,
+});
+
+globalStyledModeStyles(sectionContent, {
+  gridArea: "content",
+  // ...stretchBlockStyles,
+  "@media": {
+    // we don't want to force the aspect ratio of the content if the entry is
+    // "stacked". It leads to a lot of whitespace
+    [desktopQuery]: {
+      aspectRatio: "1 auto",
     },
   },
-]);
+});
 
 // splash section with centered text
 
@@ -102,19 +150,22 @@ globalStyle(`${splashHeader} ${header()}`, {
 export const about = style({
   display: "flex",
   flexDirection: "column",
+});
+
+globalStyledModeStyles(about, {
   "@media": {
     [tabletQuery]: {
       display: "grid",
       gridTemplateAreas: `
         "header header"
-        "image content"
+        "content content"
       `,
       gridTemplateColumns: "50% 50%",
     },
     [desktopQuery]: {
       display: "grid",
       gridTemplateAreas: `
-        "header header image"
+        "header header content"
         "header header content"
       `,
       gridTemplateColumns: "calc(100% / 3) calc(100% / 3) calc(100% / 3)",
@@ -187,8 +238,8 @@ export const projectHeader = style({
 });
 
 export const projectContent = style([
-  stretchBlock,
   {
+    ...stretchBlockStyles,
     gridArea: "content",
     display: "flex",
     alignItems: "center",
@@ -224,6 +275,26 @@ export const skills = style({
 
 export const skillSection = style({
   gridColumn: "span 3",
+});
+
+export const skillSectionHeader = style({});
+
+globalStyledModeStyles(`.${skillSectionHeader}`, {
+  aspectRatio: "1 auto",
+  font: typeFonts["header4Type"],
+  textDecoration: typeDecorations["header4Type"],
+  textTransform: typeTransforms["header4Type"],
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  "@media": {
+    [tabletQuery]: {
+      aspectRatio: "2 auto",
+    },
+    [desktopQuery]: {
+      aspectRatio: "3 auto",
+    },
+  },
 });
 
 // contact section: Large block title with summary tex
