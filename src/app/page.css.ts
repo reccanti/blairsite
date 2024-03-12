@@ -18,6 +18,7 @@ import {
   globalStyledModeStyles,
 } from "@/themes/utlities/themes.css";
 import { spacing } from "@/themes/sprinkles/sizes.css";
+import { labelDefaultColors } from "@/themes/sprinkles/colors.css";
 
 // styles that can be re-used per section
 
@@ -73,7 +74,8 @@ export const sectionContentWrapper = style({
 });
 
 globalSimpleModeStyles(sectionContentWrapper, {
-  padding: spacing["spacing3"],
+  paddingTop: spacing["spacing3"],
+  paddingBottom: spacing["spacing3"],
 });
 
 globalStyledModeStyles(sectionContentWrapper, {
@@ -109,8 +111,9 @@ export const sectionContent = style({
 });
 
 globalStyledModeStyles(sectionContent, {
-  gridArea: "content",
+  // gridArea: "content",
   // ...stretchBlockStyles,
+  flex: 1,
   "@media": {
     // we don't want to force the aspect ratio of the content if the entry is
     // "stacked". It leads to a lot of whitespace
@@ -179,6 +182,9 @@ globalStyledModeStyles(about, {
 export const projects = style({
   display: "flex",
   flexDirection: "column",
+});
+
+globalStyledModeStyles(projects, {
   "@media": {
     [desktopQuery]: {
       display: "grid",
@@ -194,7 +200,41 @@ export const projectList = style({
   gridColumn: "1 / -1",
 });
 
-export const project = style({
+// export const project = style({
+//   display: "flex",
+//   flexDirection: "column",
+//   gridColumn: "span 3",
+//   "@media": {
+//     [tabletQuery]: {
+//       display: "grid",
+//       gridTemplateColumns: "50% 50%",
+//       selectors: {
+//         "&:nth-child(2n + 1)": {
+//           gridTemplateAreas: `"header content"`,
+//         },
+//         "&:nth-child(2n)": {
+//           gridTemplateAreas: `"content header"`,
+//         },
+//       },
+//     },
+//     [desktopQuery]: {
+//       display: "grid",
+//       gridTemplateColumns: "calc(100% / 3) calc(100% / 3) calc(100% / 3)",
+//       selectors: {
+//         "&:nth-child(2n + 1)": {
+//           gridTemplateAreas: `"header content content"`,
+//         },
+//         "&:nth-child(2n)": {
+//           gridTemplateAreas: `"content content header"`,
+//         },
+//       },
+//     },
+//   },
+// });
+
+export const project = style({});
+
+globalStyledModeStyles(project, {
   display: "flex",
   flexDirection: "column",
   gridColumn: "span 3",
@@ -202,31 +242,46 @@ export const project = style({
     [tabletQuery]: {
       display: "grid",
       gridTemplateColumns: "50% 50%",
-      selectors: {
-        "&:nth-child(2n + 1)": {
-          gridTemplateAreas: `"header content"`,
-        },
-        "&:nth-child(2n)": {
-          gridTemplateAreas: `"content header"`,
-        },
-      },
     },
     [desktopQuery]: {
       display: "grid",
       gridTemplateColumns: "calc(100% / 3) calc(100% / 3) calc(100% / 3)",
-      selectors: {
-        "&:nth-child(2n + 1)": {
-          gridTemplateAreas: `"header content content"`,
-        },
-        "&:nth-child(2n)": {
-          gridTemplateAreas: `"content content header"`,
-        },
-      },
     },
   },
 });
 
-export const projectHeader = style({
+globalStyledModeStyles(`.${project}:nth-child(2n + 1)`, {
+  "@media": {
+    [tabletQuery]: {
+      gridTemplateAreas: `"header content"`,
+    },
+    [desktopQuery]: {
+      gridTemplateAreas: `"header content content"`,
+    },
+  },
+});
+
+globalStyledModeStyles(`.${project}:nth-child(2n)`, {
+  "@media": {
+    [tabletQuery]: {
+      gridTemplateAreas: `"content header"`,
+    },
+    [desktopQuery]: {
+      gridTemplateAreas: `"content content header"`,
+    },
+  },
+});
+
+globalStyledModeStyles(project, {});
+
+export const projectHeader = style({});
+
+globalSimpleModeStyles(projectHeader, {
+  background: "transparent",
+  color: labelDefaultColors["labelDefault"],
+});
+
+globalStyledModeStyles(projectHeader, {
   aspectRatio: "1 auto",
   height: "100%",
   width: "100%",
@@ -237,24 +292,24 @@ export const projectHeader = style({
   gridArea: "header",
 });
 
-export const projectContent = style([
-  {
-    ...stretchBlockStyles,
-    gridArea: "content",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "stretch",
-    width: "100%",
-    "@media": {
-      // we don't want to force the aspect ratio of the content if the entry is
-      // "stacked". It leads to a lot of whitespace
-      [desktopQuery]: {
-        aspectRatio: "2 auto",
-      },
+export const projectContent = style({});
+
+globalStyledModeStyles(projectContent, {
+  ...stretchBlockStyles,
+  gridArea: "content",
+  display: "flex",
+  // alignItems: "center",
+  justifyContent: "center",
+  alignSelf: "stretch",
+  width: "100%",
+  "@media": {
+    // we don't want to force the aspect ratio of the content if the entry is
+    // "stacked". It leads to a lot of whitespace
+    [desktopQuery]: {
+      aspectRatio: "2 auto",
     },
   },
-]);
+});
 
 // skills section: Large block title with summary text, followed by a list of
 // grid items

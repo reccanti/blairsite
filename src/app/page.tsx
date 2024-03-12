@@ -110,9 +110,11 @@ export default function Home() {
               Cool Stuff I&#39;ve Worked on
             </Header>
           </Tile>
-          <Tile className={sectionContent}>
-            <Markdown>{projectSummaryContent}</Markdown>
-          </Tile>
+          <div className={sectionContentWrapper}>
+            <Tile className={sectionContent}>
+              <Markdown>{projectSummaryContent}</Markdown>
+            </Tile>
+          </div>
           <dl className={projectList}>
             <div className={project}>
               <Tile renderAs="dt" color="Blue" className={projectHeader}>
