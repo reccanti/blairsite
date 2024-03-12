@@ -317,6 +317,9 @@ globalStyledModeStyles(projectContent, {
 export const skills = style({
   display: "flex",
   flexDirection: "column",
+});
+
+globalStyledModeStyles(skills, {
   "@media": {
     [desktopQuery]: {
       display: "grid",
@@ -328,13 +331,38 @@ export const skills = style({
   },
 });
 
-export const skillSection = style({
+export const skillSections = style({});
+
+globalSimpleModeStyles(skillSections, {
+  display: "flex",
+  flexDirection: "column",
+  flexWrap: "wrap",
+  "@media": {
+    [tabletQuery]: {
+      flexDirection: "row",
+    },
+  },
+});
+
+globalStyledModeStyles(skillSections, {
   gridColumn: "span 3",
 });
 
 export const skillSectionHeader = style({});
 
-globalStyledModeStyles(`.${skillSectionHeader}`, {
+globalSimpleModeStyles(skillSectionHeader, {
+  font: typeFonts["header5Type"],
+  textDecoration: typeDecorations["header5Type"],
+  textTransform: typeTransforms["header5Type"],
+  textAlign: "center",
+  "@media": {
+    [tabletQuery]: {
+      textAlign: "start",
+    },
+  },
+});
+
+globalStyledModeStyles(skillSectionHeader, {
   aspectRatio: "1 auto",
   font: typeFonts["header4Type"],
   textDecoration: typeDecorations["header4Type"],
@@ -350,6 +378,29 @@ globalStyledModeStyles(`.${skillSectionHeader}`, {
       aspectRatio: "3 auto",
     },
   },
+});
+
+export const skillSection = style({});
+
+globalSimpleModeStyles(skillSection, {
+  width: "100%",
+  flex: "0 0 auto",
+  "@media": {
+    [tabletQuery]: {
+      width: "50%",
+    },
+    [desktopQuery]: {
+      width: "calc(100% / 3)",
+    },
+  },
+});
+
+export const skillList = style({});
+
+globalSimpleModeStyles(skillList, {
+  paddingLeft: spacing["spacing3"],
+  paddingRight: spacing["spacing3"],
+  paddingBottom: spacing["spacing3"],
 });
 
 // contact section: Large block title with summary tex

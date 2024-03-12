@@ -16,11 +16,13 @@ import {
   sectionHeader,
   sectionImage,
   sectionImageImg,
-  skillSection,
+  skillSections,
   skillSectionHeader,
   skills,
   splash,
   splashHeader,
+  skillSection,
+  skillList,
 } from "@/app/page.css";
 import { Tile } from "@/components/Tile";
 import {
@@ -164,15 +166,17 @@ export default function Home() {
               Things I&#39;ve Used
             </Header>
           </Tile>
-          <Tile className={sectionContent}>
-            <Markdown>{projectSummaryContent}</Markdown>
-          </Tile>
-          <div className={skillSection}>
-            <section>
+          <div className={sectionContentWrapper}>
+            <Tile className={sectionContent}>
+              <Markdown>{projectSummaryContent}</Markdown>
+            </Tile>
+          </div>
+          <div className={skillSections}>
+            <section className={skillSection}>
               <Tile renderAs="h3" className={skillSectionHeader}>
                 Languages
               </Tile>
-              <GridList>
+              <GridList className={skillList}>
                 <GridListItem>
                   <GridListItemImage src={HTMLLogo.src} alt="" />
                   <GridListItemLabel label="HTML" color="Blue" />
@@ -199,11 +203,11 @@ export default function Home() {
                 </GridListItem>
               </GridList>
             </section>
-            <section>
+            <section className={skillSection}>
               <Tile renderAs="h3" className={skillSectionHeader}>
                 Tools
               </Tile>
-              <GridList>
+              <GridList className={skillList}>
                 <GridListItem>
                   <GridListItemImage src={DockerLogo.src} alt="" />
                   <GridListItemLabel label="Docker" color="Green" />
@@ -245,11 +249,11 @@ export default function Home() {
                 </GridListItem>
               </GridList>
             </section>
-            <section>
+            <section className={skillSection}>
               <Tile renderAs="h3" className={skillSectionHeader}>
                 Frameworks
               </Tile>
-              <GridList>
+              <GridList className={skillList}>
                 <GridListItem>
                   <GridListItemImage src={ReactLogo.src} alt="" />
                   <GridListItemLabel label="React" color="Blue" />

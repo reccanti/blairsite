@@ -53,7 +53,9 @@ export function Item({ children }: ItemProps) {
 
 interface ListProps {
   children?: ReactNode;
+  className?: string;
 }
-export function List({ children }: ListProps) {
-  return <ul className={list}>{children}</ul>;
+export function List({ children, className }: ListProps) {
+  const classNames = cx(list, className);
+  return <ul className={classNames}>{children}</ul>;
 }
