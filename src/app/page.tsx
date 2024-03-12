@@ -288,9 +288,11 @@ export default function Home() {
               Wanna Reach Out?
             </Header>
           </Tile>
-          <Tile className={sectionContent}>
-            <Markdown>{contactContent}</Markdown>
-          </Tile>
+          <div className={sectionContentWrapper}>
+            <Tile className={sectionContent}>
+              <Markdown>{contactContent}</Markdown>
+            </Tile>
+          </div>
         </section>
       </div>
     </main>

@@ -41,7 +41,7 @@ export const contentWrapper = style({
 const stretchBlockStyles: ComplexStyleRule = {
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
+  // alignItems: "center",
   justifyContent: "center",
   alignSelf: "stretch",
   width: "100%",
@@ -106,8 +106,8 @@ export const sectionImageImg = style({
 });
 
 export const sectionContent = style({
-  gap: spacing["spacing2"],
   ...stretchBlockStyles,
+  gap: spacing["spacing2"],
 });
 
 globalStyledModeStyles(sectionContent, {
@@ -408,6 +408,9 @@ globalSimpleModeStyles(skillList, {
 export const contact = style({
   display: "flex",
   flexDirection: "column",
+});
+
+globalStyledModeStyles(contact, {
   "@media": {
     [desktopQuery]: {
       display: "grid",
