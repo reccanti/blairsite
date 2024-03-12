@@ -17,7 +17,8 @@ export const siteHeader = style([
   {
     display: "flex",
     alignItems: "stretch",
-    position: "absolute",
+    // position: "absolute",
+    position: "relative",
     width: "100%",
     zIndex: 2,
   },
@@ -89,7 +90,7 @@ export const overlay = style({
   transitionDuration: timing.timing3,
 
   selectors: {
-    [`.${overlayWrapper}:focus-within &`]: {
+    [`.${overlayWrapper}:has(.${menus}:focus-within) &`]: {
       opacity: 1,
     },
   },

@@ -1,6 +1,8 @@
+import { PrintWrapper } from "./_components/PrintWrapper";
+
 export default function Page() {
   return (
-    <>
+    <PrintWrapper>
       <h1>Blair Wilcox: Design Technologist</h1>
       <nav>
         <ul>
@@ -183,6 +185,6 @@ export default function Page() {
           </ul>
         </section>
       </section>
-    </>
+    </PrintWrapper>
   );
 }
