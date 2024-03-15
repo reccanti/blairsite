@@ -72,21 +72,32 @@
   },
   "fontSizes": {
     "fontSizes": {
-      "1": "16px",
-      "2": "24px",
-      "3": "36px",
-      "4": "54px",
-      "5": "81px",
-      "6": "121.5px",
-      "7": "182.25px",
-      "body": "24px",
+      "body": "21px",
       "header": {
-        "1": "182.25px",
-        "2": "121.5px",
-        "3": "81px",
+        "1": "159.46875px",
+        "2": "106.3125px",
+        "3": "70.875px",
+        "4": "47.25px",
+        "5": "31.5px",
+        "6": "21px"
+      },
+      "screen": {
+        "1": "16px",
+        "2": "24px",
+        "3": "36px",
         "4": "54px",
-        "5": "36px",
-        "6": "24px"
+        "5": "81px",
+        "6": "121.5px",
+        "7": "182.25px"
+      },
+      "print": {
+        "1": "9pt",
+        "2": "13.5pt",
+        "3": "20.25pt",
+        "4": "30.375pt",
+        "5": "45.5625pt",
+        "6": "68.34375pt",
+        "7": "102.515625pt"
       }
     }
   },
@@ -114,54 +125,54 @@
   "typographies": {
     "header": {
       "1": {
-        "font": "Bold 182.25px Oleo Script",
+        "font": "Bold 159.46875px Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "2": {
-        "font": "Bold 121.5px Oleo Script",
+        "font": "Bold 106.3125px Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "3": {
-        "font": "Bold 81px Oleo Script",
+        "font": "Bold 70.875px Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "4": {
-        "font": "Bold 54px Oleo Script",
+        "font": "Bold 47.25px Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "5": {
-        "font": "Bold 36px Oleo Script",
+        "font": "Bold 31.5px Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "6": {
-        "font": "Bold 24px Oleo Script",
+        "font": "Bold 21px Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       }
     },
     "body": {
-      "font": "24px/150% Ubuntu",
+      "font": "21px/150% Ubuntu",
       "textDecoration": "none",
       "textTransform": ""
     },
     "ui": {
-      "font": "Bold 16px/100% Ubuntu",
+      "font": "Bold 14px/100% Ubuntu",
       "textDecoration": "none",
       "textTransform": "uppercase"
     },
     "link": {
       "default": {
-        "font": "Bold 24px/150% Ubuntu",
+        "font": "Bold 21px/150% Ubuntu",
         "textDecoration": "underline",
         "textTransform": ""
       },
       "hover": {
-        "font": "Bold 24px/150% Ubuntu",
+        "font": "Bold 21px/150% Ubuntu",
         "textDecoration": "none",
         "textTransform": ""
       }
@@ -175,7 +186,25 @@
       "4": "47.25px",
       "5": "70.875px",
       "6": "106.3125px",
-      "7": "159.46875px"
+      "7": "159.46875px",
+      "screen": {
+        "1": "14px",
+        "2": "21px",
+        "3": "31.5px",
+        "4": "47.25px",
+        "5": "70.875px",
+        "6": "106.3125px",
+        "7": "159.46875px"
+      },
+      "print": {
+        "1": "6pt",
+        "2": "9pt",
+        "3": "13.5pt",
+        "4": "20.25pt",
+        "5": "30.375pt",
+        "6": "45.5625pt",
+        "7": "68.34375pt"
+      }
     }
   }
 }

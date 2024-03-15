@@ -1,0 +1,21 @@
+:root {
+  --spacing1: 8pt;
+  --spacing2: calc(var(--spacing1) * 1.5);
+  --spacing3: calc(var(--spacing2) * 1.5);
+  --spacing4: calc(var(--spacing3) * 1.5);
+  --spacing5: calc(var(--spacing4) * 1.5);
+  --spacing6: calc(var(--spacing5) * 1.5);
+  --spacing7: calc(var(--spacing6) * 1.5);
+
+  --fontSize1: 8pt;
+  --fontSize2: calc(var(--fontSize1) * 1.5);
+  --fontSize3: calc(var(--fontSize2) * 1.5);
+  --fontSize4: calc(var(--fontSize3) * 1.5);
+  --fontSize5: calc(var(--fontSize4) * 1.5);
+  --fontSize6: calc(var(--fontSize5) * 1.5);
+  --fontSize7: calc(var(--fontSize6) * 1.5);
+}
+
+@page {
+  margin: var(--spacing4) var(--spacing5);
+}

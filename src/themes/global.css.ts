@@ -61,6 +61,11 @@ globalStyle(`${aSelector}:focus:hover`, {
 });
 globalStyle(`${aSelector}:visited`, {
   color: labelLinkVisitedColors.labelLinkVisitedDefault,
+  "@media": {
+    print: {
+      color: labelLinkColors.labelLinkDefault,
+    },
+  },
 });
 globalStyle(`${aSelector}:visited:focus`, {
   border: labelFocus.focusLinkVisited,

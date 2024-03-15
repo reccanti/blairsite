@@ -347,6 +347,13 @@ async function writeThemeFile(fileName, contents) {
   // font themes
   const fontsTheme = compileThemes(["base", "fonts/semantic", "fonts/styled"]);
   await writeThemeFile("fonts", fontsTheme);
+  const fontsPrintTheme = compileThemes([
+    "base",
+    "fonts/semantic",
+    "fonts/styled",
+    "fonts/print",
+  ]);
+  await writeThemeFile("fontsPrint", fontsPrintTheme);
   const fontsLargeScreenTheme = compileThemes([
     "base",
     "fonts/semantic",

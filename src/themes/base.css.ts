@@ -25,6 +25,7 @@ import darkJson from "../tokens/compiled/dark.json";
 import highContrastJson from "../tokens/compiled/highContrast.json";
 import highContrastDarkJson from "../tokens/compiled/highContrastDark.json";
 import fontsJson from "../tokens/compiled/fonts.json";
+import fontsPrintJson from "../tokens/compiled/fontsPrint.json";
 import fontsLargeScreenJson from "../tokens/compiled/fontsLargeScreen.json";
 import fontsSimple from "../tokens/compiled/fontsSimple.json";
 import fontsLargeScreenSimple from "../tokens/compiled/fontsLargeScreenSimple.json";
@@ -145,6 +146,12 @@ globalStyle("html", {
     },
     [tabletQuery]: {
       vars: assignVars(fontVars, fontsLargeScreenJson),
+    },
+    print: {
+      vars: assignVars(
+        { ...colorVars, ...fontVars },
+        { ...highContrastJson, ...fontsPrintJson }
+      ),
     },
   },
 });

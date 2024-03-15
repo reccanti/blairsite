@@ -72,14 +72,14 @@
   },
   "fontSizes": {
     "fontSizes": {
-      "body": "16px",
+      "body": "9pt",
       "header": {
-        "1": "121.5px",
-        "2": "81px",
-        "3": "54px",
-        "4": "36px",
-        "5": "24px",
-        "6": "16px"
+        "1": "68.34375pt",
+        "2": "45.5625pt",
+        "3": "30.375pt",
+        "4": "20.25pt",
+        "5": "13.5pt",
+        "6": "9pt"
       },
       "screen": {
         "1": "16px",
@@ -125,38 +125,38 @@
   "typographies": {
     "header": {
       "1": {
-        "font": "Bold 121.5px Oleo Script",
+        "font": "Bold 68.34375pt Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "2": {
-        "font": "Bold 81px Oleo Script",
+        "font": "Bold 45.5625pt Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "3": {
-        "font": "Bold 54px Oleo Script",
+        "font": "Bold 30.375pt Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "4": {
-        "font": "Bold 36px Oleo Script",
+        "font": "Bold 20.25pt Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "5": {
-        "font": "Bold 24px Oleo Script",
+        "font": "Bold 13.5pt Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       },
       "6": {
-        "font": "Bold 16px Oleo Script",
+        "font": "Bold 9pt Oleo Script",
         "textDecoration": "none",
         "textTransform": ""
       }
     },
     "body": {
-      "font": "16px/150% Ubuntu",
+      "font": "9pt/150% Ubuntu",
       "textDecoration": "none",
       "textTransform": ""
     },
@@ -167,12 +167,12 @@
     },
     "link": {
       "default": {
-        "font": "Bold 16px/150% Ubuntu",
+        "font": "Bold 9pt/150% Ubuntu",
         "textDecoration": "underline",
         "textTransform": ""
       },
       "hover": {
-        "font": "Bold 16px/150% Ubuntu",
+        "font": "Bold 9pt/150% Ubuntu",
         "textDecoration": "none",
         "textTransform": ""
       }
@@ -180,13 +180,13 @@
   },
   "spacing": {
     "spacing": {
-      "1": "14px",
-      "2": "21px",
-      "3": "31.5px",
-      "4": "47.25px",
+      "1": "6pt",
+      "2": "9pt",
+      "3": "13.5pt",
+      "4": "20.25pt",
       "5": "70.875px",
-      "6": "106.3125px",
-      "7": "159.46875px",
+      "6": "45.5625pt",
+      "7": "68.34375pt",
       "screen": {
         "1": "14px",
         "2": "21px",

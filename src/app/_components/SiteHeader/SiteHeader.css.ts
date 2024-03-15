@@ -74,6 +74,12 @@ export const overlayWrapper = style({
   position: "sticky",
   top: 0,
   zIndex: 2,
+  "@media": {
+    // hide the entire site header when printing
+    print: {
+      display: "none",
+    },
+  },
 });
 
 export const overlay = style({

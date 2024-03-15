@@ -1,7 +1,7 @@
 import { defineProperties } from "@vanilla-extract/sprinkles";
-import { colorVars } from "../base.css";
+import { fontVars } from "../base.css";
 
-const { spacing: spacingVars } = colorVars.spacing;
+const { spacing: spacingVars } = fontVars.spacing;
 
 export const spacing = {
   spacing1: spacingVars["1"],
