@@ -17,22 +17,42 @@ export function NavDropdown() {
     >
       <Menu>
         <Item>
-          <Button className={itemButton} href="/#about" color="Red">
+          <Button
+            className={itemButton}
+            href="/#about"
+            color="Red"
+            scroll={false}
+          >
             Who&#39;s This Gal?
           </Button>
         </Item>
         <Item>
-          <Button className={itemButton} href="/#projects" color="Yellow">
+          <Button
+            className={itemButton}
+            href="/#projects"
+            color="Yellow"
+            scroll={false}
+          >
             Cool Stuff I&#39;ve Worked On
           </Button>
         </Item>
         <Item>
-          <Button className={itemButton} href="/#skills" color="Green">
+          <Button
+            className={itemButton}
+            href="/#skills"
+            color="Green"
+            scroll={false}
+          >
             Things I&#39;ve Used
           </Button>
         </Item>
         <Item>
-          <Button className={itemButton} href="/#contact" color="Blue">
+          <Button
+            className={itemButton}
+            href="/#contact"
+            color="Blue"
+            scroll={false}
+          >
             Wanna Reach Out?
           </Button>
         </Item>
