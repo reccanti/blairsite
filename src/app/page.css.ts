@@ -115,6 +115,11 @@ globalStyledModeStyles(sectionContent, {
   // ...stretchBlockStyles,
   flex: 1,
   "@media": {
+    // make sure the content is at least "50%" width on tablet, otherwise
+    // NextJS's Image component will fill the container
+    [tabletQuery]: {
+      flex: "1 0 50%",
+    },
     // we don't want to force the aspect ratio of the content if the entry is
     // "stacked". It leads to a lot of whitespace
     [desktopQuery]: {
