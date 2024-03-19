@@ -19,7 +19,11 @@ function ToggleableToggle() {
     setEnabled(!enabled);
   };
 
-  return <Toggle enabled={enabled} onClick={onClick} />;
+  return (
+    <Toggle enabled={enabled} onClick={onClick}>
+      Toggle Me!
+    </Toggle>
+  );
 }
 
 export const Default: Story = {

@@ -12,7 +12,12 @@ export function Toggle({ enabled, className, children, ...spanProps }: Props) {
   const classNames = cx(className, toggleLabel);
 
   return (
-    <label {...spanProps} aria-checked={enabled} className={classNames}>
+    <label
+      {...spanProps}
+      role="switch"
+      aria-checked={enabled}
+      className={classNames}
+    >
       {children}
       <ToggleIcon className={toggle({ enabled })} width={20} height={20} />
     </label>
