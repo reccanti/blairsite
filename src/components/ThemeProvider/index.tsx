@@ -18,6 +18,7 @@ import {
 } from "react";
 import cx from "classnames";
 import { themeRootClass } from "./ThemeProvider.css";
+import useLocalStorage from "use-local-storage";
 
 // Theme State - this is for internal use, to make sure certain themes don't
 // conflict with each other (for example, we might have separate functions to
@@ -87,10 +88,19 @@ export function ThemeProvider({
   styledLayout: initialStyledLayout = defaultStyledLayout,
   reduceMotion: initialReduceMotion = defaultReduceMotion,
 }: Props) {
-  const [brightness, setBrightness] = useState(initialBrightness);
-  const [contrast, setContrast] = useState(initialContrast);
-  const [styledLayout, setStyledLayout] = useState(initialStyledLayout);
-  const [reduceMotion, setReducedMotion] = useState(initialReduceMotion);
+  const [brightness, setBrightness] = useLocalStorage(
+    "brightness",
+    initialBrightness
+  );
+  const [contrast, setContrast] = useLocalStorage("contrast", initialContrast);
+  const [styledLayout, setStyledLayout] = useLocalStorage(
+    "layout",
+    initialStyledLayout
+  );
+  const [reduceMotion, setReducedMotion] = useLocalStorage(
+    "motion",
+    initialReduceMotion
+  );
 
   const lightMode = useMemo(() => brightness === "light", [brightness]);
   const darkMode = useMemo(() => brightness === "dark", [brightness]);
