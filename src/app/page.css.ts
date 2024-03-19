@@ -27,21 +27,9 @@ export const contentWrapper = style({
   margin: "0 auto",
 });
 
-// const titleBlock = style({
-//   height: "100%",
-//   width: "100%",
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   textAlign: "center",
-// });
-
-// const stretchBlock = style([sprinkles({ gap: "spacing2" }), {}]);
-
 const stretchBlockStyles: ComplexStyleRule = {
   display: "flex",
   flexDirection: "column",
-  // alignItems: "center",
   justifyContent: "center",
   alignSelf: "stretch",
   width: "100%",
@@ -95,10 +83,6 @@ export const sectionImage = style({
   width: "100%",
 });
 
-// globalSimpleModeStyles(sectionImage, {
-//   width: "50%",
-// });
-
 globalStyledModeStyles(sectionImage, {});
 
 export const sectionImageImg = style({
@@ -111,8 +95,6 @@ export const sectionContent = style({
 });
 
 globalStyledModeStyles(sectionContent, {
-  // gridArea: "content",
-  // ...stretchBlockStyles,
   flex: 1,
   "@media": {
     // make sure the content is at least "50%" width on tablet, otherwise
@@ -205,38 +187,6 @@ export const projectList = style({
   gridColumn: "1 / -1",
 });
 
-// export const project = style({
-//   display: "flex",
-//   flexDirection: "column",
-//   gridColumn: "span 3",
-//   "@media": {
-//     [tabletQuery]: {
-//       display: "grid",
-//       gridTemplateColumns: "50% 50%",
-//       selectors: {
-//         "&:nth-child(2n + 1)": {
-//           gridTemplateAreas: `"header content"`,
-//         },
-//         "&:nth-child(2n)": {
-//           gridTemplateAreas: `"content header"`,
-//         },
-//       },
-//     },
-//     [desktopQuery]: {
-//       display: "grid",
-//       gridTemplateColumns: "calc(100% / 3) calc(100% / 3) calc(100% / 3)",
-//       selectors: {
-//         "&:nth-child(2n + 1)": {
-//           gridTemplateAreas: `"header content content"`,
-//         },
-//         "&:nth-child(2n)": {
-//           gridTemplateAreas: `"content content header"`,
-//         },
-//       },
-//     },
-//   },
-// });
-
 export const project = style({});
 
 globalStyledModeStyles(project, {
@@ -303,7 +253,6 @@ globalStyledModeStyles(projectContent, {
   ...stretchBlockStyles,
   gridArea: "content",
   display: "flex",
-  // alignItems: "center",
   justifyContent: "center",
   alignSelf: "stretch",
   width: "100%",
@@ -408,7 +357,7 @@ globalSimpleModeStyles(skillList, {
   paddingBottom: spacing["spacing3"],
 });
 
-// contact section: Large block title with summary tex
+// contact section: Large block title with summary text
 
 export const contact = style({
   display: "flex",
