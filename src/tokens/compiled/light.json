@@ -6,7 +6,7 @@
       "magenta": "#FF3FAB",
       "blue": "#00DAF2",
       "red": "#FF3434",
-      "green": "#85E500",
+      "green": "#369F90",
       "gray1": "#C3C3C3",
       "gray2": "#222222",
       "inverted": "#222222",
@@ -16,7 +16,7 @@
         "magenta": "#FF9CCD",
         "blue": "#8EF4FF",
         "red": "#FB5B5B",
-        "green": "#C7F881",
+        "green": "#6CC3A7",
         "gray1": "#D7D7D7",
         "gray2": "#363636",
         "inverted": "#363636"
@@ -38,7 +38,7 @@
         "magenta": "#FF3FAB",
         "blue": "#00DAF2",
         "red": "#FF3434",
-        "green": "#85E500"
+        "green": "#369F90"
       },
       "inactive": {
         "default": "#4A4A4A",
@@ -88,11 +88,12 @@
       },
       "green": {
         "1": "#a2e8bd",
-        "2": "#C7F881",
-        "3": "#85E500",
+        "2": "#6CC3A7",
+        "3": "#369F90",
         "4": "#007A7A",
         "5": "#005555",
-        "6": "#001C1C"
+        "6": "#001C1C",
+        "3-OLD": "#85E500"
       },
       "magenta": {
         "1": "#ffe0ed",
@@ -168,7 +169,7 @@
       },
       "active": {
         "default": "inset 0px 0px 0px 4.5px #EBEBEB,inset 0px 0px 0px 9px #222222",
-        "green": "inset 0px 0px 0px 4.5px #C7F881,inset 0px 0px 0px 9px #001C1C",
+        "green": "inset 0px 0px 0px 4.5px #6CC3A7,inset 0px 0px 0px 9px #001C1C",
         "blue": "inset 0px 0px 0px 4.5px #8EF4FF,inset 0px 0px 0px 9px #002944",
         "red": "inset 0px 0px 0px 4.5px #FB5B5B,inset 0px 0px 0px 9px #FEFFCB",
         "yellow": "inset 0px 0px 0px 4.5px #FFD484,inset 0px 0px 0px 9px #4f1800",

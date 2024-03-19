@@ -38,17 +38,14 @@ export function SettingsDropdown() {
           <Button
             className={itemButton}
             color="Gray1"
-            onClick={() => {
-              console.log("clicking...");
-              toggleLightMode();
-            }}
+            onClick={toggleLightMode}
           >
-            Light Mode <Toggle enabled={lightMode} />
+            <Toggle enabled={lightMode}>Light Mode</Toggle>
           </Button>
         </Item>
         <Item>
           <Button className={itemButton} color="Gray2" onClick={toggleDarkMode}>
-            Dark Mode <Toggle enabled={darkMode} />
+            <Toggle enabled={darkMode}>Dark Mode</Toggle>
           </Button>
         </Item>
         <Item>
@@ -57,7 +54,7 @@ export function SettingsDropdown() {
             color="Magenta"
             onClick={toggleHighContrastMode}
           >
-            High Contrast <Toggle enabled={highContrastMode} />
+            <Toggle enabled={highContrastMode}>High Contrast</Toggle>
           </Button>
         </Item>
         <Item>
@@ -66,7 +63,7 @@ export function SettingsDropdown() {
             color="Yellow"
             onClick={toggleSimpleLayoutMode}
           >
-            Simple Layout and Fonts
+            <Toggle enabled={simpleLayoutMode}>Simple Layout and Fonts</Toggle>
           </Button>
         </Item>
         <Item>
@@ -75,7 +72,7 @@ export function SettingsDropdown() {
             color="Green"
             onClick={toggleReducedMotionMode}
           >
-            Reduced Motion <Toggle enabled={reducedMotionMode} />
+            <Toggle enabled={reducedMotionMode}>Reduced Motion </Toggle>
           </Button>
         </Item>
         <Item>
@@ -84,7 +81,7 @@ export function SettingsDropdown() {
             color="Red"
             onClick={toggleWithMotionMode}
           >
-            With Motion <Toggle enabled={withMotionMode} />
+            <Toggle enabled={withMotionMode}>With Motion</Toggle>
           </Button>
         </Item>
       </Menu>

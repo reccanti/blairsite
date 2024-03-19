@@ -77,7 +77,7 @@ function ButtonToggle({ color }: { color: keyof typeof semanticColorKeymap }) {
 
   return (
     <Button color={color} onClick={onClick}>
-      <Toggle enabled={enabled} />
+      <Toggle enabled={enabled}>A Button</Toggle>
     </Button>
   );
 }

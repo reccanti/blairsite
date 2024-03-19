@@ -4,17 +4,17 @@ import ToggleLeftIcon from "../Icons/ToggleLeftIcon";
 import ToggleRightIcon from "../Icons/ToggleRightIcon";
 import { toggle, toggleLabel } from "./Toggle.css";
 
-interface Props extends ComponentProps<"span"> {
+interface Props extends ComponentProps<"label"> {
   enabled: boolean;
 }
-export function Toggle({ enabled, className, ...spanProps }: Props) {
-  const ToggleIcon = enabled ? ToggleLeftIcon : ToggleRightIcon;
-  const classNames = cx(className, toggle);
-  const label = enabled ? "enabled" : "disabled";
+export function Toggle({ enabled, className, children, ...spanProps }: Props) {
+  const ToggleIcon = enabled ? ToggleRightIcon : ToggleLeftIcon;
+  const classNames = cx(className, toggleLabel);
+
   return (
-    <span {...spanProps} className={classNames}>
-      <ToggleIcon width={20} height={20} />
-      <span className={toggleLabel}>{label}</span>
-    </span>
+    <label {...spanProps} aria-checked={enabled} className={classNames}>
+      {children}
+      <ToggleIcon className={toggle({ enabled })} width={20} height={20} />
+    </label>
   );
 }
