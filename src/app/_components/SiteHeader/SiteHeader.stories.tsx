@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { SiteHeader } from ".";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const meta: Meta = {
   title: "Molecules/SiteHeader",
@@ -10,7 +11,11 @@ type Story = StoryObj<typeof SiteHeader>;
 
 export const Default: Story = {
   render: () => {
-    return <SiteHeader />;
+    return (
+      <ThemeProvider>
+        <SiteHeader />
+      </ThemeProvider>
+    );
   },
 };
 

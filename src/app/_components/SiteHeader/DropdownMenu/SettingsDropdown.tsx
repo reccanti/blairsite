@@ -5,6 +5,7 @@ import { DropdownMenuToggleButton } from "./ToggleButton";
 import { itemButton } from "./DropdownMenu.css";
 import { useTheme } from "@/components/ThemeProvider";
 import CogIcon from "@/components/Icons/CogIcon";
+import { Toggle } from "@/components/Toggle";
 
 export function SettingsDropdown() {
   const {
@@ -14,6 +15,12 @@ export function SettingsDropdown() {
     toggleReducedMotionMode,
     toggleSimpleLayoutMode,
     toggleWithMotionMode,
+    darkMode,
+    lightMode,
+    highContrastMode,
+    reducedMotionMode,
+    simpleLayoutMode,
+    withMotionMode,
   } = useTheme();
 
   return (
@@ -36,12 +43,12 @@ export function SettingsDropdown() {
               toggleLightMode();
             }}
           >
-            Light Mode
+            Light Mode <Toggle enabled={lightMode} />
           </Button>
         </Item>
         <Item>
           <Button className={itemButton} color="Gray2" onClick={toggleDarkMode}>
-            Dark Mode
+            Dark Mode <Toggle enabled={darkMode} />
           </Button>
         </Item>
         <Item>
@@ -50,7 +57,7 @@ export function SettingsDropdown() {
             color="Magenta"
             onClick={toggleHighContrastMode}
           >
-            High Contrast
+            High Contrast <Toggle enabled={highContrastMode} />
           </Button>
         </Item>
         <Item>
@@ -68,7 +75,7 @@ export function SettingsDropdown() {
             color="Green"
             onClick={toggleReducedMotionMode}
           >
-            Reduced Motion
+            Reduced Motion <Toggle enabled={reducedMotionMode} />
           </Button>
         </Item>
         <Item>
@@ -77,7 +84,7 @@ export function SettingsDropdown() {
             color="Red"
             onClick={toggleWithMotionMode}
           >
-            With Motion
+            With Motion <Toggle enabled={withMotionMode} />
           </Button>
         </Item>
       </Menu>
