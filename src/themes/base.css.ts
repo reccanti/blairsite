@@ -102,6 +102,7 @@ export const fontsClass = "fonts";
 export const fontsLargeScreenClass = "fontsLargeScreen";
 export const simpleClass = "simple";
 export const reducedMotionClass = "reduceMotion";
+export const withMotionClass = "withMotion";
 
 createGlobalTheme(`.${themeRootClass}.${lightClass}`, colorVars, lightJson);
 createGlobalTheme(`.${themeRootClass}.${darkClass}`, colorVars, darkJson);

@@ -13,6 +13,7 @@ export function SettingsDropdown() {
     toggleHighContrastMode,
     toggleReducedMotionMode,
     toggleSimpleLayoutMode,
+    toggleWithMotionMode,
   } = useTheme();
 
   return (
@@ -68,6 +69,15 @@ export function SettingsDropdown() {
             onClick={toggleReducedMotionMode}
           >
             Reduced Motion
+          </Button>
+        </Item>
+        <Item>
+          <Button
+            className={itemButton}
+            color="Red"
+            onClick={toggleWithMotionMode}
+          >
+            With Motion
           </Button>
         </Item>
       </Menu>

@@ -6,6 +6,7 @@ import {
   lightClass,
   reducedMotionClass,
   simpleClass,
+  withMotionClass,
 } from "../../themes/base.css";
 import { ReactNode, createContext, useContext, useState, useMemo } from "react";
 import cx from "classnames";
@@ -18,7 +19,7 @@ import { themeRootClass } from "./ThemeProvider.css";
 type BrightnessThemes = "unset" | "light" | "dark";
 type ContrastThemes = "unset" | "highContrast";
 type StyledFontsThemes = "styled" | "simple";
-type ReduceMotionThemes = "reduced" | "unset";
+type ReduceMotionThemes = "reduced" | "withMotion" | "unset";
 
 interface ThemeState {
   brightness: BrightnessThemes;
@@ -41,11 +42,13 @@ interface ThemeContext {
   highContrastMode: boolean;
   simpleLayoutMode: boolean;
   reducedMotionMode: boolean;
+  withMotionMode: boolean;
   toggleLightMode: () => void;
   toggleDarkMode: () => void;
   toggleHighContrastMode: () => void;
   toggleSimpleLayoutMode: () => void;
   toggleReducedMotionMode: () => void;
+  toggleWithMotionMode: () => void;
 }
 
 /**
@@ -90,6 +93,7 @@ export function ThemeProvider({
   );
   const simpleLayoutMode = styledLayout === "simple";
   const reducedMotionMode = reduceMotion === "reduced";
+  const withMotionMode = reduceMotion === "withMotion";
 
   const toggleLightMode = () => {
     // if light mode is enabled, unset the current mode and default to user
@@ -137,6 +141,14 @@ export function ThemeProvider({
     }
   };
 
+  const toggleWithMotionMode = () => {
+    if (withMotionMode) {
+      setReducedMotion("unset");
+    } else {
+      setReducedMotion("withMotion");
+    }
+  };
+
   return (
     <ControlledThemeProvider
       brightness={brightness}
@@ -148,6 +160,7 @@ export function ThemeProvider({
       toggleHighContrastMode={toggleHighContrastMode}
       toggleSimpleLayoutMode={toggleSimpleLayoutMode}
       toggleReducedMotionMode={toggleReducedMotionMode}
+      toggleWithMotionMode={toggleWithMotionMode}
     >
       {children}
     </ControlledThemeProvider>
@@ -160,6 +173,7 @@ interface ControlledProps extends Props {
   toggleHighContrastMode: () => void;
   toggleSimpleLayoutMode: () => void;
   toggleReducedMotionMode: () => void;
+  toggleWithMotionMode: () => void;
 }
 
 const noop = () => {};
@@ -174,12 +188,14 @@ export function ControlledThemeProvider({
   toggleHighContrastMode = noop,
   toggleSimpleLayoutMode = noop,
   toggleReducedMotionMode = noop,
+  toggleWithMotionMode = noop,
 }: Partial<ControlledProps>) {
   const lightMode = brightness === "light";
   const darkMode = brightness === "dark";
   const highContrastMode = contrast === "highContrast";
   const simpleLayoutMode = styledLayout === "simple";
   const reducedMotionMode = reduceMotion === "reduced";
+  const withMotionMode = reduceMotion === "withMotion";
 
   const classNames = cx({
     [lightClass]: lightMode,
@@ -187,6 +203,7 @@ export function ControlledThemeProvider({
     [highContrastClass]: highContrastMode,
     [simpleClass]: simpleLayoutMode,
     [reducedMotionClass]: reducedMotionMode,
+    [withMotionClass]: withMotionMode,
     [themeRootClass]: true,
   });
 
@@ -198,11 +215,13 @@ export function ControlledThemeProvider({
         highContrastMode,
         simpleLayoutMode,
         reducedMotionMode,
+        withMotionMode,
         toggleLightMode,
         toggleDarkMode,
         toggleHighContrastMode,
         toggleSimpleLayoutMode,
         toggleReducedMotionMode,
+        toggleWithMotionMode,
       }}
     >
       <div className={classNames}>{children}</div>

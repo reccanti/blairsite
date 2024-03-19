@@ -12,6 +12,7 @@ import { labelFocus } from "./sprinkles/focus.css";
 import { button } from "../components/Button/Button.css";
 import { themeRootClass } from "@/components/ThemeProvider/ThemeProvider.css";
 import { timing } from "./sprinkles/timing.css";
+import { globalWithMotionStyles } from "./utlities/themes.css";
 
 globalStyle("*", {
   boxSizing: "border-box",
@@ -24,7 +25,11 @@ globalStyle(`:root, .${themeRootClass}`, {
   color: labelDefaultColors.labelDefault,
   font: typeFonts.bodyType,
   textDecoration: typeDecorations.bodyType,
-  scrollBehavior: "smooth",
+  "@media": {
+    "(prefers-reduced-motion: no-preference)": {
+      scrollBehavior: "smooth",
+    },
+  },
 });
 
 globalStyle(`:root *, .${themeRootClass} *`, {
