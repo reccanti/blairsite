@@ -1,4 +1,5 @@
-import { Metadata } from "next";
+"use client";
+
 import { Markdown } from "@/components/Markdown";
 import {
   contactList,
@@ -25,10 +26,6 @@ import paradigmsContent from "@/data/resume/skills/paradigms.md";
 // import a stylesheet for handling print styles, since Vanilla Extract doesn't
 // handle "@page" declarations
 import "./print.css";
-
-export const metadata: Metadata = {
-  title: "Blair Wilcox | Resume",
-};
 
 export default function Page() {
   return (

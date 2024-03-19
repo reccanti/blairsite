@@ -6,7 +6,7 @@
       "magenta": "#FF3FAB",
       "blue": "#00DAF2",
       "red": "#FF3434",
-      "green": "#369F90",
+      "green": "#00C868",
       "gray1": "#C3C3C3",
       "gray2": "#222222",
       "inverted": "#222222",
@@ -16,7 +16,7 @@
         "magenta": "#FF9CCD",
         "blue": "#8EF4FF",
         "red": "#FB5B5B",
-        "green": "#6CC3A7",
+        "green": "#B9F4A8",
         "gray1": "#D7D7D7",
         "gray2": "#363636",
         "inverted": "#363636"
@@ -28,7 +28,7 @@
       "magenta": "#750049",
       "blue": "#002944",
       "red": "#FEFFCB",
-      "green": "#001C1C",
+      "green": "#011F15",
       "gray1": "#222222",
       "gray2": "#FFFFFF",
       "inverted": "#FFFFFF",
@@ -38,7 +38,7 @@
         "magenta": "#FF3FAB",
         "blue": "#00DAF2",
         "red": "#FF3434",
-        "green": "#369F90"
+        "green": "#00C868"
       },
       "inactive": {
         "default": "#4A4A4A",
@@ -46,7 +46,7 @@
         "magenta": "#A20065",
         "blue": "#005C99",
         "red": "#ffaaa2",
-        "green": "#005555",
+        "green": "#02482E",
         "white": "#EBEBEB",
         "inverted": "#EBEBEB"
       },
@@ -87,12 +87,12 @@
         "6": "#002944"
       },
       "green": {
-        "1": "#a2e8bd",
-        "2": "#6CC3A7",
-        "3": "#369F90",
-        "4": "#007A7A",
-        "5": "#005555",
-        "6": "#001C1C",
+        "1": "#E4FAD2",
+        "2": "#B9F4A8",
+        "3": "#00C868",
+        "4": "#027245",
+        "5": "#02482E",
+        "6": "#011F15",
         "3-OLD": "#85E500"
       },
       "magenta": {
@@ -116,6 +116,15 @@
         "10": "#4A4A4A",
         "11": "#363636",
         "12": "#222222"
+      },
+      "green-copy": {
+        "1": "#a2e8bd",
+        "2": "#6CC3A7",
+        "3": "#369F90",
+        "4": "#007A7A",
+        "5": "#005555",
+        "6": "#001C1C",
+        "3-OLD": "#85E500"
       }
     },
     "overlay": "linear-gradient(264deg, #00000080 0%, #00000040 100%)"
@@ -147,7 +156,7 @@
     "border": {
       "focus": {
         "default": "inset 0px 0px 0px 4.5px #222222",
-        "green": "inset 0px 0px 0px 4.5px #001C1C",
+        "green": "inset 0px 0px 0px 4.5px #011F15",
         "blue": "inset 0px 0px 0px 4.5px #002944",
         "red": "inset 0px 0px 0px 4.5px #FEFFCB",
         "yellow": "inset 0px 0px 0px 4.5px #4f1800",
@@ -157,7 +166,7 @@
         "inverted": "inset 0px 0px 0px 4.5px #FFFFFF",
         "hover": {
           "default": "inset 0px 0px 0px 4.5px #222222",
-          "green": "inset 0px 0px 0px 4.5px #001C1C",
+          "green": "inset 0px 0px 0px 4.5px #011F15",
           "blue": "inset 0px 0px 0px 4.5px #002944",
           "red": "inset 0px 0px 0px 4.5px #FEFFCB",
           "yellow": "inset 0px 0px 0px 4.5px #4f1800",
@@ -169,7 +178,7 @@
       },
       "active": {
         "default": "inset 0px 0px 0px 4.5px #EBEBEB,inset 0px 0px 0px 9px #222222",
-        "green": "inset 0px 0px 0px 4.5px #6CC3A7,inset 0px 0px 0px 9px #001C1C",
+        "green": "inset 0px 0px 0px 4.5px #B9F4A8,inset 0px 0px 0px 9px #011F15",
         "blue": "inset 0px 0px 0px 4.5px #8EF4FF,inset 0px 0px 0px 9px #002944",
         "red": "inset 0px 0px 0px 4.5px #FB5B5B,inset 0px 0px 0px 9px #FEFFCB",
         "yellow": "inset 0px 0px 0px 4.5px #FFD484,inset 0px 0px 0px 9px #4f1800",
