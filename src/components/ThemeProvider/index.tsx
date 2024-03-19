@@ -224,9 +224,13 @@ export function ControlledThemeProvider({
     [themeRootClass]: true,
   });
 
+  console.log("Debug: Rendering ThemeProvider");
+  console.log(classNames);
+
   useEffect(() => {
     const rootEl = document.querySelector(":root");
     if (rootEl) {
+      console.log("appending classnames to root node");
       rootEl.className = classNames;
     }
   }, [classNames]);

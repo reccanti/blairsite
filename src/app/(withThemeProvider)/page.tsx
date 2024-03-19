@@ -25,7 +25,7 @@ import {
   splashHeader,
   skillSection,
   skillList,
-} from "@/app/page.css";
+} from "@/app/(withThemeProvider)/page.css";
 import { Tile } from "@/components/Tile";
 import {
   List as GridList,
@@ -35,30 +35,30 @@ import {
 } from "./_components/GridList";
 
 // images
-import ProfilePicture from "../../public/assets/ProfilePicture.png";
+import ProfilePicture from "@/../public/assets/ProfilePicture.png";
 
 // logos
-import BuildkiteLogo from "../../public/assets/logos/BuildkiteLogo.svg";
-import CSSLogo from "../../public/assets/logos/CSSLogo.svg";
-import DockerLogo from "../../public/assets/logos/DockerLogo.svg";
-import FigmaLogo from "../../public/assets/logos/FigmaLogo.svg";
-import GCPLogo from "../../public/assets/logos/GCPLogo.svg";
-import GoogleAnalyticsLogo from "../../public/assets/logos/GoogleAnalyticsLogo.svg";
-import HTMLLogo from "../../public/assets/logos/HTMLLogo.svg";
-import JSLogo from "../../public/assets/logos/JSLogo.svg";
-import KubernetesLogo from "../../public/assets/logos/KubernetesLogo.svg";
-import LaravelLogo from "../../public/assets/logos/LaravelLogo.svg";
-import LookerStudioLogo from "../../public/assets/logos/LookerStudioLogo.svg";
-import MagentoLogo from "../../public/assets/logos/MagentoLogo.svg";
-import NextJSLogo from "../../public/assets/logos/NextJSLogo.svg";
-import NodeJSLogo from "../../public/assets/logos/NodeJSLogo.svg";
-import PHPLogo from "../../public/assets/logos/PHPLogo.svg";
-import ReactLogo from "../../public/assets/logos/ReactLogo.svg";
-import SassLogo from "../../public/assets/logos/SassLogo.svg";
-import SketchLogo from "../../public/assets/logos/SketchLogo.svg";
-import TerraformLogo from "../../public/assets/logos/TerraformLogo.svg";
-import TypescriptLogo from "../../public/assets/logos/TypescriptLogo.svg";
-import WordpressLogo from "../../public/assets/logos/WordpressLogo.svg";
+import BuildkiteLogo from "@/../public/assets/logos/BuildkiteLogo.svg";
+import CSSLogo from "@/../public/assets/logos/CSSLogo.svg";
+import DockerLogo from "@/../public/assets/logos/DockerLogo.svg";
+import FigmaLogo from "@/../public/assets/logos/FigmaLogo.svg";
+import GCPLogo from "@/../public/assets/logos/GCPLogo.svg";
+import GoogleAnalyticsLogo from "@/../public/assets/logos/GoogleAnalyticsLogo.svg";
+import HTMLLogo from "@/../public/assets/logos/HTMLLogo.svg";
+import JSLogo from "@/../public/assets/logos/JSLogo.svg";
+import KubernetesLogo from "@/../public/assets/logos/KubernetesLogo.svg";
+import LaravelLogo from "@/../public/assets/logos/LaravelLogo.svg";
+import LookerStudioLogo from "@/../public/assets/logos/LookerStudioLogo.svg";
+import MagentoLogo from "@/../public/assets/logos/MagentoLogo.svg";
+import NextJSLogo from "@/../public/assets/logos/NextJSLogo.svg";
+import NodeJSLogo from "@/../public/assets/logos/NodeJSLogo.svg";
+import PHPLogo from "@/../public/assets/logos/PHPLogo.svg";
+import ReactLogo from "@/../public/assets/logos/ReactLogo.svg";
+import SassLogo from "@/../public/assets/logos/SassLogo.svg";
+import SketchLogo from "@/../public/assets/logos/SketchLogo.svg";
+import TerraformLogo from "@/../public/assets/logos/TerraformLogo.svg";
+import TypescriptLogo from "@/../public/assets/logos/TypescriptLogo.svg";
+import WordpressLogo from "@/../public/assets/logos/WordpressLogo.svg";
 
 import { desktopSize, tabletSize } from "@/themes/utlities/breakpoints.css";
 import Markdown from "react-markdown";

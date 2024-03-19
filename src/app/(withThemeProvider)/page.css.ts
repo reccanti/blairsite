@@ -1,13 +1,13 @@
 import { style, globalStyle, ComplexStyleRule } from "@vanilla-extract/css";
-import { sprinkles } from "../themes/sprinkles.css";
-import { highlight } from "../components/Highlight/Highlight.css";
-import { header } from "../components/Header/Header.css";
+import { sprinkles } from "../../themes/sprinkles.css";
+import { highlight } from "../../components/Highlight/Highlight.css";
+import { header } from "../../components/Header/Header.css";
 import {
   lineHeights,
   typeDecorations,
   typeFonts,
   typeTransforms,
-} from "../themes/sprinkles/fonts.css";
+} from "../../themes/sprinkles/fonts.css";
 import {
   desktopQuery,
   desktopSize,
