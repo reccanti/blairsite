@@ -3,6 +3,8 @@ import { styleVariants } from "@vanilla-extract/css";
 import { sprinkles } from "../../themes/sprinkles.css";
 import {
   backgroundHoverColors,
+  labelDefaultColors,
+  labelInactiveColors,
   semanticColorKeymap,
 } from "../../themes/sprinkles/colors.css";
 import { shadowFocus, shadowActive } from "../../themes/sprinkles/focus.css";
@@ -10,8 +12,6 @@ import { shadowFocus, shadowActive } from "../../themes/sprinkles/focus.css";
 const variants = styleVariants(semanticColorKeymap, (v, color) => [
   sprinkles({ color: `label${color}`, backgroundColor: `background${color}` }),
   {
-    // color: labelDefaultColors[`label${color}`],
-    // font: typeFonts[`uiType`],
     border: "none",
     outline: "none",
     selectors: {
@@ -24,6 +24,13 @@ const variants = styleVariants(semanticColorKeymap, (v, color) => [
       "&:active": {
         boxShadow: shadowActive[`active${color}`],
       },
+    },
+    // set contextual colors
+    vars: {
+      [labelDefaultColors["labelContextualDefault"]]:
+        labelDefaultColors[`label${color}`],
+      [labelInactiveColors["labelInactiveContextualDefault"]]:
+        labelInactiveColors[`labelInactive${color}`],
     },
   },
 ]);

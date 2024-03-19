@@ -125,6 +125,10 @@ export const backgroundDefaultColors = {
   backgroundGray1,
   backgroundGray2,
   backgroundInverted,
+  // the contextual default can be overridden so that the color can
+  // automatically change depending on where it's used (like parent background
+  // color)
+  backgroundContextualDefault: backgroundDefault,
 };
 
 const {
@@ -175,6 +179,10 @@ export const labelDefaultColors = {
   labelGray1,
   labelGray2,
   labelInverted,
+  // the contextual default can be overridden so that the color can
+  // automatically change depending on where it's used (like parent background
+  // color)
+  labelContextualDefault: labelDefault,
 };
 
 const {
@@ -200,6 +208,10 @@ export const labelInactiveColors = {
   labelInactiveGray1: labelInactiveWhite,
   labelInactiveGray2: labelInactiveWhite,
   labelInactiveInverted,
+  // the contextual default can be overridden so that the color can
+  // automatically change depending on where it's used (like parent background
+  // color)
+  labelInactiveContextualDefault: labelInactiveDefault,
 };
 
 const {

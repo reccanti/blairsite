@@ -1,16 +1,23 @@
-import { styleVariants, globalStyle } from "@vanilla-extract/css";
+import { styleVariants } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 import { sprinkles } from "../../themes/sprinkles.css";
 import {
-  backgroundDefaultColors,
   labelDefaultColors,
+  labelInactiveColors,
   semanticColorKeymap,
 } from "../..//themes/sprinkles/colors.css";
-import { themeRootClass } from "../ThemeProvider/ThemeProvider.css";
-import { simpleClass } from "@/themes/base.css";
 
 const colorVariants = styleVariants(semanticColorKeymap, (v, color) => [
   sprinkles({ backgroundColor: `background${color}`, color: `label${color}` }),
+  {
+    // set contextual colors
+    vars: {
+      [labelDefaultColors["labelContextualDefault"]]:
+        labelDefaultColors[`label${color}`],
+      [labelInactiveColors["labelInactiveContextualDefault"]]:
+        labelInactiveColors[`labelInactive${color}`],
+    },
+  },
 ]);
 
 export const tile = recipe({
