@@ -1,8 +1,8 @@
 
 /**
- * AUTO GENERATED - don't edit directly. Instead modify the `npm run compileIcons` script.
+ * AUTO GENERATED - don't edit directly. Instead modify the `npm run build-icons` script.
  * 
- * Last Updated: March 05, 2024
+ * Last Updated: March 19, 2024
  */
 
 import type { SVGProps } from "react";

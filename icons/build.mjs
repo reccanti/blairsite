@@ -44,7 +44,7 @@ async function transformSvg(code, componentName) {
 
     const annotatedTransform = `
 /**
- * AUTO GENERATED - don't edit directly. Instead modify the \`npm run compileIcons\` script.
+ * AUTO GENERATED - don't edit directly. Instead modify the \`npm run build-icons\` script.
  * 
  * Last Updated: ${new Date().toLocaleString("en-US", {
    year: "numeric",
