@@ -161,7 +161,7 @@ export default function Home() {
           </dl>
         </section>
         <section className={skills} id="skills">
-          <Tile color="Blue" className={sectionHeader}>
+          <Tile color="Green" className={sectionHeader}>
             <Header renderAs="h2" size={3}>
               Things I&#39;ve Used
             </Header>
@@ -268,11 +268,11 @@ export default function Home() {
                 </GridListItem>
                 <GridListItem>
                   <GridListItemImage src={WordpressLogo.src} alt="" />
-                  <GridListItemLabel label="Wordpress" color="Red" />
+                  <GridListItemLabel label="Wordpress" color="Yellow" />
                 </GridListItem>
                 <GridListItem>
                   <GridListItemImage src={LaravelLogo.src} alt="" />
-                  <GridListItemLabel label="Laravel" color="Yellow" />
+                  <GridListItemLabel label="Laravel" color="Red" />
                 </GridListItem>
                 <GridListItem>
                   <GridListItemImage src={MagentoLogo.src} alt="" />
@@ -283,7 +283,7 @@ export default function Home() {
           </div>
         </section>
         <section className={contact} id="contact">
-          <Tile color="Green" className={sectionHeader}>
+          <Tile color="Blue" className={sectionHeader}>
             <Header renderAs="h2" size={3}>
               Wanna Reach Out?
             </Header>
