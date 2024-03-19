@@ -61,6 +61,14 @@ globalStyle(`.${contactList} li:not(:first-child)::before`, {
 // Skills are grouped in sections whose title is inline, follwed by a a "-", and
 // where each item is comma-separated
 
+export const skillListWrapper = style({
+  selectors: {
+    "&:not(:first-child)": {
+      paddingTop: spacing["spacing1"],
+    },
+  },
+});
+
 export const skillListHeader = style({
   display: "inline",
   selectors: {

@@ -6,6 +6,7 @@ import {
   skillList,
   skillListHeader,
   section,
+  skillListWrapper,
 } from "./page.css";
 import { Header } from "@/components/Header";
 
@@ -14,6 +15,8 @@ import linkContent from "@/data/resume/links.md";
 import globalThinkingContent from "@/data/resume/experience/globalThinking.md";
 import fitbitContent from "@/data/resume/experience/fitbit.md";
 import wayfairContent from "@/data/resume/experience/wayfair.md";
+import ritContent from "@/data/resume/education/rit.md";
+import designInfrastructureContent from "@/data/resume/writing/designInfrastructureEngineeringAtWayfair.md";
 import languagesContent from "@/data/resume/skills/languages.md";
 import toolsContent from "@/data/resume/skills/tools.md";
 import frameworksContent from "@/data/resume/skills/frameworks.md";
@@ -69,14 +72,13 @@ export default function Page() {
           Education
         </Header>
         <section>
-          <h3>
-            Rochester Institute of Technolgy - BS New Media Interactive
-            Development
-          </h3>
-          <div>
-            <span>September 2012</span>
-            <span>June 2017</span>
-          </div>
+          <Markdown
+            components={{
+              h1: (props) => <Header {...props} renderAs="h3" size={6} />,
+            }}
+          >
+            {ritContent}
+          </Markdown>
         </section>
       </section>
       <section className={section}>
@@ -84,11 +86,7 @@ export default function Page() {
           Writing
         </Header>
         <section>
-          <p>
-            <a href="https://medium.com/wayfair-design/design-infrastructure-engineering-at-wayfair-a78df89fa075">
-              Design Infrastructure Engineering at Wayfair
-            </a>
-          </p>
+          <Markdown>{designInfrastructureContent}</Markdown>
         </section>
       </section>
       <section className={section}>
@@ -96,7 +94,7 @@ export default function Page() {
           Skills
         </Header>
         <div>
-          <div>
+          <div className={skillListWrapper}>
             <Markdown
               components={{
                 h1: (props) => (
@@ -113,7 +111,7 @@ export default function Page() {
               {languagesContent}
             </Markdown>
           </div>
-          <div>
+          <div className={skillListWrapper}>
             <Markdown
               components={{
                 h1: (props) => (
@@ -130,7 +128,7 @@ export default function Page() {
               {toolsContent}
             </Markdown>
           </div>
-          <div>
+          <div className={skillListWrapper}>
             <Markdown
               components={{
                 h1: (props) => (
@@ -147,7 +145,7 @@ export default function Page() {
               {frameworksContent}
             </Markdown>
           </div>
-          <div>
+          <div className={skillListWrapper}>
             <Markdown
               components={{
                 h1: (props) => (
@@ -165,22 +163,6 @@ export default function Page() {
             </Markdown>
           </div>
         </div>
-        {/* <Markdown
-          components={{
-            h1: (props) => <Header {...props} renderAs="h2" size={5} />,
-            h2: (props) => (
-              <Header
-                {...props}
-                className={skillListHeader}
-                renderAs="h3"
-                size={6}
-              />
-            ),
-            ul: (props) => <ul {...props} className={skillList} />,
-          }}
-        >
-          {skillsContent}
-        </Markdown> */}
       </section>
     </div>
   );
