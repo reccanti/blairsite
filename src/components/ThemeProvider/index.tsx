@@ -8,7 +8,14 @@ import {
   simpleClass,
   withMotionClass,
 } from "../../themes/base.css";
-import { ReactNode, createContext, useContext, useState, useMemo } from "react";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useState,
+  useMemo,
+  useEffect,
+} from "react";
 import cx from "classnames";
 import { themeRootClass } from "./ThemeProvider.css";
 
@@ -207,6 +214,13 @@ export function ControlledThemeProvider({
     [themeRootClass]: true,
   });
 
+  useEffect(() => {
+    const rootEl = document.querySelector(":root");
+    if (rootEl) {
+      rootEl.className = classNames;
+    }
+  }, [classNames]);
+
   return (
     <ThemeContext.Provider
       value={{
@@ -224,7 +238,8 @@ export function ControlledThemeProvider({
         toggleWithMotionMode,
       }}
     >
-      <div className={classNames}>{children}</div>
+      {children}
+      {/* <div className={classNames}>{children}</div> */}
     </ThemeContext.Provider>
   );
 }

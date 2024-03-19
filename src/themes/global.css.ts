@@ -25,11 +25,10 @@ globalStyle(`:root, .${themeRootClass}`, {
   color: labelDefaultColors.labelDefault,
   font: typeFonts.bodyType,
   textDecoration: typeDecorations.bodyType,
-  "@media": {
-    "(prefers-reduced-motion: no-preference)": {
-      scrollBehavior: "smooth",
-    },
-  },
+});
+
+globalWithMotionStyles("", {
+  scrollBehavior: "smooth",
 });
 
 globalStyle(`:root *, .${themeRootClass} *`, {
