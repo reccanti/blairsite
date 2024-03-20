@@ -247,7 +247,9 @@ globalStyledModeStyles(projectHeader, {
   gridArea: "header",
 });
 
-export const projectContent = style([sectionContent]);
+export const projectContent = style({
+  gap: spacing["spacing2"],
+});
 
 globalStyledModeStyles(projectContent, {
   ...stretchBlockStyles,
