@@ -1,5 +1,5 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import { Markdown } from "@/components/Markdown";
 import {
   contactList,
@@ -26,7 +26,12 @@ import paradigmsContent from "@/data/resume/skills/paradigms.md";
 // import a stylesheet for handling print styles, since Vanilla Extract doesn't
 // handle "@page" declarations
 import "./print.css";
-import { PrintButton } from "./_components/PrintButton";
+
+const NoSSRPrintButton = dynamic(
+  () =>
+    import("./_components/PrintButton").then(({ PrintButton }) => PrintButton),
+  { ssr: false }
+);
 
 export default function Page() {
   return (
@@ -162,7 +167,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <PrintButton />
+      <NoSSRPrintButton />
     </main>
   );
 }
