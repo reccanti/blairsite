@@ -78,7 +78,7 @@ export function SettingsDropdown() {
         <Item>
           <Button
             className={itemButton}
-            color="Red"
+            color="Blue"
             onClick={toggleWithMotionMode}
           >
             <Toggle enabled={withMotionMode}>With Motion</Toggle>

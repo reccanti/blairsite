@@ -165,7 +165,7 @@ globalStyle(`.${themeRootClass}.${simpleClass}`, {
   },
 });
 
-globalStyle(`html :not(.${darkClass}).${highContrastClass}`, {
+globalStyle(`.${themeRootClass}:not(.${darkClass}).${highContrastClass}`, {
   "@media": {
     "(prefers-color-scheme: light)": {
       vars: assignVars(colorVars, highContrastJson),
@@ -173,7 +173,7 @@ globalStyle(`html :not(.${darkClass}).${highContrastClass}`, {
   },
 });
 
-globalStyle(`html :not(.${lightClass}).${highContrastClass}`, {
+globalStyle(`.${themeRootClass}:not(.${lightClass}).${highContrastClass}`, {
   "@media": {
     "(prefers-color-scheme: dark)": {
       vars: assignVars(colorVars, highContrastDarkJson),

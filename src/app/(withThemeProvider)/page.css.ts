@@ -247,7 +247,7 @@ globalStyledModeStyles(projectHeader, {
   gridArea: "header",
 });
 
-export const projectContent = style({});
+export const projectContent = style([sectionContent]);
 
 globalStyledModeStyles(projectContent, {
   ...stretchBlockStyles,
