@@ -26,6 +26,7 @@ import paradigmsContent from "@/data/resume/skills/paradigms.md";
 // import a stylesheet for handling print styles, since Vanilla Extract doesn't
 // handle "@page" declarations
 import "./print.css";
+import { PrintButton } from "./_components/PrintButton";
 
 export default function Page() {
   return (
@@ -161,6 +162,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <PrintButton />
     </main>
   );
 }
