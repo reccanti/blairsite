@@ -151,7 +151,7 @@ export default function Home() {
               </Tile>
             </div>
             <div className={project}>
-              <Tile renderAs="dt" color="Red" className={projectHeader}>
+              <Tile renderAs="dt" color="Yellow" className={projectHeader}>
                 <Header renderAs="h3" size={4}>
                   Homebase Docs Site
                 </Header>
