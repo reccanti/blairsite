@@ -88,19 +88,31 @@ export function ThemeProvider({
   styledLayout: initialStyledLayout = defaultStyledLayout,
   reduceMotion: initialReduceMotion = defaultReduceMotion,
 }: Props) {
-  const [brightness, setBrightness] = useLocalStorage(
-    "brightness",
-    initialBrightness
-  );
-  const [contrast, setContrast] = useLocalStorage("contrast", initialContrast);
-  const [styledLayout, setStyledLayout] = useLocalStorage(
-    "layout",
-    initialStyledLayout
-  );
-  const [reduceMotion, setReducedMotion] = useLocalStorage(
-    "motion",
-    initialReduceMotion
-  );
+  // commenting out this use of local storage because it was causing flashing
+  // lights in a way I didn't like. If I'm able to set this up on a server, a
+  // better solution might be to have this pull from cookies and set these
+  // variables during SSR instead
+  //
+  // ~Blair, 3/20/2024
+
+  // const [brightness, setBrightness] = useLocalStorage(
+  //   "brightness",
+  //   initialBrightness
+  // );
+  // const [contrast, setContrast] = useLocalStorage("contrast", initialContrast);
+  // const [styledLayout, setStyledLayout] = useLocalStorage(
+  //   "layout",
+  //   initialStyledLayout
+  // );
+  // const [reduceMotion, setReducedMotion] = useLocalStorage(
+  //   "motion",
+  //   initialReduceMotion
+  // );
+
+  const [brightness, setBrightness] = useState(initialBrightness);
+  const [contrast, setContrast] = useState(initialContrast);
+  const [styledLayout, setStyledLayout] = useState(initialStyledLayout);
+  const [reduceMotion, setReducedMotion] = useState(initialReduceMotion);
 
   const lightMode = useMemo(() => brightness === "light", [brightness]);
   const darkMode = useMemo(() => brightness === "dark", [brightness]);

@@ -145,6 +145,12 @@ globalStyle("html", {
     "(prefers-color-scheme: dark)": {
       vars: assignVars(colorVars, darkJson),
     },
+    "(prefers-contrast: more)": {
+      vars: assignVars(colorVars, highContrastJson),
+    },
+    "(prefers-contrast: more) and (prefers-color-scheme: dark)": {
+      vars: assignVars(colorVars, highContrastDarkJson),
+    },
     [tabletQuery]: {
       vars: assignVars(fontVars, fontsLargeScreenJson),
     },

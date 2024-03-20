@@ -9,7 +9,7 @@ import {
   overlayWrapper,
   siteHeader,
 } from "./SiteHeader.css";
-import { SettingsDropdown } from "./DropdownMenu/SettingsDropdown";
+// import { SettingsDropdown } from "./DropdownMenu/SettingsDropdown";
 import { NavDropdown } from "./DropdownMenu/NavDropdown";
 
 export function SiteHeader() {
@@ -28,7 +28,15 @@ export function SiteHeader() {
           </h1>
         </Button>
         <div className={menus}>
-          <SettingsDropdown />
+          {/**
+           * Commenting out the Settings Menu for now since toggling
+           * settings in this client-only app can cause flashing lights.
+           *  Might re-enable this if I'm able to set this up on a
+           *  server and can render the classes on the page with SSR
+           *
+           * ~Blair, March 20, 2024
+           */}
+          {/* <SettingsDropdown /> */}
           <NavDropdown />
         </div>
       </Tile>
