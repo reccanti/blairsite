@@ -21,6 +21,7 @@ export function ItemImage(props: ItemImageProps) {
       <Image
         {...props}
         className={imgClassName}
+        alt=""
         fill
         sizes={`
                 (min-width: ${desktopSize}) 400px,

@@ -54,6 +54,7 @@ globalStyle(aSelector, {
 });
 globalStyle(`${aSelector}:focus`, {
   border: labelFocus.focusLink,
+  outline: "none",
 });
 globalStyle(`${aSelector}:hover`, {
   color: labelLinkColors.labelLinkHover,

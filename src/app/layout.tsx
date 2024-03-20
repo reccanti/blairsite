@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blair Wilcox | Blair Makes Cool Things",
+  title: "Blair Wilcox - Blair Makes Cool Things",
 };
 
 export default function RootLayout({
@@ -10,7 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="themeRoot">
       <body>{children}</body>
     </html>
   );

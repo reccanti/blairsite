@@ -29,7 +29,7 @@ import "./print.css";
 
 export default function Page() {
   return (
-    <div className={wrapper}>
+    <main id="main" className={wrapper}>
       <section className={section}>
         <Header renderAs="h1" size={4}>
           Blair Wilcox: Design Technologist
@@ -161,6 +161,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

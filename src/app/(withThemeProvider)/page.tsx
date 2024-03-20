@@ -73,7 +73,7 @@ import contactContent from "@/data/homepage/contacts.md";
 
 export default function Home() {
   return (
-    <main>
+    <main id="main">
       <section className={splash}>
         <header className={splashHeader}>
           <Header renderAs="h1" size={3}>
@@ -258,7 +258,7 @@ export default function Home() {
               <GridList className={skillList}>
                 <GridListItem>
                   <GridListItemImage src={ReactLogo.src} alt="" />
-                  <GridListItemLabel label="React" color="Blue" />
+                  <GridListItemLabel label="React" color="Green" />
                 </GridListItem>
                 <GridListItem>
                   <GridListItemImage src={NextJSLogo.src} alt="" />
@@ -266,7 +266,7 @@ export default function Home() {
                 </GridListItem>
                 <GridListItem>
                   <GridListItemImage src={NodeJSLogo.src} alt="" />
-                  <GridListItemLabel label="NodeJS" color="Green" />
+                  <GridListItemLabel label="NodeJS" color="Blue" />
                 </GridListItem>
                 <GridListItem>
                   <GridListItemImage src={WordpressLogo.src} alt="" />
@@ -278,7 +278,7 @@ export default function Home() {
                 </GridListItem>
                 <GridListItem>
                   <GridListItemImage src={MagentoLogo.src} alt="" />
-                  <GridListItemLabel label="Magento" color="Blue" />
+                  <GridListItemLabel label="Magento" color="Green" />
                 </GridListItem>
               </GridList>
             </section>
